@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<launch>
+
+  <machine
+  name="beagle-gauche"
+  user="debian"
+  password="temppwd"
+  address="beagle-gauche"
+  env-loader="/home/debian/env-loader-yo.sh"
+  />
+  <machine
+  name="beagle-droite"
+  user="debian"
+  password="temppwd"
+  address="beagle-droite"
+  env-loader="/home/debian/env-loader-yo.sh"
+  />
+
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="joy_node" >
+    <param name="dev" type="string" value="/dev/input/js4" />
+    <param name="deadzone" value="0.12" />
+    <param name="autorepeat_rate" value="20" />
+  </node>
+
+ <node machine="beagle-gauche" name="left_init_epaule_av_server" pkg="capteurs" type="init_epaule_av_server.py" />
+ <node machine="beagle-gauche" name="left_init_epaule_ar_server" pkg="capteurs" type="init_epaule_ar_server.py" />
+ <node machine="beagle-droite" name="right_init_epaule_av_server" pkg="capteurs" type="init_epaule_av_server.py" />
+ <node machine="beagle-droite" name="right_init_epaule_ar_server" pkg="capteurs" type="init_epaule_ar_server.py" />
+
+ <!-- PWM -->
+ <node machine="beagle-gauche" name="left_multi_motors" pkg="actionneurs" type="multi_motors.py" />
+ <node machine="beagle-droite" name="right_multi_motors" pkg="actionneurs" type="multi_motors.py" />
+
+ <param name="axis_linear" value="1" type="int"/>
+ <param name="right_trigger" value="5" type="int"/>
+ <param name="left_trigger" value="2" type="int"/>
+ <param name="button_A" value="0" type="int"/>
+ <param name="button_B" value="1" type="int"/>
+ <param name="button_Y" value="3" type="int"/>
+ <param name="button_LB" value="4" type="int"/>
+ <param name="button_RB" value="5" type="int"/>
+ <param name="button_right_joystick" value="10" type="int"/>
+ 
+ 
+ <param name="scale_linear" value="25" type="double"/>
+  
+ <node name="init_epaule_manette" pkg="popi_robot" type="manette_vitesse" />
+
+</launch>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="popi" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="PI" value="3.1415926535897931"/>
+
+
+    <!-- URDF -->
+
+    <!-- damping : physical damping value of the joint [N*s / m] for prismatic joints, [N*m*s / rad] for revolute joints. -->
+    <!-- friction : physical static friction value of the joint [N] for prismatic joints,[N/m] for revolute joints. -->
+    <!-- lower : an attribute specifying the lower joint limit (radians for revolute joints, meters for prismatic joints). Omit if joint is continuous. -->
+    <!-- upper : an attribute specifying the upper joint limit (radians for revolute joints, meters for prismatic joints). Omit if joint is continuous. -->
+    <!-- effort : an attribute for enforcing the maximum joint effort (|applied effort| < |effort limit|). (N.m for revolute joints, N for prismatic joints) -->
+    <!-- vel : an attribute for enforcing the maximum joint velocity. -->
+
+    <xacro:property name="damping_aile" value="0.1"/> <!-- optional, defaults to 0 ; taken into account in ODE physics engine -->
+    <xacro:property name="damping_epaule" value="0.1"/>
+    <xacro:property name="damping_coude" value="0.1"/>
+
+    <xacro:property name="friction_aile" value="4.5"/> <!-- optional, defaults to 0 ; taken into account in ODE physics engine -->
+    <xacro:property name="friction_epaule" value="7.5"/>
+    <xacro:property name="friction_coude" value="5"/>
+
+    <xacro:property name="lower_aile" value="-0.4"/> <!-- optional, defaults to 0 ; taken into account in ODE physics engine -->
+    <xacro:property name="upper_aile" value="0.4"/> <!-- optional, defaults to 0 ; taken into account in ODE physics engine -->
+    <xacro:property name="effort_aile" value="120"/> <!-- required ; taken into account in ODE physics engine -->
+    <xacro:property name="vel_aile" value="${PI}"/> <!-- required ; taken into account in ODE physics engine -->
+
+    <xacro:property name="lower_epaule" value="0"/>
+    <xacro:property name="upper_epaule" value="${PI}"/>
+    <xacro:property name="effort_epaule" value="122"/>
+    <xacro:property name="vel_epaule" value="2.87"/>
+
+    <xacro:property name="lower_coude" value="0.26"/>
+    <xacro:property name="upper_coude" value="1.92"/>
+    <xacro:property name="effort_coude" value="110"/> <!-- 2000 N * 0.055m (distance point d'application de la force du verin et l'axe de rotation du coude -->
+    <xacro:property name="vel_coude" value="0.34"/>
+
+
+    <xacro:property name="masse_bati" value="22.934"/>
+    <xacro:property name="masse_epaule" value="6.775"/>
+    <xacro:property name="masse_hjambe" value="4.955"/>
+    <xacro:property name="masse_bjambe" value="0.49"/>
+    <xacro:property name="masse_pied" value="0.001"/>
+
+    <!-- SDF -->
+
+    <!-- fdir : direction principale, dans le repere de collision du lien concerne, de la pyramide de frottement definie par mu1 et mu2. Si laisse par defaut, resultats imprevisibles. -->
+    <!-- selfcollide : si sur 1, le lien peut entrer en collision avec les autres liens du modele ; deux liens connectes par un joint n'entreront pas en collision. -->
+    <!-- kp : contact stiffness for rigid body contacts -->
+    <!-- kd : damping for rigid body contacts -->
+    <!-- NOTE : erp : error reduction parameter, par defaut erp = 0.2 | erp = ( dt * kp ) / ( dt * kp + kd ) -->
+    <!-- NOTE : cfm : constraint force mixing parameter, par defaut cfm = 0 | cfm = 1 / ( dt * kp + kd ) -->
+    <!-- mu1 : coefficient de friction mu, cone de friction approxime par une pyramide dont mu1 represente la premiere direction -->
+    <!-- mu2 : coefficient de friction mu, cone de friction approxime par une pyramide dont mu2 represente la deuxieme direction -->
+    <!-- maxVel : maximum contact correction velocity truncation term : lorsqu'il y a collision de deux entites, vitesse maximale du rebond. Important a set a faible valeur pour eviter un eclatement du modele -->
+    <!-- minDepth : minimum allowable depth before contact correction impulse is applied -->
+
+	<xacro:property name="fdir_bati" value="1 0 0"/> <!-- default in ODE physics engine 0 0 0 -->
+    <xacro:property name="selfcollide_bati" value="1"/> <!-- default in ODE physics engine 0 -->
+    <xacro:property name="kp_bati" value="10e12"/> <!-- default in ODE physics engine 10^12 -->
+    <xacro:property name="kd_bati" value="1.0"/> <!-- default in ODE physics engine 1.0 -->
+    <xacro:property name="mu1_bati" value="1.0"/> <!-- default in ODE physics engine 1.0 -->
+    <xacro:property name="mu2_bati" value="1.0"/>  <!-- default in ODE physics engine 1.0 -->
+    <xacro:property name="maxVel_bati" value="0.01"/> <!-- default in ODE physics engine 0.01 -->
+    <xacro:property name="minDepth_bati" value="0.0"/> <!-- default in ODE physics engine 0.0 -->
+
+	<xacro:property name="fdir_epaule" value="0 1 0"/>
+    <xacro:property name="selfcollide_epaule" value="1"/>
+    <xacro:property name="kp_epaule" value="10e12"/>
+    <xacro:property name="kd_epaule" value="1.0"/>
+    <xacro:property name="mu1_epaule" value="1.0"/>
+    <xacro:property name="mu2_epaule" value="1.0"/>
+    <xacro:property name="maxVel_epaule" value="0.01"/>
+    <xacro:property name="minDepth_epaule" value="0.0"/>
+
+    <xacro:property name="fdir_hjambe" value="1 0 0"/>
+    <xacro:property name="selfcollide_hjambe" value="1"/>
+    <xacro:property name="kp_hjambe" value="10e12"/>
+    <xacro:property name="kd_hjambe" value="1.0"/>
+    <xacro:property name="mu1_hjambe" value="1.0"/>
+    <xacro:property name="mu2_hjambe" value="1.0"/>
+    <xacro:property name="maxVel_hjambe" value="0.01"/>
+    <xacro:property name="minDepth_hjambe" value="0.0"/>
+
+    <xacro:property name="fdir_bjambe" value="1 0 0"/>
+    <xacro:property name="selfcollide_bjambe" value="1"/>
+    <xacro:property name="kp_bjambe" value="10e12"/> <!-- 10e6 -->
+    <xacro:property name="kd_bjambe" value="1.0"/> <!-- 10e5 -->
+    <xacro:property name="mu1_bjambe" value="1.0"/>
+    <xacro:property name="mu2_bjambe" value="1.0"/>
+    <xacro:property name="maxVel_bjambe" value="0.01"/>
+    <xacro:property name="minDepth_bjambe" value="0.02"/>
+
+	<xacro:property name="fdir_pied" value="1 0 0"/>
+    <xacro:property name="selfcollide_pied" value="1"/>
+    <xacro:property name="kp_pied" value="10e12"/> <!-- 10e6 -->
+    <xacro:property name="kd_pied" value="1"/> <!-- 10e5 -->
+    <xacro:property name="mu1_pied" value="1.0"/>
+    <xacro:property name="mu2_pied" value="1.0"/>
+    <xacro:property name="maxVel_pied" value="0.01"/>
+    <xacro:property name="minDepth_pied" value="0.02"/>
+
+</robot>

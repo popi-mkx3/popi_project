@@ -1,0 +1,182 @@
+<robot name="popi">
+    <link name="world" />
+    <link name="base">
+        <inertial>
+            <origin xyz="0.00000 0.00000 -0.03523"/>
+            <mass value="22.93400"/>
+            <inertia ixx="0.38573" iyy="0.90692" izz="1.22770" ixy="-0.00000" ixz="-0.00000" iyz="-0.00000"/>
+        </inertial>
+    </link>
+    <link name="EpauleAVD">
+        <inertial>
+            <origin xyz="-0.00354 0.04355 0.00137"/>
+            <mass value="6.77500"/>
+            <inertia ixx="0.02893" iyy="0.01067" izz="0.02860" ixy="-0.00075" ixz="0.00018" iyz="-0.00006"/>
+        </inertial>
+    </link>
+    <link name="HJambeAVD">
+        <inertial>
+            <origin xyz="-0.11331 0.01743 -0.00512"/>
+            <mass value="4.89500"/>
+            <inertia ixx="0.00899" iyy="0.05703" izz="0.06050" ixy="0.00647" ixz="-0.00215" iyz="0.00043"/>
+        </inertial>
+    </link>
+    <link name="BJambeAVD">
+        <inertial>
+            <origin xyz="0.11762 0.01239 0.00000"/>
+            <mass value="0.49003"/>
+            <inertia ixx="0.00010" iyy="0.00678" izz="0.00680" ixy="0.00019" ixz="0.00000" iyz="-0.00000"/>
+        </inertial>
+    </link>
+    <link name="EpauleAVG">
+        <inertial>
+            <origin xyz="0.00354 -0.04355 -0.00137"/>
+            <mass value="6.77500"/>
+            <inertia ixx="0.02893" iyy="0.01067" izz="0.02864" ixy="-0.00075" ixz="0.00018" iyz="-0.00006"/>
+        </inertial>
+    </link>
+    <link name="HJambeAVG">
+        <inertial>
+            <origin xyz="-0.11389 0.00901 0.00555"/>
+            <mass value="4.95500"/>
+            <inertia ixx="0.01032" iyy="0.05596" izz="0.06056" ixy="0.01011" ixz="0.00226" iyz="-0.00025"/>
+        </inertial>
+    </link>
+    <link name="BJambeAVG">
+        <inertial>
+            <origin xyz="0.11762 0.01239 -0.00000"/>
+            <mass value="0.49003"/>
+            <inertia ixx="0.00010" iyy="0.00678" izz="0.00680" ixy="0.00019" ixz="0.00000" iyz="-0.00000"/>
+        </inertial>
+    </link>
+    <link name="EpauleARD">
+        <inertial>
+            <origin xyz="-0.00354 0.04355 -0.00137"/>
+            <mass value="6.77500"/>
+            <inertia ixx="0.02893" iyy="0.01067" izz="0.02864" ixy="-0.00075" ixz="-0.00002" iyz="0.00006"/>
+        </inertial>
+    </link>
+    <link name="HJambeARD">
+        <inertial>
+            <origin xyz="-0.11331 0.01743 -0.00512"/>
+            <mass value="4.89500"/>
+            <inertia ixx="0.00899" iyy="0.05703" izz="0.06050" ixy="0.00647" ixz="-0.00215" iyz="0.00043"/>
+        </inertial>
+    </link>
+    <link name="BJambeARD">
+        <inertial>
+            <origin xyz="0.11762 0.01239 0.00000"/>
+            <mass value="0.49003"/>
+            <inertia ixx="0.00010" iyy="0.00678" izz="0.00680" ixy="0.00019" ixz="0.00000" iyz="-0.00000"/>
+        </inertial>
+    </link>
+    <link name="EpauleARG">
+        <inertial>
+            <origin xyz="0.00354 -0.04355 0.00137"/>
+            <mass value="6.77500"/>
+            <inertia ixx="0.02893" iyy="0.01067" izz="0.02864" ixy="-0.00075" ixz="-0.00018" iyz="0.00006"/>
+        </inertial>
+    </link>
+    <link name="HJambeARG">
+        <inertial>
+            <origin xyz="-0.11389 0.00901 0.00555"/>
+            <mass value="4.95500"/>
+            <inertia ixx="0.01032" iyy="0.05596" izz="0.06056" ixy="0.01011" ixz="0.00226" iyz="-0.00025"/>
+        </inertial>
+    </link>
+    <link name="BJambeARG">
+        <inertial>
+            <origin xyz="0.11762 0.01239 -0.00000"/>
+            <mass value="0.49003"/>
+            <inertia ixx="0.00010" iyy="0.00678" izz="0.00680" ixy="0.00019" ixz="0.00000" iyz="-0.00000"/>
+        </inertial>
+    </link>
+    <joint name="fbj" type="floating">
+        <parent link="world"/>
+        <child  link="base"/>
+    </joint>
+    <joint name="rf_haa_joint" type="revolute">
+        <origin xyz="0.33050 -0.17500 -0.05100" rpy="3.141592653589793 -1.570796282091413 3.141592653589793"/>
+        <parent link="base"/>
+        <child  link="EpauleAVD"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="rf_hfe_joint" type="revolute">
+        <origin xyz="0.00000 -0.10770 0.00000" rpy="-2.3561944901923457 1.5707962635746238 2.3561944901923457"/>
+        <parent link="EpauleAVD"/>
+        <child  link="HJambeAVD"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="rf_kfe_joint" type="revolute">
+        <origin xyz="-0.35192 -0.04151 -0.00000" rpy="3.1415925661670134 -0.0 0.0"/>
+        <parent link="HJambeAVD"/>
+        <child  link="BJambeAVD"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="lf_haa_joint" type="revolute">
+        <origin xyz="0.33050 0.17500 -0.05100" rpy="3.141592653589793 1.570796282091413 3.141592653589793"/>
+        <parent link="base"/>
+        <child  link="EpauleAVG"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="lf_hfe_joint" type="revolute">
+        <origin xyz="0.00000 0.10770 0.00000" rpy="-2.3561944901923457 -1.5707962635746238 -2.3561944901923457"/>
+        <parent link="EpauleAVG"/>
+        <child  link="HJambeAVG"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="lf_kfe_joint" type="revolute">
+        <origin xyz="-0.35192 -0.04151 -0.00000" rpy="3.1415925661670134 -0.0 0.0"/>
+        <parent link="HJambeAVG"/>
+        <child  link="BJambeAVG"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="rh_haa_joint" type="revolute">
+        <origin xyz="-0.33050 -0.17500 -0.05100" rpy="3.141592653589793 -1.570796282091413 3.141592653589793"/>
+        <parent link="base"/>
+        <child  link="EpauleARD"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="rh_hfe_joint" type="revolute">
+        <origin xyz="0.00000 -0.10770 0.00000" rpy="-2.3561944901923457 1.5707962635746238 2.3561944901923457"/>
+        <parent link="EpauleARD"/>
+        <child  link="HJambeARD"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="rh_kfe_joint" type="revolute">
+        <origin xyz="-0.35192 -0.04151 -0.00000" rpy="3.1415925661670134 -0.0 0.0"/>
+        <parent link="HJambeARD"/>
+        <child  link="BJambeARD"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="lh_haa_joint" type="revolute">
+        <origin xyz="-0.33050 0.17500 -0.05100" rpy="3.141592653589793 1.570796282091413 3.141592653589793"/>
+        <parent link="base"/>
+        <child  link="EpauleARG"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="lh_hfe_joint" type="revolute">
+        <origin xyz="0.00000 0.10770 0.00000" rpy="-2.3561944901923457 -1.5707962635746238 -2.3561944901923457"/>
+        <parent link="EpauleARG"/>
+        <child  link="HJambeARG"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="lh_kfe_joint" type="revolute">
+        <origin xyz="-0.35192 -0.04151 -0.00000" rpy="3.1415925661670134 -0.0 0.0"/>
+        <parent link="HJambeARG"/>
+        <child  link="BJambeARG"/>
+        <limit effort="30" velocity="1.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+</robot>

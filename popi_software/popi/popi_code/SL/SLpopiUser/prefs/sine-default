@@ -1,0 +1,13 @@
+/*  #sines   offset    amplitude   phase  freq */
+rf_haa_joint   1    0.0     0.1     0.0     1.0
+rf_hfe_joint   1    0.0     0.1     0.0     1.0
+rf_kfe_joint   1    0.0     0.1     0.0     1.0
+lf_haa_joint   1    0.0     0.1     0.0     1.0
+lf_hfe_joint   1    0.0     0.1     0.0     1.0
+lf_kfe_joint   1    0.0     0.1     0.0     1.0
+rh_haa_joint   1    0.0     0.1     0.0     1.0
+rh_hfe_joint   1    0.0     0.1     0.0     1.0
+rh_kfe_joint   1    0.0     0.1     0.0     1.0
+lh_haa_joint   1    0.0     0.1     0.0     1.0
+lh_hfe_joint   1    0.0     0.1     0.0     1.0
+lh_kfe_joint   1    0.0     0.1     0.0     1.0

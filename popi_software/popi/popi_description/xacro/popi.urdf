@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="popi">
+
+<!--**************************************************************************************-->
+<!--*************************************** CORPS ****************************************-->
+<!--**************************************************************************************-->
+
+	<link name="Base_flottante">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_flottante" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <parent link="Base_flottante"/>
+        <child link="Bati"/>
+    </joint>
+
+  	<link name="Bati">
+	    <inertial>
+		    <origin xyz="0 0 -0.03523"
+		        	rpy="0 0 0" />
+		    <mass value="22.934" />
+		    <inertia 	ixx="0.38573"  ixy="0"   		ixz="0"
+										iyy="0.90692" 	iyz="0"
+		        										izz="1.2277" />
+	    </inertial>
+	    <visual>
+		    <origin xyz="0 0 0"
+		        	rpy="0 0 0" />
+		    <geometry>
+		    	<mesh filename="package://popi_description/meshes/Bati.STL" />
+		    </geometry>
+		    <material name="grey"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        	  	rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/Bati.STL" />
+	      	</geometry>
+	    </collision>
+  	</link>
+  	
+<!--**************************************************************************************-->
+<!--********************************* JAMBE AVANT-DROITE *********************************-->
+<!--**************************************************************************************-->
+
+  	<link name="EpauleAVD">
+	    <inertial>
+	      	<origin xyz="-0.00137 0.04355 -0.00354"
+	        		rpy="0 0 0" />
+	     	<mass value="6.775" />
+	      	<inertia  	ixx="0.0286" 	ixy="6E-05" 	ixz="-0.00018"
+	        							iyy="0.01067" 	iyz="-0.00075"
+	        											izz="0.02893" />
+	    </inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/EpauleAVD.STL" />
+	      	</geometry>
+	      	<material name="orange"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://popi_description/meshes/EpauleAVD.STL" />
+      		</geometry>
+    	</collision>
+  	</link>
+  	
+  	<link name="HJambeAVD">
+    	<inertial>
+     		<origin xyz="-0.11331 0.00512 0.01743"
+        			rpy="0 0 0" />
+      		<mass value="4.895" />
+      		<inertia 	ixx="0.00899" 	ixy="0.00215" 	ixz="0.00647"
+        								iyy="0.0605"    iyz="-0.00043"
+        												izz="0.05703" />
+    	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://popi_description/meshes/HJambeAVD.STL" />
+      		</geometry>
+      		<material name="darkgrey"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry> 
+        		<mesh filename="package://popi_description/meshes/HJambeAVD.STL" />
+      		</geometry>
+    	</collision>
+  	</link>
+  	
+  	<link name="BJambeAVD">
+    	<inertial>
+      		<origin xyz="0.11761 0 -0.012387"
+        			rpy="0 0 0" />
+      		<mass value="0.49" />
+      		<inertia 	ixx="0.000103" 	ixy="0.000000" 	ixz="-0.00019" 	
+      									iyy="0.006798" 	iyz="0"
+        												izz="0.006776" />
+    	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://popi_description/meshes/BJambeAVD.STL" />
+      		</geometry>
+      		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry> 
+        		<mesh filename="package://popi_description/meshes/BJambeAVD.STL" />
+      		</geometry>
+    	</collision>
+  	</link>
+  	
+  	<link name="PiedAVD">
+    	<inertial>
+      		<origin xyz="0.0005 1.1348E-09 -1.2018E-09"
+        			rpy="0 0 0" />
+      		<mass value="2.5E-05" />
+      		<inertia 	ixx="1.0417E-10"	ixy="3.2086E-25"	ixz="2.1003E-26"
+        									iyy="5.4167E-11"	iyz="6.3205E-25"
+        														izz="5.4167E-11" />
+    	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        	    	rpy="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://popi_description/meshes/PiedAVD.STL" />
+      		</geometry>
+      		<material name="white"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        	  		rpy="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://popi_description/meshes/PiedAVD.STL" />
+      		</geometry>
+    	</collision>
+  	</link>
+    
+<!--**************************************************************************************-->
+<!--********************************* JAMBE AVANT-GAUCHE *********************************-->
+<!--**************************************************************************************-->
+
+    <link name="EpauleAVG">
+    	<inertial>
+      		<origin xyz="-0.00137 -0.04355 -0.00354"
+        			rpy="0 0 0" />
+      		<mass value="6.775" />
+      		<inertia 	ixx="0.02864" 	ixy="-6E-05"	ixz="-0.00018"
+        								iyy="0.01067"	iyz="0.00075"
+        												izz="0.02893" />
+    	</inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+     		 <geometry> 
+       			<mesh filename="package://popi_description/meshes/EpauleAVG.STL" />
+      		</geometry>
+      		<material name="orange"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry>
+        		<mesh filename="package://popi_description/meshes/EpauleAVG.STL" />
+      		</geometry>
+    	</collision>
+  	</link>
+	
+	<link name="HJambeAVG">
+	    <inertial>
+	      	<origin xyz="-0.11389 -0.00555 0.00901"
+	        		rpy="0 0 0" />
+	      	<mass value="4.955" />
+	      	<inertia 	ixx="0.01032" 	ixy="-0.00226" 	ixz="0.01011"
+	        							iyy="0.06056" 	iyz="0.00025"
+	        											izz="0.05596" />
+	    </inertial>
+	    <visual>
+	     	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/HJambeAVG.STL" />
+	      	</geometry>
+	      	<material name="darkgrey"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      		<geometry>
+	        		<mesh filename="package://popi_description/meshes/HJambeAVG.STL" />
+	      		</geometry>
+	    </collision>
+	</link>
+	
+	<link name="BJambeAVG">
+	    <inertial>
+	      	<origin xyz="0.11761 0 -0.012387"
+	        		rpy="0 0 0" />
+	      	<mass value="0.49" />
+	      	<inertia 	ixx="0.000103" 	ixy="0.000000" 	ixz="-0.00019" 	
+      									iyy="0.006798" 	iyz="0"
+        												izz="0.006776" />
+	    </inertial>
+	    <visual>
+	      	<origin xyz="0 0 0"
+        		  	rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/BJambeAVG.STL" />
+	      	</geometry>
+	      	<material name="white"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+        		  	rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/BJambeAVG.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+	<link name="PiedAVG">
+    	<inertial>
+      		<origin xyz="0.0005 -3.5068E-06 -4.4931E-09"
+        	  		rpy="0 0 0" />
+      		<mass value="2.5E-05" />
+      		<inertia 		ixx="1.0417E-10" 	ixy="4.4849E-25" 	ixz="1.454E-25"
+        										iyy="5.4167E-11" 	iyz="6.3205E-25"
+        															izz="5.4167E-11" />
+    	</inertial>
+	    <visual>
+	    	<origin xyz="0 0 0"
+	        	  	rpy="0 0 0" />
+	    	<geometry>
+	        	<mesh filename="package://popi_description/meshes/PiedAVG.STL" />
+	      	</geometry>
+	      	<material name="white"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        	  	rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/PiedAVG.STL" />
+	      	</geometry>
+    	</collision>
+  	</link>
+
+<!--**************************************************************************************-->
+<!--******************************** JAMBE ARRIERE-DROITE ********************************-->
+<!--**************************************************************************************-->	
+	<link name="EpauleARD">
+	    <inertial>
+	      	<origin xyz="0.00137 0.04355 -0.00354"
+	        		rpy="0 0 0" />
+	      	<mass value="6.775" />
+	     	<inertia 	ixx="0.02864" 	ixy="-6E-05" 	ixz="1.8E-05"
+	        							iyy="0.01067"	iyz="-0.00075"
+	        											izz="0.02893" />
+	    </inertial>
+	    <visual>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	        <geometry>
+	        	<mesh filename="package://popi_description/meshes/EpauleARD.STL" />
+	      	</geometry>
+	      	<material name="orange"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	        <geometry>
+	        	<mesh filename="package://popi_description/meshes/EpauleARD.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+	<link name="HJambeARD">
+	    <inertial>
+	     	<origin xyz="-0.11331 0.00512 0.01743"
+	        		rpy="0 0 0" /> 
+	      	<mass value="4.895" />
+	      	<inertia 	ixx="0.00899" 	ixy="0.00215" 	ixz="0.00647"
+	        							iyy="0.0605"  	iyz="-0.00043"
+	        											izz="0.05703" />
+	    </inertial>
+	    <visual>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/HJambeARD.STL" />
+	      	</geometry>
+	      	<material name="darkgrey"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/HJambeARD.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+  	<link name="BJambeARD">
+	    <inertial>
+	      	<origin xyz="0.11761 0 -0.012387"
+	        		rpy="0 0 0" />
+	      	<mass value="0.49" />
+	      	<inertia 	ixx="0.000103" 	ixy="0.000000" 	ixz="-0.00019" 	
+      									iyy="0.006798" 	iyz="0"
+        												izz="0.006776" />
+	    </inertial>
+	    <visual>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry> 
+	        	<mesh filename="package://popi_description/meshes/BJambeARD.STL" />
+	      	</geometry>
+	      	<material name="white"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry> 
+	        	<mesh filename="package://popi_description/meshes/BJambeARD.STL" />
+	      	</geometry>
+	    </collision>
+  	</link>	
+
+	<link name="PiedARD">
+	    <inertial>
+	      	<origin xyz="0.0005 -3.0378E-12 -8.2379E-14"
+	        		rpy="0 0 0" />
+	      	<mass value="2.5E-05" />
+	    	<inertia ixx="1.0417E-10"	ixy="-3.7731E-26"	ixz="-1.6964E-25"
+	        							iyy="5.4167E-11" 	iyz="1.0234E-25"
+	        												izz="5.4167E-11" />
+	    </inertial>
+	    <visual>
+	    	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/PiedARD.STL" />
+	      	</geometry>
+	      	<material name="white"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/PiedARD.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+<!--**************************************************************************************-->
+<!--******************************** JAMBE ARRIERE-GAUCHE ********************************-->
+<!--**************************************************************************************-->
+  	
+  	<link name="EpauleARG">
+	    <inertial>
+	      	<origin xyz="0.00137 -0.04355 -0.00354"
+	        		rpy="0 0 0" />
+	      	<mass value="6.775" />
+	      	<inertia 	ixx="0.02864" 	ixy="6E-05" 	ixz="0.00018"
+	        							iyy="0.01067" 	iyz="0.00075"
+	        											izz="0.02893" />
+	    </inertial>
+    	<visual>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry> 
+        		<mesh filename="package://popi_description/meshes/EpauleARG.STL" />
+      		</geometry>
+      		<material name="orange"/>
+    	</visual>
+    	<collision>
+      		<origin xyz="0 0 0"
+        			rpy="0 0 0" />
+      		<geometry> 
+        		<mesh filename="package://popi_description/meshes/EpauleARG.STL" />
+      		</geometry>
+    	</collision>
+  	</link>
+
+	<link name="HJambeARG">
+	    <inertial>
+	      	<origin xyz="-0.11389 -0.00555 0.00901"
+	        		rpy="0 0 0" />
+	      	<mass value="4.955" />
+	      	<inertia 	ixx="0.01032" 	ixy="-0.00226"	ixz="0.01011"
+	        							iyy="0.06056"  	iyz="0.00025"
+	        											izz="0.05596" />
+	    </inertial>
+	    <visual> 
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	     	<geometry>
+	        	<mesh filename="package://popi_description/meshes/HJambeARG.STL" />
+	      	</geometry>
+	      	<material name="darkgrey"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	     	<geometry>
+	        	<mesh filename="package://popi_description/meshes/HJambeARG.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+	<link name="BJambeARG">
+	    <inertial>
+	      	<origin xyz="0.11761 0.0 -0.012387"
+	        		rpy="0 0 0" />
+	      	<mass value="0.49" />
+	      	<inertia ixx="0.000103" 	ixy="0.000000" 	ixz="-0.00019" 	
+      									iyy="0.006798" 	iyz="0"
+        												izz="0.006776" />
+	    </inertial>
+	    <visual>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/BJambeARG.STL" />
+	      	</geometry>
+	      	<material name="white"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/BJambeARG.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+	<link name="PiedARG">
+	    <inertial>
+	      	<origin xyz="0.0005 -3.5073E-06 5.5511E-14"
+	        		rpy="0 0 0" />
+	      	<mass value="2.5E-05" />
+	      	<inertia ixx="1.0417E-10" 	ixy="6.1999E-25" 	ixz="-9.8551E-26"
+	        							iyy="5.4167E-11" 	iyz="-1.1985E-25"
+	        												izz="5.4167E-11" />
+	    </inertial>
+	    <visual>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/PiedARG.STL" />
+	      	</geometry>
+	      	<material name="white"/>
+	    </visual>
+	    <collision>
+	      	<origin xyz="0 0 0"
+	        		rpy="0 0 0" />
+	      	<geometry>
+	        	<mesh filename="package://popi_description/meshes/PiedARG.STL" />
+	      	</geometry>
+	    </collision>
+	</link>
+
+<!--**************************************************************************************-->
+<!--********************************* JOINTS AVANT-DROITS ********************************-->
+<!--**************************************************************************************-->
+
+  	<joint name="aileAVD" type="revolute">
+    	<origin xyz="0.3305 -0.175 -0.051"
+      			rpy="0 0 0" />
+    	<parent link="Bati" />
+    	<child  link="EpauleAVD" />
+    	<axis   xyz="-1 0 0" />
+    	<limit  lower="-0.4"
+      			upper="0.4"
+      			effort="120"
+      			velocity="3.14159" />
+	</joint>
+
+	<joint name="epauleAVD" type="revolute">
+	    <origin xyz="0 -0.1077 0"
+	      		rpy="0 0 0" />
+	    <parent link="EpauleAVD" />
+	    <child  link="HJambeAVD" />
+	    <axis   xyz="0 -1 0" />
+	    <limit  lower="0"
+	      		upper="3.14159"
+	      		effort="122"
+	      		velocity="2.87" />
+  	</joint>
+
+  	<joint name="coudeAVD" type="revolute">
+	    <origin xyz="-0.35192 0 -0.041509"
+	      		rpy="0 0 0" />
+	    <parent link="HJambeAVD" />
+	    <child  link="BJambeAVD" />
+	    <axis   xyz="0 1 0" />
+	    <limit  lower="0.2"
+	      		upper="2.2"
+	      		effort="1000"
+	      		velocity="3.14159" />
+  	</joint>
+
+  	<joint name="piedAVD" type="fixed">
+	    <origin xyz="0.29604 0 -0.015"
+	      		rpy="0 0 0" />
+	    <parent link="BJambeAVD" />
+	    <child 	link="PiedAVD" />
+	    <axis 	xyz="0 0 0" />
+  	</joint>
+
+<!--**************************************************************************************-->
+<!--******************************** JOINTS AVANT-GAUCHES ********************************-->
+<!--**************************************************************************************-->
+
+	<joint name="aileAVG" type="revolute">
+	    <origin xyz="0.3305 0.175 -0.051"
+	      		rpy="0 0 0" />
+	    <parent link="Bati" />
+	    <child  link="EpauleAVG" />
+	    <axis   xyz="1 0 0" />
+	    <limit  lower="-0.4"
+	      		upper="0.4"
+	      		effort="120"
+	      		velocity="3.14159" />
+	</joint>
+
+	<joint name="epauleAVG" type="revolute">
+	    <origin xyz="0 0.1077 0"
+	      		rpy="0 0 0" />
+	    <parent link="EpauleAVG" />
+	    <child  link="HJambeAVG" />
+	    <axis   xyz="0 -1 0" />
+	    <limit  lower="0"
+	      		upper="3.14159"
+	      		effort="122"
+	      		velocity="2.87" />
+  	</joint>
+
+  	<joint name="coudeAVG" type="revolute">
+	    <origin xyz="-0.35192 0 -0.041509"
+	      		rpy="0 0 0" />
+	    <parent link="HJambeAVG" />
+	    <child  link="BJambeAVG" />
+	    <axis   xyz="0 1 0" />
+	    <limit  lower="0.2"
+	      		upper="2.2"
+	      		effort="1000"
+	      		velocity="3.14159" />
+  	</joint>
+
+  	<joint name="piedAVG" type="fixed">
+    	<origin xyz="0.29604 0 -0.015"
+      			rpy="0 0 0" />
+	    <parent link="BJambeAVG" />
+	    <child 	link="PiedAVG" />
+	    <axis 	xyz="0 0 0" />
+  	</joint>
+
+<!--**************************************************************************************-->
+<!--******************************* JOINTS ARRIERE-DROITS ********************************-->
+<!--**************************************************************************************-->
+
+	<joint  name="aileARD"  type="revolute">
+	    <origin xyz="-0.3305 -0.175 -0.051"
+	      		rpy="0 0 0" />
+	    <parent link="Bati" />
+	    <child  link="EpauleARD" />
+	    <axis   xyz="-1 0 0" />
+	    <limit  lower="-0.4"
+	      		upper="0.4"
+	      		effort="120"
+	      		velocity="3.14159" />
+	</joint>
+	<joint name="epauleARD" type="revolute">
+	    <origin xyz="0 -0.1077 0"
+	      		rpy="0 0 0" />
+	    <parent link="EpauleARD" />
+	    <child  link="HJambeARD" />
+	    <axis   xyz="0 -1 0" />
+	    <limit  lower="0"
+	      		upper="3.14159"
+	      		effort="122"
+	      		velocity="2.87" />
+	</joint>
+	<joint name="coudeARD" type="revolute">
+	    <origin xyz="-0.35192 0 -0.041509"
+	      		rpy="0 0 0" />
+	    <parent link="HJambeARD" />
+	    <child  link="BJambeARD" />
+	    <axis   xyz="0 1 0" />
+	    <limit  lower="0.2"
+	      		upper="2.2"
+	      		effort="1000"
+	      		velocity="3.14159" />
+	</joint>
+
+	<joint name="piedARD" type="fixed">
+	    <origin xyz="0.29604 0 -0.015"
+	      		rpy="0 0 0" />
+	    <parent link="BJambeARD" />
+	    <child 	link="PiedARD" />
+	    <axis 	xyz="0 0 0" />
+  	</joint>
+
+<!--**************************************************************************************-->
+<!--****************************** JOINTS ARRIERE-GAUCHES ********************************-->
+<!--**************************************************************************************-->
+
+	<joint name="aileARG" type="revolute">
+    	<origin xyz="-0.3305 0.175 -0.051"
+      			rpy="0 0 0" />
+    	<parent link="Bati" />
+	    <child  link="EpauleARG" />
+	    <axis   xyz="1 0 0" />
+	    <limit  lower="-0.4"
+	      		upper="0.4"
+	      		effort="120"
+	      		velocity="3.14159" />
+  	</joint>
+  	<joint name="epauleARG" type="revolute">
+	    <origin xyz="0 0.1077 0"
+	      		rpy="0 0 0" />
+	    <parent link="EpauleARG" />
+	    <child  link="HJambeARG" />
+	    <axis   xyz="0 -1 0" />
+	    <limit  lower="0"
+	      		upper="3.14159"
+	      		effort="122"
+	      		velocity="2.87" />
+  	</joint>
+	<joint name="coudeARG" type="revolute">
+		<origin xyz="-0.35192 0 -0.041509"
+		  		rpy="0 0 0" />
+		<parent link="HJambeARG" />
+		<child  link="BJambeARG" />
+		<axis   xyz="0 1 0" />
+		<limit  lower="0.2"
+		   		upper="2.2"
+		   		effort="1000"
+		   		velocity="3.14159" />
+	</joint>
+
+	<joint name="piedARG" type="fixed">
+	    <origin xyz="0.29604 0 -0.015"
+	      		rpy="0 0 0" />
+	    <parent link="BJambeARG" />
+	    <child 	link="PiedARG" />
+	    <axis 	xyz="0 0 0" />
+	</joint>
+
+<!--**************************************************************************************-->
+<!--********************************** PLUGINS GAZEBO ************************************-->
+<!--**************************************************************************************-->	
+  	<gazebo>
+    	<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      		<robotNamespace>/popi</robotNamespace>
+      		<!--<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>-->
+    	</plugin>
+  	</gazebo>
+
+<!--**************************************************************************************-->
+<!--***************************** TRANSMISSIONS AVANT-DROITES ****************************-->
+<!--**************************************************************************************-->
+
+  	<transmission name="aileAVD_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="aileAVD">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="aileAVD_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="epauleAVD_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="epauleAVD">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="epauleAVD_moteur">
+      		<mechanicalReduction>100</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="coudeAVD_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="coudeAVD">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="coudeAVD_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+<!--**************************************************************************************-->
+<!--***************************** TRANSMISSIONS AVANT-GAUCHES ****************************-->
+<!--**************************************************************************************-->
+
+    <transmission name="aileAVG_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="aileAVG">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="aileAVG_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="epauleAVG_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="epauleAVG">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="epauleAVG_moteur">
+      		<mechanicalReduction>100</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="coudeAVG_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="coudeAVG">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="coudeAVG_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+<!--**************************************************************************************-->
+<!--**************************** TRANSMISSIONS ARRIERE-DROITES ***************************-->
+<!--**************************************************************************************-->
+
+    <transmission name="aileARD_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="aileARD">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="aileARD_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="epauleARD_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="epauleARD">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="epauleARD_moteur">
+      		<mechanicalReduction>100</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="coudeARD_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="coudeARD">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="coudeARD_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+<!--**************************************************************************************-->
+<!--**************************** TRANSMISSIONS ARRIERE-GAUCHES ***************************-->
+<!--**************************************************************************************-->
+
+    <transmission name="aileARG_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="aileARG">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="aileARG_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="epauleARG_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="epauleARG">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="epauleARG_moteur">
+      		<mechanicalReduction>100</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+  	<transmission name="coudeARG_tran">
+    	<type>transmission_interface/SimpleTransmission</type>
+    	<joint name="coudeARG">
+      		<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    	</joint>
+    	<actuator name="coudeARG_moteur">
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+  	</transmission>
+
+</robot>

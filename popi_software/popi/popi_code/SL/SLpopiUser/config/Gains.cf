@@ -1,0 +1,12 @@
+rf_haa_joint   600.0    10.0    0.0   1000
+rf_hfe_joint   600.0    10.0    0.0   1000
+rf_kfe_joint   600.0    10.0    0.0   1000
+lf_haa_joint   600.0    10.0    0.0   1000
+lf_hfe_joint   600.0    10.0    0.0   1000
+lf_kfe_joint   600.0    10.0    0.0   1000
+rh_haa_joint   600.0    10.0    0.0   1000
+rh_hfe_joint   600.0    10.0    0.0   1000
+rh_kfe_joint   600.0    10.0    0.0   1000
+lh_haa_joint   600.0    10.0    0.0   1000
+lh_hfe_joint   600.0    10.0    0.0   1000
+lh_kfe_joint   600.0    10.0    0.0   1000

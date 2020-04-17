@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <!-- We use a custom world for Popi ((so that the camera angle is launched correctly)) -->
+
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+	<physics name="ode_damping" type="ode" default="true">
+      <real_time_update_rate>1500</real_time_update_rate>
+      <ode>
+        <solver>
+          <iters>100</iters>
+        </solver>
+	<constraints>
+		<contact_max_correcting_vel>1</contact_max_correcting_vel>
+		<contact_surface_layer>0.001</contact_surface_layer>
+		<cfm>1e-6</cfm>
+		<erp>0.2</erp>
+	</constraints>
+      </ode>
+    </physics>
+
+    <physics name="ode_nodamping" type="ode">
+      <ode>
+        <solver>
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+
+  </world>
+</sdf>

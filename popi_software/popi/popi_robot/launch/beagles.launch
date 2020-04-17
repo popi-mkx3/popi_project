@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+
+  <machine
+  name="beagle-droite"
+  user="debian"
+  password="temppwd"
+  address="beagle-droite"
+  env-loader="/home/debian/env-loader-yo.sh"
+  />
+
+  <machine
+  name="beagle-gauche"
+  user="debian"
+  password="temppwd"
+  address="beagle-gauche"
+  env-loader="/home/debian/env-loader-yo.sh"
+  />
+
+  <machine
+  name="popi-raspi"
+  user="ubuntu"
+  password="ubuntu"
+  address="popi-raspi"
+  env-loader="/home/ubuntu/env-loader-yo.sh"
+  />
+
+  
+
+  <group ns="popi">
+    <!-- Retours capteurs -->
+  <node machine="beagle-gauche" name="left_multi_potards_publisher" pkg="capteurs" type="multi_potards_publisher.py" />
+  <node machine="beagle-droite" name="right_multi_potards_publisher" pkg="capteurs" type="multi_potards_publisher.py" />
+      <!-- Retours capteurs -->
+  <node machine="beagle-gauche" name="left_multi_roues_codeuses_publisher" pkg="capteurs" type="multi_roues_codeuses_publisher.py" />
+  <node machine="beagle-droite" name="right_multi_roues_codeuses_publisher" pkg="capteurs" type="multi_roues_codeuses_publisher.py" />
+  <!-- PWM -->
+  <node machine="beagle-gauche" name="left_multi_motors" pkg="actionneurs" type="multi_motors.py" />
+  <node machine="beagle-droite" name="right_multi_motors" pkg="actionneurs" type="multi_motors.py" />
+
+  </group>
+
+</launch>

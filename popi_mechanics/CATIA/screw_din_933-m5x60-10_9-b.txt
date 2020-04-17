@@ -1,0 +1,16 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"DIN 933 - d M5 x l 60 - 10.9";"";
+"MATERIAL";"Steel";"";
+"TraceParts.PartStatus";"Published";"";
+"DESIGN";"Hexagon head screw DIN 933 - M5 x 60 - 10.9";"";
+"TraceParts.PartNumber";"10-26032013-076731";"";
+"TraceParts.PartLanguage";"en";"";
+"STANDARD";"DIN 933";"";
+"TraceParts.InstanceId";"10-26032013-076731F4EGYIZ331XBDC6DM9F3VKAAJ";"";
+"TraceParts.PartTitle";"M 1.6 to M 52 hexagon head screws threaded up to the head";"";
+"NOTE";"Class : 10.9; Grade : B";"";
+"TraceParts.PartVersion";"1.3.5";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"TraceParts.ClassPath";"DIN:10-26032013-076731";"";
+"TraceParts.PartStandardAcronym";"DIN";"";

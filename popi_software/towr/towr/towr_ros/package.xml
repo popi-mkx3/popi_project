@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>towr_ros</name>
+  <version>1.4.1</version>
+  <description>
+    A ROS dependent wrapper for
+    <a href="http://wiki.ros.org/towr">towr</a>.
+    Adds a keyboard user interface to set different goal states, motions
+    and robots and visualizes the produced motions plan in rviz using
+    <a href="http://wiki.ros.org/xpp">xpp</a>.
+  </description>
+
+  <author>Alexander W. Winkler</author>
+  <maintainer email="alexander.w.winkler@gmail.com">Alexander W. Winkler</maintainer>
+  <license>BSD</license>
+  
+  <url type="website">http://github.com/ethz-adrl/towr</url>
+  <url type="bugtracker">http://github.com/ethz-adrl/towr/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+    
+  <depend>libncurses-dev</depend>
+  
+  <depend>message_runtime</depend>
+  <depend>message_generation</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>rosbag</depend>
+  <depend>xpp_states</depend>
+  <depend>xpp_msgs</depend>
+  <depend>towr</depend>
+  <depend>xpp_popi</depend>
+  <exec_depend>xterm</exec_depend>
+  <exec_depend>xpp_hyq</exec_depend>
+  
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>rqt_bag</exec_depend>
+
+  <!-- TEST -->
+  <!-- <build_depend>message_generation</build_depend> -->
+  <!-- <exec_depend>message_runtime</exec_depend> -->
+</package>

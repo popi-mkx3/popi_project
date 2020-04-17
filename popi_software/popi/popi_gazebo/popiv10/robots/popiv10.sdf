@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.5">
+  <model name="popiv10">
+    <pose>0 0 0.55 0 0 0</pose>
+    <plugin name="clock" filename="libgz_clock.so">
+      <topic>/gazebo/frc/time</topic>
+    </plugin>
+    <link name="Bati">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>1</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>20</mass>
+        <pose>9.09532074717387E-06 -0.000497553877309163 -0.0275069463969434 0 0 0</pose>
+        <inertia>
+          <ixx>0.247668537907728</ixx>
+          <ixy>9.52719505934244E-09</ixy>
+          <ixz>9.14606177069775E-06</ixz>
+          <iyy>0.721725932996695</iyy>
+          <iyz>1.25675089666419E-05</iyz>
+          <izz>0.909808046486756</izz>
+        </inertia>
+      </inertial>
+      <collision name="Bati_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/Bati_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="Bati_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.501960784313725 0.501960784313725 0.501960784313725 1</ambient>
+          <diffuse>0.501960784313725 0.501960784313725 0.501960784313725 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/Bati.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="AileAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.263425754201004 0.114444721397644 -0.0432315685423388 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0646786387611762</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>2.25767017294111E-05</ixx>
+          <ixy>1.29438836587314E-10</ixy>
+          <ixz>1.39844874559254E-07</ixz>
+          <iyy>1.8492229405514E-05</iyy>
+          <iyz>8.35522267007479E-09</iyz>
+          <izz>9.46527628055262E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="AileAvG_collision">
+        <pose>-0.263425754201004 -0.114444721397644 0.0432315685423388 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="AileAvG_visual">
+        <pose>-0.263425754201004 -0.114444721397644 0.0432315685423388 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-AileAvG" type="revolute">
+      <parent>Bati</parent>
+      <child>AileAvG</child>
+      <pose>7.42457990038914E-05 -6.26432165022617E-06 -0.00676795740041729 0 6.28318530717959 4.72089941321358</pose>
+      <axis>
+        <xyz>0.00851033009774649 0.999963786485104 2.17326029417106E-17</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.383523383846024</upper>
+          <lower>-0.383523383846026</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="EpauleAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>6.5</mass>
+        <pose>0.330160459717672 0.113505740104002 -0.0631160868327549 0 0 0</pose>
+        <inertia>
+          <ixx>0.00781693</ixx>
+          <ixy>3.684E-05</ixy>
+          <ixz>1.995E-05</ixz>
+          <iyy>0.00375687</iyy>
+          <iyz>0.00015667</iyz>
+          <izz>0.00774045</izz>
+        </inertia>
+      </inertial>
+      <collision name="EpauleAvG_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="EpauleAvG_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-EpauleAvG" type="revolute">
+      <parent>Bati</parent>
+      <child>EpauleAvG</child>
+      <pose>0.330499999999994 0.174462531062964 -0.050999999880791 0 0 3.14159265358979</pose>
+      <axis>
+        <xyz>-1 -1.22460635382238E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="BieletteAileAvG-EpauleAvG" type="revolute">
+      <parent>BieletteAileAvG</parent>
+      <child>EpauleAvG</child>
+      <pose>0.263499999999995 0.174462531062966 -0.0239999998807918 0 2.16840434497101E-15 3.14159265358979</pose>
+      <axis>
+        <xyz>-1 -1.22460635382238E-16 -4.33680868994201E-15</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="HJambeAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>4.1</mass>
+        <pose>0.245410748798941 0.277164493537131 -0.115188374157169 0 0 0</pose>
+        <inertia>
+          <ixx>0.0220357818968176</ixx>
+          <ixy>0.000712337452440022</ixy>
+          <ixz>0.0111390372482744</ixz>
+          <iyy>0.0302085713461647</iyy>
+          <iyz>0.000476765402940527</iyz>
+          <izz>0.0113202097886378</izz>
+        </inertia>
+      </inertial>
+      <collision name="HJambeAvG_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="HJambeAvG_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>1 0 1 1</ambient>
+          <diffuse>1 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="EpauleAvG-HJambeAvG" type="revolute">
+      <parent>EpauleAvG</parent>
+      <child>HJambeAvG</child>
+      <pose>0.330500000002319 0.282244545292279 -0.0509999998820486 0 6.28318530717959 4.71238898038469</pose>
+      <axis>
+        <xyz>1 -1.87014163338584E-16 -3.95422248090819E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>1</upper>
+          <lower>-1.5</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BJambeAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.216447376348876 0.281994545292388 -0.417386841132585 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.469736249389513</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00253610875647126</ixx>
+          <ixy>7.37151137908166E-12</ixy>
+          <ixz>0.00337121059012424</ixz>
+          <iyy>0.00714961627655026</iyy>
+          <iyz>7.23513978500038E-13</iyz>
+          <izz>0.0046504334596967</izz>
+        </inertia>
+      </inertial>
+      <collision name="BJambeAvG_collision">
+        <pose>-0.216447376348876 -0.281994545292389 0.417386841132585 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BJambeAvG_visual">
+        <pose>-0.216447376348876 -0.281994545292389 0.417386841132585 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="HJambeAvG-BJambeAvG" type="revolute">
+      <parent>HJambeAvG</parent>
+      <child>BJambeAvG</child>
+      <pose>-0.0896042233885925 -1.09634523681734E-13 0.0763905558995271 0 0 4.71238898038469</pose>
+      <axis>
+        <xyz>1 2.22044604925031E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="BieletteAvG-BJambeAvG" type="revolute">
+      <parent>BieletteAvG</parent>
+      <child>BJambeAvG</child>
+      <pose>-0.143543143871407 -1.09745545984197E-13 0.112661658131862 0 0 4.71238898038469</pose>
+      <axis>
+        <xyz>1 2.22044604925031E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="TigeVerinAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.176757322686291 0.282244545212022 -0.210137911755464 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.819350645424425</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00140421484692396</ixx>
+          <ixy>6.99481704008864E-12</ixy>
+          <ixz>0.00128823449592725</ixz>
+          <iyy>0.00264825158697256</iyy>
+          <iyz>6.65368592118286E-12</iyz>
+          <izz>0.00131684880190005</izz>
+        </inertia>
+      </inertial>
+      <collision name="TigeVerinAvG_collision">
+        <pose>-0.176757322686291 -0.282244545212022 0.210137911755464 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="TigeVerinAvG_visual">
+        <pose>-0.176757322686291 -0.282244545212022 0.210137911755464 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="HJambeAvG-TigeVerinAvG" type="prismatic">
+      <parent>HJambeAvG</parent>
+      <child>TigeVerinAvG</child>
+      <pose>3.21900006650111E-10 8.02571342717329E-11 -3.11169645605958E-10 0 5.48083901776243 1.20020565550599E-15</pose>
+      <axis>
+        <xyz>1 2.8765475674835E-17 3.33066907387547E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.0477695258948646</upper>
+          <lower>-0.104230474105135</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.0896638423431795 0.281994545292381 -0.293811179283136 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0323957439627731</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>4.72536618155967E-06</ixx>
+          <ixy>1.41108078436688E-20</ixy>
+          <ixz>3.66200752356185E-06</ixz>
+          <iyy>1.23438596351373E-05</iyy>
+          <iyz>6.75738668758352E-21</iyz>
+          <izz>7.96404790009363E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteAvG_collision">
+        <pose>-0.0896638423431794 -0.281994545292381 0.293811179283136 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteAvG_visual">
+        <pose>-0.0896638423431794 -0.281994545292381 0.293811179283136 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="TigeVerinAvG-BieletteAvG" type="revolute">
+      <parent>TigeVerinAvG</parent>
+      <child>BieletteAvG</child>
+      <pose>0.0167596098657077 -1.02362562870439E-13 0.0109140037177449 0 6.28318530717959 4.71238898038469</pose>
+      <axis>
+        <xyz>1 1.15388342592191E-15 -2.96485229448768E-17</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="AileAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.263425754201022 -0.115519659271709 -0.0432315685423388 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0646786387611766</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>2.25767017294112E-05</ixx>
+          <ixy>1.29438836609017E-10</ixy>
+          <ixz>1.39844874559271E-07</ixz>
+          <iyy>1.84922294055141E-05</iyy>
+          <iyz>8.35522266994819E-09</iyz>
+          <izz>9.4652762805527E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="AileAvD_collision">
+        <pose>-0.263425754201022 0.115519659271709 0.0432315685423388 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="AileAvD_visual">
+        <pose>-0.263425754201022 0.115519659271709 0.0432315685423388 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-AileAvD" type="revolute">
+      <parent>Bati</parent>
+      <child>AileAvD</child>
+      <pose>7.4246443611814E-05 6.26437808091962E-06 -0.00676795668422939 0 6.28318530717958 3.14159265358979</pose>
+      <axis>
+        <xyz>1 2.15451954526929E-16 -4.00572262214392E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.383523383846024</upper>
+          <lower>-0.383523383846025</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="EpauleAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>6.5</mass>
+        <pose>0.329651979210791 -0.119157625267659 -0.0620302195490913 0 0 0</pose>
+        <inertia>
+          <ixx>0.00851805</ixx>
+          <ixy>9.2E-05</ixy>
+          <ixz>5.21E-05</ixz>
+          <iyy>0.0042674</iyy>
+          <iyz>0.00027441</iyz>
+          <izz>0.00855281</izz>
+        </inertia>
+      </inertial>
+      <collision name="EpauleAvD_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="EpauleAvD_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-EpauleAvD" type="revolute">
+      <parent>Bati</parent>
+      <child>EpauleAvD</child>
+      <pose>0.330500000000001 -0.175537468937039 -0.050999999880792 0 0 3.14159265358979</pose>
+      <axis>
+        <xyz>1 1.22460635382238E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="BieletteAileAvD-EpauleAvD" type="revolute">
+      <parent>BieletteAileAvD</parent>
+      <child>EpauleAvD</child>
+      <pose>0.263499999984395 -0.17553746869356 -0.0240000001962606 0 6.28318530717959 3.14159265358979</pose>
+      <axis>
+        <xyz>1 1.22460635382238E-16 7.05008781044128E-17</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="HJambeAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>4.1</mass>
+        <pose>0.253396068518462 -0.272602217530575 -0.110970658809525 0 0 0</pose>
+        <inertia>
+          <ixx>0.02370185</ixx>
+          <ixy>0.00150343</ixy>
+          <ixz>0.01224045</ixz>
+          <iyy>0.032955085283372</iyy>
+          <iyz>0.00097724</iyz>
+          <izz>0.01358912</izz>
+        </inertia>
+      </inertial>
+      <collision name="HJambeAvD_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="HJambeAvD_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>1 0 1 1</ambient>
+          <diffuse>1 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="EpauleAvD-HJambeAvD" type="revolute">
+      <parent>EpauleAvD</parent>
+      <child>HJambeAvD</child>
+      <pose>0.330500000000002 -0.28315545470771 -0.0509999998807942 0 1.197854970235E-16 4.71238898038469</pose>
+      <axis>
+        <xyz>1 2.22044604925031E-16 -2.46519032881566E-32</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>1</upper>
+          <lower>-1.5</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="TigeVerinAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.17649914990041 -0.283155454788444 -0.209911199630747 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.819350645411138</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00140021885085488</ixx>
+          <ixy>7.02243398024131E-12</ixy>
+          <ixz>0.00128836379286627</ixz>
+          <iyy>0.00264825158688577</iyy>
+          <iyz>6.66056283179175E-12</iyz>
+          <izz>0.00132084479788077</izz>
+        </inertia>
+      </inertial>
+      <collision name="TigeVerinAvD_collision">
+        <pose>-0.17649914990041 0.283155454788444 0.209911199630747 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="TigeVerinAvD_visual">
+        <pose>-0.17649914990041 0.283155454788444 0.209911199630747 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="HJambeAvD-TigeVerinAvD" type="prismatic">
+      <parent>HJambeAvD</parent>
+      <child>TigeVerinAvD</child>
+      <pose>3.21619564314091E-10 8.07224287413533E-11 -3.11864811752827E-10 0 5.48238989700715 6.28318530717958</pose>
+      <axis>
+        <xyz>1 1.07364054814694E-16 -1.66533453693773E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.0477861233637279</upper>
+          <lower>-0.104213876636272</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.0892768695676518 -0.283405454707717 -0.29345062373754 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0323957439627731</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>4.71459459126065E-06</ixx>
+          <ixy>7.24180321541611E-21</ixy>
+          <ixz>3.65722535850406E-06</ixz>
+          <iyy>1.23438596351374E-05</iyy>
+          <iyz>3.09638023000429E-21</iyz>
+          <izz>7.9748194903927E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteAvD_collision">
+        <pose>-0.0892768695676521 0.283405454707717 0.29345062373754 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteAvD_visual">
+        <pose>-0.0892768695676521 0.283405454707717 0.29345062373754 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="TigeVerinAvD-BieletteAvD" type="revolute">
+      <parent>TigeVerinAvD</parent>
+      <child>BieletteAvD</child>
+      <pose>0.0167756536522129 1.60982338570648E-14 0.0108893270931236 0 6.28318530717959 4.71238898038469</pose>
+      <axis>
+        <xyz>1 1.10410726205712E-15 -4.88095103277837E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BJambeAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.215899984472949 -0.283405454707723 -0.417185316449007 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.469736249392124</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00254474555040036</ixx>
+          <ixy>7.37239303461882E-12</ixy>
+          <ixz>0.00337390682087246</ixz>
+          <iyy>0.00714961627663037</iyy>
+          <iyz>7.14103447451869E-13</iyz>
+          <izz>0.00464179666584774</izz>
+        </inertia>
+      </inertial>
+      <collision name="BJambeAvD_collision">
+        <pose>-0.21589998447295 0.283405454707723 0.417185316449007 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BJambeAvD_visual">
+        <pose>-0.21589998447295 0.283405454707723 0.417185316449007 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="BieletteAvD-BJambeAvD" type="revolute">
+      <parent>BieletteAvD</parent>
+      <child>BJambeAvD</child>
+      <pose>-0.143398768557513 2.19269047363468E-14 0.112845365618351 0 6.28318530717958 4.71238898038469</pose>
+      <axis>
+        <xyz>1 -2.36657397882327E-15 -6.04756975549474E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="HJambeAvD-BJambeAvD" type="revolute">
+      <parent>HJambeAvD</parent>
+      <child>BJambeAvD</child>
+      <pose>-0.0895063356320149 2.27595720048157E-15 0.0765052270196603 0 0 4.71238898038469</pose>
+      <axis>
+        <xyz>1 -1.2264489552059E-15 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="AileArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.263425754200995 0.114444721397642 -0.0432315685423508 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0646786387611763</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>2.25767017294111E-05</ixx>
+          <ixy>1.29438836601784E-10</ixy>
+          <ixz>1.39844874559266E-07</ixz>
+          <iyy>1.8492229405514E-05</iyy>
+          <iyz>8.35522267005522E-09</iyz>
+          <izz>9.46527628055264E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="AileArG_collision">
+        <pose>0.263425754200995 -0.114444721397642 0.0432315685423508 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="AileArG_visual">
+        <pose>0.263425754200995 -0.114444721397642 0.0432315685423508 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-AileArG" type="revolute">
+      <parent>Bati</parent>
+      <child>AileArG</child>
+      <pose>-7.42457990055567E-05 -6.26432164808899E-06 -0.00676795740041408 0 6.28318530717959 4.72089941321358</pose>
+      <axis>
+        <xyz>0.00851033009774649 0.999963786485104 2.17326029417106E-17</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.383523383846024</upper>
+          <lower>-0.383523383846026</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="EpauleArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>6.5</mass>
+        <pose>-0.330160488561749 0.113505740028266 -0.0631160783512883 0 0 0</pose>
+        <inertia>
+          <ixx>0.00781693</ixx>
+          <ixy>3.684E-05</ixy>
+          <ixz>1.995E-05</ixz>
+          <iyy>0.00375687</iyy>
+          <iyz>0.00015667</iyz>
+          <izz>0.00774044970464082</izz>
+        </inertia>
+      </inertial>
+      <collision name="EpauleArG_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="EpauleArG_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-EpauleArG" type="revolute">
+      <parent>Bati</parent>
+      <child>EpauleArG</child>
+      <pose>-0.330500000000007 0.174462531062964 -0.0509999998807889 0 0 3.14159265358979</pose>
+      <axis>
+        <xyz>-1 -1.22460635382238E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="BieletteAileArG-EpauleArG" type="revolute">
+      <parent>BieletteAileArG</parent>
+      <child>EpauleArG</child>
+      <pose>-0.263500003637691 0.174462534898399 -0.0240000001215705 0 0 0</pose>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="HJambeArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>4.1</mass>
+        <pose>-0.41558925113957 0.277164493513262 -0.11518837417974 0 0 0</pose>
+        <inertia>
+          <ixx>0.0220357818731865</ixx>
+          <ixy>0.000712337452382621</ixy>
+          <ixz>0.0111390372464694</ixz>
+          <iyy>0.0302085713135378</iyy>
+          <iyz>0.00047676540853857</iyz>
+          <izz>0.0113202097802231</izz>
+        </inertia>
+      </inertial>
+      <collision name="HJambeArG_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="HJambeArG_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>1 0 1 1</ambient>
+          <diffuse>1 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="EpauleArG-HJambeArG" type="revolute">
+      <parent>EpauleArG</parent>
+      <child>HJambeArG</child>
+      <pose>-0.330500000049006 0.282244545292279 -0.050999999912882 0 5.16374209661646E-16 4.71238898038469</pose>
+      <axis>
+        <xyz>1 2.88064888632223E-15 -9.86076131526265E-32</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>1</upper>
+          <lower>-1.5</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="TigeVerinArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.484242677313733 0.282244545211858 -0.210137911755469 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.819350645424423</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00140421484692373</ixx>
+          <ixy>6.99481620954319E-12</ixy>
+          <ixz>0.00128823449592725</ixz>
+          <iyy>0.00264825158697254</iyy>
+          <iyz>6.65368506438056E-12</iyz>
+          <izz>0.00131684880190026</izz>
+        </inertia>
+      </inertial>
+      <collision name="TigeVerinArG_collision">
+        <pose>0.484242677313733 -0.282244545211857 0.210137911755469 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="TigeVerinArG_visual">
+        <pose>0.484242677313733 -0.282244545211857 0.210137911755469 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="HJambeArG-TigeVerinArG" type="prismatic">
+      <parent>HJambeArG</parent>
+      <child>TigeVerinArG</child>
+      <pose>3.21896564958735E-10 8.04164512757666E-11 -3.11166259425733E-10 0 5.48083901776252 1.60027420734146E-15</pose>
+      <axis>
+        <xyz>1 3.83539675662543E-17 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.0477695258948678</upper>
+          <lower>-0.104230474105132</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.571336157656853 0.281994545292214 -0.293811179283134 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0323957439627735</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>4.72536618155908E-06</ixx>
+          <ixy>9.38296758738578E-21</ixy>
+          <ixz>3.6620075235616E-06</ixz>
+          <iyy>1.23438596351375E-05</iyy>
+          <iyz>1.19128295963892E-20</iyz>
+          <izz>7.96404790009437E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteArG_collision">
+        <pose>0.571336157656854 -0.281994545292213 0.293811179283134 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteArG_visual">
+        <pose>0.571336157656854 -0.281994545292213 0.293811179283134 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="TigeVerinArG-BieletteArG" type="revolute">
+      <parent>TigeVerinArG</parent>
+      <child>BieletteArG</child>
+      <pose>0.0167596098657244 6.51145803942654E-14 0.0109140037176295 0 0 4.71238898038469</pose>
+      <axis>
+        <xyz>1 1.48016096849335E-15 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BJambeArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.444552623651175 0.281994545292203 -0.417386841132587 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.469736249389513</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00253610875647184</ixx>
+          <ixy>7.37152976745088E-12</ixy>
+          <ixz>0.00337121059012442</ixz>
+          <iyy>0.00714961627655026</iyy>
+          <iyz>7.23500662394798E-13</iyz>
+          <izz>0.00465043345969612</izz>
+        </inertia>
+      </inertial>
+      <collision name="BJambeArG_collision">
+        <pose>0.444552623651175 -0.281994545292203 0.417386841132587 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BJambeArG_visual">
+        <pose>0.444552623651175 -0.281994545292203 0.417386841132587 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="BieletteArG-BJambeArG" type="revolute">
+      <parent>BieletteArG</parent>
+      <child>BJambeArG</child>
+      <pose>-0.143543143871374 7.54951656745106E-14 0.112661658131754 0 0 4.71238898038469</pose>
+      <axis>
+        <xyz>1 2.22044604925031E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="HJambeArG-BJambeArG" type="revolute">
+      <parent>HJambeArG</parent>
+      <child>BJambeArG</child>
+      <pose>-0.0896042233885624 7.55506768257419E-14 0.0763905558994144 0 0 4.71238898038469</pose>
+      <axis>
+        <xyz>1 1.21837218857817E-15 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteAileArG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.263500004147109 0.144462580212292 -0.023949998224632 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0292053931664001</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>1.35676527357592E-05</ixx>
+          <ixy>2.02077411649163E-20</ixy>
+          <ixz>7.59456158233352E-23</ixz>
+          <iyy>1.16291526214607E-06</iyy>
+          <iyz>1.92536666637304E-08</iyz>
+          <izz>1.27162617074808E-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteAileArG_collision">
+        <pose>0.263500004147109 -0.144462580212292 0.023949998224632 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileArG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteAileArG_visual">
+        <pose>0.263500004147109 -0.144462580212292 0.023949998224632 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileArG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="AileArG-BieletteAileArG" type="revolute">
+      <parent>AileArG</parent>
+      <child>BieletteAileArG</child>
+      <pose>5.09417286131963E-10 -0.0299999619614808 5.00095150871641E-05 0 6.28318530717959 1.32581766366803</pose>
+      <axis>
+        <xyz>0.242535625036335 -0.970142500145332 3.03424117003625E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteAileAvD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.26350000000005 -0.145537510613226 -0.0239499941747634 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0292053931664001</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>1.35676527357591E-05</ixx>
+          <ixy>1.86481535007197E-20</ixy>
+          <ixz>7.80084053938387E-22</ixz>
+          <iyy>1.16291526214607E-06</iyy>
+          <iyz>1.9253666663721E-08</iyz>
+          <izz>1.27162617074808E-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteAileAvD_collision">
+        <pose>-0.26350000000005 0.145537510613226 0.0239499941747634 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileAvD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteAileAvD_visual">
+        <pose>-0.26350000000005 0.145537510613226 0.0239499941747634 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileAvD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="AileAvD-BieletteAileAvD" type="revolute">
+      <parent>AileAvD</parent>
+      <child>BieletteAileAvD</child>
+      <pose>-1.56553658925418E-11 0.0299999585672533 5.00053905283515E-05 0 2.41239653012042E-29 3.14159265358979</pose>
+      <axis>
+        <xyz>1 9.27662086551456E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteAileAvG">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>0.263499999999992 0.144462572739172 -0.023949994174783 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0292053931664</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>1.35676527357591E-05</ixx>
+          <ixy>1.10538925080078E-20</ixy>
+          <ixz>1.55969521614184E-21</ixz>
+          <iyy>1.1629152900721E-06</iyy>
+          <iyz>1.9262043482874E-08</iyz>
+          <izz>1.27162616795548E-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteAileAvG_collision">
+        <pose>-0.263499999999992 -0.144462572739172 0.023949994174783 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileAvG_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteAileAvG_visual">
+        <pose>-0.263499999999992 -0.144462572739172 0.023949994174783 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileAvG.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="AileAvG-BieletteAileAvG" type="revolute">
+      <parent>AileAvG</parent>
+      <child>BieletteAileAvG</child>
+      <pose>3.1641356201817E-15 -0.0299999583237945 5.00057060174169E-05 0 2.31296463463574E-15 3.14159265358979</pose>
+      <axis>
+        <xyz>-1 -1.22460635382238E-16 -4.62592926927148E-15</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="AileArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.263425754200967 -0.115519659271723 -0.0432315685423512 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0646786387611762</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>2.25767017294111E-05</ixx>
+          <ixy>1.29438836585633E-10</ixy>
+          <ixz>1.39844874559257E-07</ixz>
+          <iyy>1.8492229405514E-05</iyy>
+          <iyz>8.35522267008636E-09</iyz>
+          <izz>9.46527628055261E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="AileArD_collision">
+        <pose>0.263425754200967 0.115519659271724 0.0432315685423512 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="AileArD_visual">
+        <pose>0.263425754200967 0.115519659271724 0.0432315685423512 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/AileArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Bati-AileArD" type="revolute">
+      <parent>Bati</parent>
+      <child>AileArD</child>
+      <pose>-7.42457990197676E-05 6.26432165057311E-06 -0.00676795740041591 0 6.28318530717958 3.14159265358979</pose>
+      <axis>
+        <xyz>1 2.15451954526929E-16 -4.00572262214392E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.383523383846025</upper>
+          <lower>-0.383523383846025</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteAileArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.263499999999979 -0.145537510613237 -0.0239499941747799 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0292053931664</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>1.35676527357591E-05</ixx>
+          <ixy>1.09474744912887E-20</ixy>
+          <ixz>7.15178893111736E-23</ixz>
+          <iyy>1.1629152900721E-06</iyy>
+          <iyz>1.92620434827043E-08</iyz>
+          <izz>1.27162616795547E-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteAileArD_collision">
+        <pose>0.263499999999979 0.145537510613237 0.0239499941747799 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteAileArD_visual">
+        <pose>0.263499999999979 0.145537510613237 0.0239499941747799 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteAileArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="AileArD-BieletteAileArD" type="revolute">
+      <parent>AileArD</parent>
+      <child>BieletteAileArD</child>
+      <pose>-9.15933995315754E-15 0.0299999583237844 5.00057060105683E-05 0 2.55988745464328E-15 3.14159265358979</pose>
+      <axis>
+        <xyz>1 1.84098647905884E-15 -3.94430452610506E-31</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="EpauleArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>6.5</mass>
+        <pose>-0.330159848516167 -0.114580677981242 -0.0631171647196816 0 0 0</pose>
+        <inertia>
+          <ixx>0.00781689</ixx>
+          <ixy>3.692E-05</ixy>
+          <ixz>1.997E-05</ixz>
+          <iyy>0.00375683</iyy>
+          <iyz>0.00015651</iyz>
+          <izz>0.00774045</izz>
+        </inertia>
+      </inertial>
+      <collision name="EpauleArD_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="EpauleArD_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/EpauleArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="BieletteAileArD-EpauleArD" type="revolute">
+      <parent>BieletteAileArD</parent>
+      <child>EpauleArD</child>
+      <pose>-0.263499999999988 -0.175537468937041 -0.0239999998807947 0 5.26020871420789E-17 3.14159265358979</pose>
+      <axis>
+        <xyz>1 2.64736081820202E-15 6.16297582203915E-33</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="Bati-EpauleArD" type="revolute">
+      <parent>Bati</parent>
+      <child>EpauleArD</child>
+      <pose>-0.3305 -0.175537468937038 -0.0509999998807926 0 0 3.14159265358979</pose>
+      <axis>
+        <xyz>1 1.22460635382238E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="HJambeArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-1.23401267283955E-16 -9.48763512283674E-17 -8.67361737988425E-19 0 0 0</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>4.1</mass>
+        <pose>-0.407511638358407 -0.272602217545919 -0.111089131749184 0 0 0</pose>
+        <inertia>
+          <ixx>0.0237394640391261</ixx>
+          <ixy>0.00150192282908954</ixy>
+          <ixz>0.0122248466559928</ixz>
+          <iyy>0.0329550852647242</iyy>
+          <iyz>0.000979553840195978</iyz>
+          <izz>0.0135515012326105</izz>
+        </inertia>
+      </inertial>
+      <collision name="HJambeArD_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="HJambeArD_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>1 0 1 1</ambient>
+          <diffuse>1 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/HJambeArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="EpauleArD-HJambeArD" type="revolute">
+      <parent>EpauleArD</parent>
+      <child>HJambeArD</child>
+      <pose>-0.330499999999995 -0.283155454707724 -0.0509999998807916 0 9.8222744586508E-16 4.71238898038469</pose>
+      <axis>
+        <xyz>1 9.67353577953872E-16 -1.97215226305253E-31</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>1</upper>
+          <lower>-1.5</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="TigeVerinArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.484244914612034 -0.283155454788639 -0.210135951625397 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.819350645424311</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00140418025391139</ixx>
+          <ixy>6.9950542082713E-12</ixy>
+          <ixz>0.00128823566848382</ixz>
+          <iyy>0.00264825158697181</iyy>
+          <iyz>6.65374396410795E-12</iyz>
+          <izz>0.00131688339491185</izz>
+        </inertia>
+      </inertial>
+      <collision name="TigeVerinArD_collision">
+        <pose>0.484244914612033 0.283155454788639 0.210135951625397 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="TigeVerinArD_visual">
+        <pose>0.484244914612033 0.283155454788639 0.210135951625397 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/TigeVerinArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="HJambeArD-TigeVerinArD" type="prismatic">
+      <parent>HJambeArD</parent>
+      <child>TigeVerinArD</child>
+      <pose>3.22053328449812E-10 8.09173839044774E-11 -3.11326214808005E-10 0 5.48085244427618 6.28318530717959</pose>
+      <axis>
+        <xyz>1 -2.87644768920343E-16 -6.10622663543836E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0.0477696707009455</upper>
+          <lower>-0.104230329299054</lower>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BieletteArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.571339510852381 -0.283405454707613 -0.293808061355116 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.0323957439627733</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>4.72527290272329E-06</ixx>
+          <ixy>1.66220827877629E-22</ixy>
+          <ixz>3.66196627421127E-06</ixz>
+          <iyy>1.23438596351374E-05</iyy>
+          <iyz>2.02992619486094E-22</iyz>
+          <izz>7.96414117893013E-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="BieletteArD_collision">
+        <pose>0.571339510852381 0.283405454707613 0.293808061355116 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BieletteArD_visual">
+        <pose>0.571339510852381 0.283405454707613 0.293808061355116 0 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BieletteArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="TigeVerinArD-BieletteArD" type="revolute">
+      <parent>TigeVerinArD</parent>
+      <child>BieletteArD</child>
+      <pose>0.016759748866053 -1.17883480754699E-12 0.0109137902642125 0 6.28318530717959 4.71238898038469</pose>
+      <axis>
+        <xyz>1 -7.7715611723761E-16 -4.62559089722132E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <link name="BJambeArD">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.444557362711004 -0.283405454708263 -0.417385098371715 0 0 -8.0520144301051E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.469736249389535</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.00253618337680357</ixx>
+          <ixy>7.35942470150473E-12</ixy>
+          <ixz>0.00337123398906564</ixz>
+          <iyy>0.00714961627655834</iyy>
+          <iyz>7.32409144273531E-13</iyz>
+          <izz>0.00465035883937247</izz>
+        </inertia>
+      </inertial>
+      <collision name="BJambeArD_collision">
+        <pose>0.444557362711004 0.283405454708263 0.417385098371715 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeArD_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="BJambeArD_visual">
+        <pose>0.444557362711004 0.283405454708263 0.417385098371715 0 0 0</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://popiv10/meshes/BJambeArD.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="BieletteArD-BJambeArD" type="revolute">
+      <parent>BieletteArD</parent>
+      <child>BJambeArD</child>
+      <pose>-0.14354189700763 -5.28854737780193E-13 0.112663246751263 0 5.42160497950223E-16 4.71238898038469</pose>
+      <axis>
+        <xyz>1 2.1945440205256E-15 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="HJambeArD-BJambeArD" type="revolute">
+      <parent>HJambeArD</parent>
+      <child>BJambeArD</child>
+      <pose>-0.0896033779494106 5.46174216964346E-13 0.0763915475661222 0 6.28318530717959 4.71238898038469</pose>
+      <axis>
+        <xyz>1 -2.6546860725508E-15 1.84394159261228E-16</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <effort>-1</effort>
+        </limit>
+      </axis>
+    </joint>
+    <plugin name="Bati-AileAvG_motor" filename="libgz_dc_motor.so">
+      <joint>Bati-AileAvG</joint>
+      <topic>/gazebo/frc/simulator/pwm/3</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="EpauleAvG-HJambeAvG_motor" filename="libgz_dc_motor.so">
+      <joint>EpauleAvG-HJambeAvG</joint>
+      <topic>/gazebo/frc/simulator/pwm/7</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="HJambeAvG-TigeVerinAvG_piston" filename="libgz_pneumatic_piston.so">
+      <joint>HJambeAvG-TigeVerinAvG</joint>
+      <topic>/gazebo/frc/simulator/pneumatic/3/3</topic>
+      <forward-force>1500</forward-force>
+      <reverse-force>1500</reverse-force>
+    </plugin>
+    <plugin name="Bati-AileAvD_motor" filename="libgz_dc_motor.so">
+      <joint>Bati-AileAvD</joint>
+      <topic>/gazebo/frc/simulator/pwm/4</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="EpauleAvD-HJambeAvD_motor" filename="libgz_dc_motor.so">
+      <joint>EpauleAvD-HJambeAvD</joint>
+      <topic>/gazebo/frc/simulator/pwm/6</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="HJambeAvD-TigeVerinAvD_piston" filename="libgz_pneumatic_piston.so">
+      <joint>HJambeAvD-TigeVerinAvD</joint>
+      <topic>/gazebo/frc/simulator/pneumatic/2/2</topic>
+      <forward-force>1500</forward-force>
+      <reverse-force>1500</reverse-force>
+    </plugin>
+    <plugin name="Bati-AileArG_motor" filename="libgz_dc_motor.so">
+      <joint>Bati-AileArG</joint>
+      <topic>/gazebo/frc/simulator/pwm/1</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="EpauleArG-HJambeArG_motor" filename="libgz_dc_motor.so">
+      <joint>EpauleArG-HJambeArG</joint>
+      <topic>/gazebo/frc/simulator/pwm/5</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="HJambeArG-TigeVerinArG_piston" filename="libgz_pneumatic_piston.so">
+      <joint>HJambeArG-TigeVerinArG</joint>
+      <topic>/gazebo/frc/simulator/pneumatic/1/1</topic>
+      <forward-force>1500</forward-force>
+      <reverse-force>1500</reverse-force>
+    </plugin>
+    <plugin name="Bati-AileArD_motor" filename="libgz_dc_motor.so">
+      <joint>Bati-AileArD</joint>
+      <topic>/gazebo/frc/simulator/pwm/2</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="EpauleArD-HJambeArD_motor" filename="libgz_dc_motor.so">
+      <joint>EpauleArD-HJambeArD</joint>
+      <topic>/gazebo/frc/simulator/pwm/8</topic>
+      <multiplier>1</multiplier>
+    </plugin>
+    <plugin name="HJambeArD-TigeVerinArD_piston" filename="libgz_pneumatic_piston.so">
+      <joint>HJambeArD-TigeVerinArD</joint>
+      <topic>/gazebo/frc/simulator/pneumatic/4/4</topic>
+      <forward-force>1500</forward-force>
+      <reverse-force>1500</reverse-force>
+    </plugin>
+  </model>
+</sdf>

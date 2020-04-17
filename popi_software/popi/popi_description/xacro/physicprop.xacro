@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="popi" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <xacro:include filename="$(find popi_description)/xacro/const.xacro" />
+
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+
+  <material name="grey">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+  <material name="darkgrey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+
+  <material name="orange">
+    <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+  </material>
+
+  <material name="brown">
+    <color rgba="${222/255} ${207/255} ${195/255} 1.0"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+
+
+  <gazebo reference="Bati">
+    <material>Gazebo/Grey</material>
+    <fdir1>${fdir_bati}</fdir1>
+    <self_collide>${selfcollide_bati}</self_collide>
+    <kp>${kp_bati}</kp>
+    <kd>${kd_bati}</kd>
+    <mu1>${mu1_bati}</mu1>
+    <mu2>${mu2_bati}</mu2>
+    <maxVel>${maxVel_bati}</maxVel>
+    <minDepth>${minDepth_bati}</minDepth>
+  </gazebo>
+
+
+
+  <gazebo reference="EpauleAVD">
+    <material>Gazebo/Orange</material>
+    <fdir1>${fdir_epaule}</fdir1>
+    <self_collide>${selfcollide_epaule}</self_collide>
+    <kp>${kp_epaule}</kp>
+    <kd>${kd_epaule}</kd>
+    <mu1>${mu1_epaule}</mu1>
+    <mu2>${mu2_epaule}</mu2>
+    <maxVel>${maxVel_epaule}</maxVel>
+    <minDepth>${minDepth_epaule}</minDepth>
+  </gazebo>
+
+  <gazebo reference="EpauleAVG">
+    <material>Gazebo/Orange</material>
+    <fdir1>${fdir_epaule}</fdir1>
+    <self_collide>${selfcollide_epaule}</self_collide>
+    <kp>${kp_epaule}</kp>
+    <kd>${kd_epaule}</kd>
+    <mu1>${mu1_epaule}</mu1>
+    <mu2>${mu2_epaule}</mu2>
+    <maxVel>${maxVel_epaule}</maxVel>
+    <minDepth>${minDepth_epaule}</minDepth>
+  </gazebo>
+
+  <gazebo reference="EpauleARD">
+    <material>Gazebo/Orange</material>
+    <fdir1>${fdir_epaule}</fdir1>
+    <self_collide>${selfcollide_epaule}</self_collide>
+    <kp>${kp_epaule}</kp>
+    <kd>${kd_epaule}</kd>
+    <mu1>${mu1_epaule}</mu1>
+    <mu2>${mu2_epaule}</mu2>
+    <maxVel>${maxVel_epaule}</maxVel>
+    <minDepth>${minDepth_epaule}</minDepth>
+  </gazebo>
+
+  <gazebo reference="EpauleARG">
+    <material>Gazebo/Orange</material>
+    <fdir1>${fdir_epaule}</fdir1>
+    <self_collide>${selfcollide_epaule}</self_collide>
+    <kp>${kp_epaule}</kp>
+    <kd>${kd_epaule}</kd>
+    <mu1>${mu1_epaule}</mu1>
+    <mu2>${mu2_epaule}</mu2>
+    <maxVel>${maxVel_epaule}</maxVel>
+    <minDepth>${minDepth_epaule}</minDepth>
+  </gazebo>
+
+
+
+  <gazebo reference="HJambeAVD">
+    <material>Gazebo/DarkGrey</material>
+    <fdir1>${fdir_hjambe}</fdir1>
+    <self_collide>${selfcollide_hjambe}</self_collide>
+    <kp>${kp_hjambe}</kp>
+    <kd>${kd_hjambe}</kd>
+    <mu1>${mu1_hjambe}</mu1>
+    <mu2>${mu2_hjambe}</mu2>
+    <maxVel>${maxVel_hjambe}</maxVel>
+    <minDepth>${minDepth_hjambe}</minDepth>
+  </gazebo>
+
+  <gazebo reference="HJambeAVG">
+    <material>Gazebo/DarkGrey</material>
+    <fdir1>${fdir_hjambe}</fdir1>
+    <self_collide>${selfcollide_hjambe}</self_collide>
+    <kp>${kp_hjambe}</kp>
+    <kd>${kd_hjambe}</kd>
+    <mu1>${mu1_hjambe}</mu1>
+    <mu2>${mu2_hjambe}</mu2>
+    <maxVel>${maxVel_hjambe}</maxVel>
+    <minDepth>${minDepth_hjambe}</minDepth>
+  </gazebo>
+
+  <gazebo reference="HJambeARD">
+    <material>Gazebo/DarkGrey</material>
+    <fdir1>${fdir_hjambe}</fdir1>
+    <self_collide>${selfcollide_hjambe}</self_collide>
+    <kp>${kp_hjambe}</kp>
+    <kd>${kd_hjambe}</kd>
+    <mu1>${mu1_hjambe}</mu1>
+    <mu2>${mu2_hjambe}</mu2>
+    <maxVel>${maxVel_hjambe}</maxVel>
+    <minDepth>${minDepth_hjambe}</minDepth>
+  </gazebo>
+
+  <gazebo reference="HJambeARG">
+    <material>Gazebo/DarkGrey</material>
+    <fdir1>${fdir_hjambe}</fdir1>
+    <self_collide>${selfcollide_hjambe}</self_collide>
+    <kp>${kp_hjambe}</kp>
+    <kd>${kd_hjambe}</kd>
+    <mu1>${mu1_hjambe}</mu1>
+    <mu2>${mu2_hjambe}</mu2>
+    <maxVel>${maxVel_hjambe}</maxVel>
+    <minDepth>${minDepth_hjambe}</minDepth>
+  </gazebo>
+
+
+
+  <gazebo reference="BJambeAVD">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_bjambe}</fdir1>
+    <self_collide>${selfcollide_bjambe}</self_collide>
+    <kp>${kp_bjambe}</kp>
+    <kd>${kd_bjambe}</kd>
+    <mu1>${mu1_bjambe}</mu1>
+    <mu2>${mu2_bjambe}</mu2>
+    <maxVel>${maxVel_bjambe}</maxVel>
+    <minDepth>${minDepth_bjambe}</minDepth>
+  </gazebo>
+
+  <gazebo reference="BJambeAVG">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_bjambe}</fdir1>
+    <self_collide>${selfcollide_bjambe}</self_collide>
+    <kp>${kp_bjambe}</kp>
+    <kd>${kd_bjambe}</kd>
+    <mu1>${mu1_bjambe}</mu1>
+    <mu2>${mu2_bjambe}</mu2>
+    <maxVel>${maxVel_bjambe}</maxVel>
+    <minDepth>${minDepth_bjambe}</minDepth>
+  </gazebo>
+
+  <gazebo reference="BJambeARD">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_bjambe}</fdir1>
+    <self_collide>${selfcollide_bjambe}</self_collide>
+    <kp>${kp_bjambe}</kp>
+    <kd>${kd_bjambe}</kd>
+    <mu1>${mu1_bjambe}</mu1>
+    <mu2>${mu2_bjambe}</mu2>
+    <maxVel>${maxVel_bjambe}</maxVel>
+    <minDepth>${minDepth_bjambe}</minDepth>
+  </gazebo>
+
+  <gazebo reference="BJambeARG">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_bjambe}</fdir1>
+    <self_collide>${selfcollide_bjambe}</self_collide>
+    <kp>${kp_bjambe}</kp>
+    <kd>${kd_bjambe}</kd>
+    <mu1>${mu1_bjambe}</mu1>
+    <mu2>${mu2_bjambe}</mu2>
+    <maxVel>${maxVel_bjambe}</maxVel>
+    <minDepth>${minDepth_bjambe}</minDepth>
+  </gazebo>
+
+
+
+  <gazebo reference="PiedAVD">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_pied}</fdir1>
+    <self_collide>${selfcollide_pied}</self_collide>
+    <kp>${kp_pied}</kp>
+    <kd>${kd_pied}</kd>
+    <mu1>${mu1_pied}</mu1>
+    <mu2>${mu2_pied}</mu2>
+    <maxVel>${maxVel_pied}</maxVel>
+    <minDepth>${minDepth_pied}</minDepth>
+  </gazebo>
+
+  <gazebo reference="PiedAVG">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_pied}</fdir1>
+    <self_collide>${selfcollide_pied}</self_collide>
+    <kp>${kp_pied}</kp>
+    <kd>${kd_pied}</kd>
+    <mu1>${mu1_pied}</mu1>
+    <mu2>${mu2_pied}</mu2>
+    <maxVel>${maxVel_pied}</maxVel>
+    <minDepth>${minDepth_pied}</minDepth>
+  </gazebo>
+
+  <gazebo reference="PiedARD">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_pied}</fdir1>
+    <self_collide>${selfcollide_pied}</self_collide>
+    <kp>${kp_pied}</kp>
+    <kd>${kd_pied}</kd>
+    <mu1>${mu1_pied}</mu1>
+    <mu2>${mu2_pied}</mu2>
+    <maxVel>${maxVel_pied}</maxVel>
+    <minDepth>${minDepth_pied}</minDepth>
+  </gazebo>
+
+  <gazebo reference="PiedARG">
+    <material>Gazebo/White</material>
+    <fdir1>${fdir_pied}</fdir1>
+    <self_collide>${selfcollide_pied}</self_collide>
+    <kp>${kp_pied}</kp>
+    <kd>${kd_pied}</kd>
+    <mu1>${mu1_pied}</mu1>
+    <mu2>${mu2_pied}</mu2>
+    <maxVel>${maxVel_pied}</maxVel>
+    <minDepth>${minDepth_pied}</minDepth>
+  </gazebo>
+
+</robot>

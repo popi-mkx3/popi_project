@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-05052009-134769";"";
+"REFERENCE";"210217-3X10";"";
+"TraceParts.ClassPath";"/BENE/BENE_BV/SER_10_b_1/SER_10_b_2/S_10_b_3/";"";
+"TraceParts.PartVersion";"1.2.9";"";
+"TraceParts.InstanceId";"10-05052009-13476959K7LJVXVXHAUOSVM069LM6VO";"";
+"TraceParts.PartLanguage";"fr";"";
+"TraceParts.PartTitle";"210217 : VIS A TETE CYLINDRIQUE BOMBEE CRUCIFORME ""PHILLIPS"" - INOX A2";"";
+"SUPPLIER";"BENE INOX";"";
+"DESIGN";"210217 : VIS A TETE CYLINDRIQUE BOMBEE CRUCIFORME ""PHILLIPS"" - INOX A2 - 210217-3X10";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";

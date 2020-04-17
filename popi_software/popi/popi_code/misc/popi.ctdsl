@@ -1,0 +1,41 @@
+
+Model popi
+
+Frames {
+    fr_base, fr_EpauleAVD, fr_HJambeAVD, fr_BJambeAVD, fr_EpauleAVG, fr_HJambeAVG, fr_BJambeAVG, fr_EpauleARD, fr_HJambeARD, fr_BJambeARD, fr_EpauleARG, fr_HJambeARG, fr_BJambeARG, fr_Bati, fr_base_COM, fr_EpauleAVD_COM, fr_HJambeAVD_COM, fr_BJambeAVD_COM, fr_PiedAVD, fr_EpauleAVG_COM, fr_HJambeAVG_COM, fr_BJambeAVG_COM, fr_PiedAVG, fr_EpauleARD_COM, fr_HJambeARD_COM, fr_BJambeARD_COM, fr_PiedARD, fr_EpauleARG_COM, fr_HJambeARG_COM, fr_BJambeARG_COM, fr_PiedARG, fr_rf_haa_joint, fr_rf_hfe_joint, fr_rf_kfe_joint, fr_lf_haa_joint, fr_lf_hfe_joint, fr_lf_kfe_joint, fr_rh_haa_joint, fr_rh_hfe_joint, fr_rh_kfe_joint, fr_lh_haa_joint, fr_lh_hfe_joint, fr_lh_kfe_joint
+}
+
+
+
+Params lengths {
+}
+
+Params angles {
+}
+
+TransformedFramePos = right
+
+{fr_EpauleAVD}_X_{fr_base} = Rz(-q_rf_haa_joint) Ry(PI / 2.0) Tz(-consts.tz_rf_haa_joint) Ty(-consts.ty_rf_haa_joint) Tx(-consts.tx_rf_haa_joint)
+{fr_base}_X_{fr_EpauleAVD} = Tx(consts.tx_rf_haa_joint) Ty(consts.ty_rf_haa_joint) Tz(consts.tz_rf_haa_joint) Ry(-PI / 2.0) Rz(q_rf_haa_joint)
+{fr_HJambeAVD}_X_{fr_EpauleAVD} = Rz(-q_rf_hfe_joint) Rz(PI / 2.0) Rx(-PI / 2.0) Ty(-consts.ty_rf_hfe_joint)
+{fr_EpauleAVD}_X_{fr_HJambeAVD} = Ty(consts.ty_rf_hfe_joint) Rx(PI / 2.0) Rz(-PI / 2.0) Rz(q_rf_hfe_joint)
+{fr_BJambeAVD}_X_{fr_HJambeAVD} = Rz(-q_rf_kfe_joint) Rx(PI) Ty(-consts.ty_rf_kfe_joint) Tx(-consts.tx_rf_kfe_joint)
+{fr_HJambeAVD}_X_{fr_BJambeAVD} = Tx(consts.tx_rf_kfe_joint) Ty(consts.ty_rf_kfe_joint) Rx(-PI) Rz(q_rf_kfe_joint)
+{fr_EpauleAVG}_X_{fr_base} = Rz(-q_lf_haa_joint) Ry(-PI / 2.0) Tz(-consts.tz_lf_haa_joint) Ty(-consts.ty_lf_haa_joint) Tx(-consts.tx_lf_haa_joint)
+{fr_base}_X_{fr_EpauleAVG} = Tx(consts.tx_lf_haa_joint) Ty(consts.ty_lf_haa_joint) Tz(consts.tz_lf_haa_joint) Ry(PI / 2.0) Rz(q_lf_haa_joint)
+{fr_HJambeAVG}_X_{fr_EpauleAVG} = Rz(-q_lf_hfe_joint) Rz(-PI / 2.0) Rx(-PI / 2.0) Ty(-consts.ty_lf_hfe_joint)
+{fr_EpauleAVG}_X_{fr_HJambeAVG} = Ty(consts.ty_lf_hfe_joint) Rx(PI / 2.0) Rz(PI / 2.0) Rz(q_lf_hfe_joint)
+{fr_BJambeAVG}_X_{fr_HJambeAVG} = Rz(-q_lf_kfe_joint) Rx(PI) Ty(-consts.ty_lf_kfe_joint) Tx(-consts.tx_lf_kfe_joint)
+{fr_HJambeAVG}_X_{fr_BJambeAVG} = Tx(consts.tx_lf_kfe_joint) Ty(consts.ty_lf_kfe_joint) Rx(-PI) Rz(q_lf_kfe_joint)
+{fr_EpauleARD}_X_{fr_base} = Rz(-q_rh_haa_joint) Ry(PI / 2.0) Tz(-consts.tz_rh_haa_joint) Ty(-consts.ty_rh_haa_joint) Tx(-consts.tx_rh_haa_joint)
+{fr_base}_X_{fr_EpauleARD} = Tx(consts.tx_rh_haa_joint) Ty(consts.ty_rh_haa_joint) Tz(consts.tz_rh_haa_joint) Ry(-PI / 2.0) Rz(q_rh_haa_joint)
+{fr_HJambeARD}_X_{fr_EpauleARD} = Rz(-q_rh_hfe_joint) Rz(PI / 2.0) Rx(-PI / 2.0) Ty(-consts.ty_rh_hfe_joint)
+{fr_EpauleARD}_X_{fr_HJambeARD} = Ty(consts.ty_rh_hfe_joint) Rx(PI / 2.0) Rz(-PI / 2.0) Rz(q_rh_hfe_joint)
+{fr_BJambeARD}_X_{fr_HJambeARD} = Rz(-q_rh_kfe_joint) Rx(PI) Ty(-consts.ty_rh_kfe_joint) Tx(-consts.tx_rh_kfe_joint)
+{fr_HJambeARD}_X_{fr_BJambeARD} = Tx(consts.tx_rh_kfe_joint) Ty(consts.ty_rh_kfe_joint) Rx(-PI) Rz(q_rh_kfe_joint)
+{fr_EpauleARG}_X_{fr_base} = Rz(-q_lh_haa_joint) Ry(-PI / 2.0) Tz(-consts.tz_lh_haa_joint) Ty(-consts.ty_lh_haa_joint) Tx(-consts.tx_lh_haa_joint)
+{fr_base}_X_{fr_EpauleARG} = Tx(consts.tx_lh_haa_joint) Ty(consts.ty_lh_haa_joint) Tz(consts.tz_lh_haa_joint) Ry(PI / 2.0) Rz(q_lh_haa_joint)
+{fr_HJambeARG}_X_{fr_EpauleARG} = Rz(-q_lh_hfe_joint) Rz(-PI / 2.0) Rx(-PI / 2.0) Ty(-consts.ty_lh_hfe_joint)
+{fr_EpauleARG}_X_{fr_HJambeARG} = Ty(consts.ty_lh_hfe_joint) Rx(PI / 2.0) Rz(PI / 2.0) Rz(q_lh_hfe_joint)
+{fr_BJambeARG}_X_{fr_HJambeARG} = Rz(-q_lh_kfe_joint) Rx(PI) Ty(-consts.ty_lh_kfe_joint) Tx(-consts.tx_lh_kfe_joint)
+{fr_HJambeARG}_X_{fr_BJambeARG} = Tx(consts.tx_lh_kfe_joint) Ty(consts.ty_lh_kfe_joint) Rx(-PI) Rz(q_lh_kfe_joint)

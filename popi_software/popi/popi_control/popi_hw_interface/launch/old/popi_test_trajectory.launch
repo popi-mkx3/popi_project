@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- GDB functionality -->
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+  <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+  <group ns="popi">
+
+    <!-- Load hardware interface -->
+    <node name="test_trajectory" pkg="popi_hw_interface" type="test_trajectory"
+          output="screen" launch-prefix="$(arg launch_prefix)">
+      <param name="action_topic" value="/popi/position_trajectory_controller/follow_joint_trajectory/"/>
+      <rosparam file="$(find popi_hw_interface)/popi_hw_interface/config/popi_controllers.yaml" command="load"/>
+    </node>
+
+  </group>
+
+</launch>

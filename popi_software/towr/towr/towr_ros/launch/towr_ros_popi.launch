@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- ros_args.launch -->
+  <arg name="debug" default="false" doc="run with gdb" />
+    
+  <!-- so the logging prints the node name -->
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${node}]: ${message}" />
+
+  <!-- TOWR: Start the optimizer and GUI-->
+  <group unless="$(arg debug)">
+    <include file="$(find towr_ros)/launch/towr_nodes.launch">
+      <arg name="gdb" value="" />
+    </include>
+  </group>
+  
+  <!-- TOWR: Start the optimizer and GUI with gdb -->
+  <group if="$(arg debug)">
+    <include file="$(find towr_ros)/launch/towr_nodes.launch">
+      <arg name="gdb" value="gdb -ex run --args" />
+    </include>
+  </group>
+   
+  <!-- visualizes goal, opt. parameters and cartesian base state, endeffector positions and forces -->
+  <node name="rviz_marker_node" pkg="xpp_vis" type="rviz_marker_node" output="screen">
+  </node>
+  
+  <!-- Launch rviz with specific configuration -->
+  <node name="rviz_xpp" pkg="rviz" type="rviz" args="-d $(find towr_ros)/rviz/xpp_towr_popi.rviz">
+  </node>
+  
+  <!--  Launches the URDF visualizers  --> 
+  <include file="$(find xpp_popi)/launch/popi.launch"></include>
+  
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find popi_description)/xacro/popi.xacro'" />
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find popi_control)/popi_hw_interface/config/popi_controllers_simu.yaml" command="load" ns="/popi"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner"
+  pkg="controller_manager"
+  type="spawner"
+  respawn="false"
+  output="screen"
+  ns="/popi"
+  args="joint_state_controller
+        aileAVD_eff_position_controller epauleAVD_eff_position_controller coudeAVD_eff_position_controller
+  aileAVG_eff_position_controller epauleAVG_eff_position_controller coudeAVG_eff_position_controller
+  aileARD_eff_position_controller epauleARD_eff_position_controller coudeARD_eff_position_controller
+  aileARG_eff_position_controller epauleARG_eff_position_controller coudeARG_eff_position_controller"/>
+
+  <node name="joint_pose_translator"
+    pkg="towr_ros"
+    type="joint_pose_translator"
+    respawn="false"
+    output="screen">
+  </node>
+
+</launch>

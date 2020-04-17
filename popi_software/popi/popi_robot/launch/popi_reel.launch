@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="rqt_gui"
+    pkg="rqt_gui"
+    type="rqt_gui"
+    respawn="false"
+    output="screen">
+  </node>
+ 
+  <include file="$(find popi_robot)/launch/manette_reel.launch"/>
+</launch>

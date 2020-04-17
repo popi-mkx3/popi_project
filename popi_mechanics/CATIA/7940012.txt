@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"10-22122011-068396";"";
+"REFERENCE";"7940012";"";
+"TraceParts.PartTitle";"79400 : CIRCLIP EXTERIEUR POUR ARBRE DIN 471 ACIER - BRUT";"";
+"TraceParts.InstanceId";"10-22122011-068396404CTUTIX9KDNFZUYH3S8V04Z";"";
+"DESIGN";"79400 : CIRCLIP EXTERIEUR POUR ARBRE DIN 471 ACIER - BRUT - 7940012";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";
+"SUPPLIER";"Emile Maurin";"";
+"TraceParts.PartVersion";"1.1.5";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"fr";"";
+"TraceParts.ClassPath";"EMILE_MAURIN_BV:/EM_BV/BV/GRP_CG_b_1/10-22122011-068396";"";

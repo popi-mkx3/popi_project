@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find popi_gazebo)/launch/popi.launch"/>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find popi_control)/popi_hw_interface/config/popi_controllers_simu.yaml" command="load" ns="/popi"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner"
+  pkg="controller_manager"
+  type="spawner"
+  respawn="false"
+  output="screen"
+  ns="/popi"
+  args="joint_state_controller
+        aileAVD_eff_position_controller epauleAVD_eff_position_controller coudeAVD_eff_position_controller
+	aileAVG_eff_position_controller epauleAVG_eff_position_controller coudeAVG_eff_position_controller
+	aileARD_eff_position_controller epauleARD_eff_position_controller coudeARD_eff_position_controller
+	aileARG_eff_position_controller epauleARG_eff_position_controller coudeARG_eff_position_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher"
+    respawn="false"
+    output="screen">
+    <remap from="/joint_states" to="/popi/joint_states" />
+  </node>
+ 
+  <include file="$(find popi_robot)/launch/manette_simu.launch"/>
+</launch>

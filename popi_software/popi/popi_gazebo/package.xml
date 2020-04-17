@@ -1,0 +1,33 @@
+<package>
+  <name>popi_gazebo</name>
+  <version>0.1.0</version>
+  <description>popi_gazebo</description>
+  <maintainer email="llabarussiat@gmail.com">Lucas Labarussiat</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website"></url>
+  <url type="bugtracker"></url>
+  <url type="repository"></url>
+
+  <author email="llabarussiat@gmail.com">Lucas Labarussiat</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gazebo_plugins</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>popi_control</run_depend>
+  <run_depend>popi_description</run_depend>
+  <run_depend>xacro</run_depend>
+
+  <export>
+    <!-- gazebo_ros_paths_plugin automatically adds these to
+        GAZEBO_PLUGIN_PATH and GAZEBO_MODEL_PATH when you do this export inside
+        the package.xml file. You can than use URIs of type model://my_package/stuff. -->
+  <gazebo_ros                                                                 
+        gazebo_plugin_path="${prefix}/lib"
+        gazebo_model_path="${prefix}:/home/lucas/catkin_ws_popi/src/popi/popi_gazebo/" /> 
+	</export>
+
+</package>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load example URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find popi_description)/urdf/popi.xacro'" />
+    <env name="LC_NUMERIC" value="en_US.UTF-8"/>
+  <!-- Show in Rviz  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find popi_description)/launch/popi.rviz"/>
+
+</launch>
+

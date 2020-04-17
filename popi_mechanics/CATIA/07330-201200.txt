@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"30-06122017-106291";"";
+"REFERENCE";"07330-201200";"";
+"TraceParts.PartTitle";"07330 Anneau élastique pour arbres 
+DIN 471";"";
+"TraceParts.InstanceId";"30-06122017-106291ETIYGBC9SCS7ISFBYZJGT86GS";"";
+"DESIGN";"CIRCLIPS POUR ARBRES ACIER, DIN471, D1=20, S=1,2";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";
+"SUPPLIER";"norelem";"";
+"TraceParts.PartVersion";"1.0.4";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"fr";"";
+"TraceParts.ClassPath";"NORELEM:30-06122017-106291";"";

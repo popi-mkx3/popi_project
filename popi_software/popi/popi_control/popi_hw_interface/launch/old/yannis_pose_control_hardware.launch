@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+  <machine
+  name="beaglebone"
+  user="debian"
+  password="temppwd"
+  address="192.168.7.2"
+  env-loader="/home/debian/env-loader-yo.sh"
+  />
+    <machine
+  name="yannis-laptop"
+  user="yannis"
+  password="ubuntu"
+  address="192.168.7.1"
+  default="true"
+  />
+
+  <!-- GDB functionality -->
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+  <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+  <!-- Load example URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find popi_description)/urdf/popi.xacro'" />
+
+  <group ns="popi">
+    
+    <!-- Load hardware interface -->
+    <node name="popi_hardware_interface" pkg="popi_hw_interface" type="popi_hw_main"
+          output="screen" launch-prefix="$(arg launch_prefix)"/>
+
+    <!-- Load controller settings -->
+    <rosparam file="$(find popi_hw_interface)/popi_hw_interface/config/yannis_popi_controllers.yaml" command="load"/>
+
+    <!-- Load controller manager -->
+    <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false"
+	  output="screen" args="spawn joint_state_controller joint1_eff_position_controller joint2_eff_position_controller" />
+
+    <!-- Convert joint states to /tf tranforms -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node machine="beaglebone" name="potar_server" pkg="test" type="sensor_server.py" />
+    <node machine="beaglebone" name="motor" pkg="bb_dc_motors" type="verin.py" />
+  </group>
+
+</launch>

@@ -1,0 +1,16 @@
+bzero(Jlist[1], sizeof(Jlist[1]));
+Jlist[1][RF_KFE_JOINT] = 1;
+Jlist[1][RF_HFE_JOINT] = 1;
+Jlist[1][RF_HAA_JOINT] = 1;
+bzero(Jlist[2], sizeof(Jlist[2]));
+Jlist[2][LF_KFE_JOINT] = 1;
+Jlist[2][LF_HFE_JOINT] = 1;
+Jlist[2][LF_HAA_JOINT] = 1;
+bzero(Jlist[3], sizeof(Jlist[3]));
+Jlist[3][RH_KFE_JOINT] = 1;
+Jlist[3][RH_HFE_JOINT] = 1;
+Jlist[3][RH_HAA_JOINT] = 1;
+bzero(Jlist[4], sizeof(Jlist[4]));
+Jlist[4][LH_KFE_JOINT] = 1;
+Jlist[4][LH_HFE_JOINT] = 1;
+Jlist[4][LH_HAA_JOINT] = 1;

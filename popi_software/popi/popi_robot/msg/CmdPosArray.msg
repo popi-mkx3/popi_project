@@ -1,0 +1,12 @@
+float64 aile_avd
+float64 aile_avg
+float64 aile_ard
+float64 aile_arg
+float64 epaule_avd
+float64 epaule_avg
+float64 epaule_ard
+float64 epaule_arg
+float64 coude_avd
+float64 coude_avg
+float64 coude_ard
+float64 coude_arg

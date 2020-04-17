@@ -1,0 +1,72 @@
+Model popi
+Frames {
+    fr_base, fr_EpauleAVD, fr_HJambeAVD, fr_BJambeAVD, fr_EpauleAVG, fr_HJambeAVG, fr_BJambeAVG, fr_EpauleARD, fr_HJambeARD, fr_BJambeARD, fr_EpauleARG, fr_HJambeARG, fr_BJambeARG,
+
+    fr_Bati, fr_base_COM,
+    fr_EpauleAVD_COM,
+    fr_HJambeAVD_COM,
+    fr_BJambeAVD_COM, fr_PiedAVD,
+    fr_EpauleAVG_COM,
+    fr_HJambeAVG_COM,
+    fr_BJambeAVG_COM, fr_PiedAVG,
+    fr_EpauleARD_COM,
+    fr_HJambeARD_COM,
+    fr_BJambeARD_COM, fr_PiedARD,
+    fr_EpauleARG_COM,
+    fr_HJambeARG_COM,
+    fr_BJambeARG_COM, fr_PiedARG,
+
+    fr_rf_haa_joint, fr_rf_hfe_joint, fr_rf_kfe_joint, fr_lf_haa_joint, fr_lf_hfe_joint, fr_lf_kfe_joint, fr_rh_haa_joint, fr_rh_hfe_joint, fr_rh_kfe_joint, fr_lh_haa_joint, fr_lh_hfe_joint, fr_lh_kfe_joint
+}
+
+Params lengths {
+}
+Params angles {
+}
+
+Convention = local
+
+fr_base -> fr_rf_haa_joint : trx(consts.tx_rf_haa_joint) try(consts.ty_rf_haa_joint) trz(consts.tz_rf_haa_joint) roty(-PI/2.0)
+fr_EpauleAVD -> fr_rf_hfe_joint : try(consts.ty_rf_hfe_joint) rotx(PI/2.0) rotz(-PI/2.0)
+fr_HJambeAVD -> fr_rf_kfe_joint : trx(consts.tx_rf_kfe_joint) try(consts.ty_rf_kfe_joint) rotx(-PI)
+fr_base -> fr_lf_haa_joint : trx(consts.tx_lf_haa_joint) try(consts.ty_lf_haa_joint) trz(consts.tz_lf_haa_joint) roty(PI/2.0)
+fr_EpauleAVG -> fr_lf_hfe_joint : try(consts.ty_lf_hfe_joint) rotx(PI/2.0) rotz(PI/2.0)
+fr_HJambeAVG -> fr_lf_kfe_joint : trx(consts.tx_lf_kfe_joint) try(consts.ty_lf_kfe_joint) rotx(-PI)
+fr_base -> fr_rh_haa_joint : trx(consts.tx_rh_haa_joint) try(consts.ty_rh_haa_joint) trz(consts.tz_rh_haa_joint) roty(-PI/2.0)
+fr_EpauleARD -> fr_rh_hfe_joint : try(consts.ty_rh_hfe_joint) rotx(PI/2.0) rotz(-PI/2.0)
+fr_HJambeARD -> fr_rh_kfe_joint : trx(consts.tx_rh_kfe_joint) try(consts.ty_rh_kfe_joint) rotx(-PI)
+fr_base -> fr_lh_haa_joint : trx(consts.tx_lh_haa_joint) try(consts.ty_lh_haa_joint) trz(consts.tz_lh_haa_joint) roty(PI/2.0)
+fr_EpauleARG -> fr_lh_hfe_joint : try(consts.ty_lh_hfe_joint) rotx(PI/2.0) rotz(PI/2.0)
+fr_HJambeARG -> fr_lh_kfe_joint : trx(consts.tx_lh_kfe_joint) try(consts.ty_lh_kfe_joint) rotx(-PI)
+
+fr_rf_haa_joint -> fr_EpauleAVD : rotz(q_rf_haa_joint)
+fr_rf_hfe_joint -> fr_HJambeAVD : rotz(q_rf_hfe_joint)
+fr_rf_kfe_joint -> fr_BJambeAVD : rotz(q_rf_kfe_joint)
+fr_lf_haa_joint -> fr_EpauleAVG : rotz(q_lf_haa_joint)
+fr_lf_hfe_joint -> fr_HJambeAVG : rotz(q_lf_hfe_joint)
+fr_lf_kfe_joint -> fr_BJambeAVG : rotz(q_lf_kfe_joint)
+fr_rh_haa_joint -> fr_EpauleARD : rotz(q_rh_haa_joint)
+fr_rh_hfe_joint -> fr_HJambeARD : rotz(q_rh_hfe_joint)
+fr_rh_kfe_joint -> fr_BJambeARD : rotz(q_rh_kfe_joint)
+fr_lh_haa_joint -> fr_EpauleARG : rotz(q_lh_haa_joint)
+fr_lh_hfe_joint -> fr_HJambeARG : rotz(q_lh_hfe_joint)
+fr_lh_kfe_joint -> fr_BJambeARG : rotz(q_lh_kfe_joint)
+
+fr_base -> fr_Bati : 
+fr_base -> fr_base_COM : trz(consts.tz_fr_base_COM)
+fr_EpauleAVD -> fr_EpauleAVD_COM : trx(consts.tx_fr_EpauleAVD_COM) try(consts.ty_fr_EpauleAVD_COM) trz(consts.tz_fr_EpauleAVD_COM) roty(PI/2.0)
+fr_HJambeAVD -> fr_HJambeAVD_COM : trx(consts.tx_fr_HJambeAVD_COM) try(consts.ty_fr_HJambeAVD_COM) trz(consts.tz_fr_HJambeAVD_COM) rotx(-PI/2.0)
+fr_BJambeAVD -> fr_BJambeAVD_COM : trx(consts.tx_fr_BJambeAVD_COM) try(consts.ty_fr_BJambeAVD_COM) trz(consts.tz_fr_BJambeAVD_COM) rotx(PI/2.0)
+fr_BJambeAVD -> fr_PiedAVD : trx(consts.tx_fr_PiedAVD) try(consts.ty_fr_PiedAVD) rotx(PI/2.0)
+fr_EpauleAVG -> fr_EpauleAVG_COM : trx(consts.tx_fr_EpauleAVG_COM) try(consts.ty_fr_EpauleAVG_COM) trz(consts.tz_fr_EpauleAVG_COM) roty(-PI/2.0)
+fr_HJambeAVG -> fr_HJambeAVG_COM : trx(consts.tx_fr_HJambeAVG_COM) try(consts.ty_fr_HJambeAVG_COM) trz(consts.tz_fr_HJambeAVG_COM) rotx(-PI/2.0)
+fr_BJambeAVG -> fr_BJambeAVG_COM : trx(consts.tx_fr_BJambeAVG_COM) try(consts.ty_fr_BJambeAVG_COM) trz(consts.tz_fr_BJambeAVG_COM) rotx(PI/2.0)
+fr_BJambeAVG -> fr_PiedAVG : trx(consts.tx_fr_PiedAVG) try(consts.ty_fr_PiedAVG) rotx(PI/2.0)
+fr_EpauleARD -> fr_EpauleARD_COM : trx(consts.tx_fr_EpauleARD_COM) try(consts.ty_fr_EpauleARD_COM) trz(consts.tz_fr_EpauleARD_COM) roty(PI/2.0)
+fr_HJambeARD -> fr_HJambeARD_COM : trx(consts.tx_fr_HJambeARD_COM) try(consts.ty_fr_HJambeARD_COM) trz(consts.tz_fr_HJambeARD_COM) rotx(-PI/2.0)
+fr_BJambeARD -> fr_BJambeARD_COM : trx(consts.tx_fr_BJambeARD_COM) try(consts.ty_fr_BJambeARD_COM) rotx(PI/2.0)
+fr_BJambeARD -> fr_PiedARD : trx(consts.tx_fr_PiedARD) try(consts.ty_fr_PiedARD) rotx(PI/2.0)
+fr_EpauleARG -> fr_EpauleARG_COM : trx(consts.tx_fr_EpauleARG_COM) try(consts.ty_fr_EpauleARG_COM) trz(consts.tz_fr_EpauleARG_COM) roty(-PI/2.0)
+fr_HJambeARG -> fr_HJambeARG_COM : trx(consts.tx_fr_HJambeARG_COM) try(consts.ty_fr_HJambeARG_COM) trz(consts.tz_fr_HJambeARG_COM) rotx(-PI/2.0)
+fr_BJambeARG -> fr_BJambeARG_COM : trx(consts.tx_fr_BJambeARG_COM) try(consts.ty_fr_BJambeARG_COM) trz(consts.tz_fr_BJambeARG_COM) rotx(PI/2.0)
+fr_BJambeARG -> fr_PiedARG : trx(consts.tx_fr_PiedARG) try(consts.ty_fr_PiedARG) rotx(PI/2.0)

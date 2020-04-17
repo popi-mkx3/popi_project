@@ -1,0 +1,91 @@
+/* this file contains a list of DOFs that are computed by each processor
+   Note: the file is parsed according to keywords, after the keyword,
+   the values need to come in the correct sequence */
+
+   /* format: keyword, <list of joint names for a processor> */
+
+task_servo
+    rf_haa_joint
+    rf_hfe_joint
+    rf_kfe_joint
+    lf_haa_joint
+    lf_hfe_joint
+    lf_kfe_joint
+    rh_haa_joint
+    rh_hfe_joint
+    rh_kfe_joint
+    lh_haa_joint
+    lh_hfe_joint
+    lh_kfe_joint
+
+task_sim_servo
+    rf_haa_joint
+    rf_hfe_joint
+    rf_kfe_joint
+    lf_haa_joint
+    lf_hfe_joint
+    lf_kfe_joint
+    rh_haa_joint
+    rh_hfe_joint
+    rh_kfe_joint
+    lh_haa_joint
+    lh_hfe_joint
+    lh_kfe_joint
+
+motor_servo
+    rf_haa_joint
+    rf_hfe_joint
+    rf_kfe_joint
+    lf_haa_joint
+    lf_hfe_joint
+    lf_kfe_joint
+    rh_haa_joint
+    rh_hfe_joint
+    rh_kfe_joint
+    lh_haa_joint
+    lh_hfe_joint
+    lh_kfe_joint
+
+motor_sim_servo
+    rf_haa_joint
+    rf_hfe_joint
+    rf_kfe_joint
+    lf_haa_joint
+    lf_hfe_joint
+    lf_kfe_joint
+    rh_haa_joint
+    rh_hfe_joint
+    rh_kfe_joint
+    lh_haa_joint
+    lh_hfe_joint
+    lh_kfe_joint
+
+vision_servo
+vision_sim_servo
+invdyn_servo
+    rf_haa_joint
+    rf_hfe_joint
+    rf_kfe_joint
+    lf_haa_joint
+    lf_hfe_joint
+    lf_kfe_joint
+    rh_haa_joint
+    rh_hfe_joint
+    rh_kfe_joint
+    lh_haa_joint
+    lh_hfe_joint
+    lh_kfe_joint
+
+invdyn_sim_servo
+    rf_haa_joint
+    rf_hfe_joint
+    rf_kfe_joint
+    lf_haa_joint
+    lf_hfe_joint
+    lf_kfe_joint
+    rh_haa_joint
+    rh_hfe_joint
+    rh_kfe_joint
+    lh_haa_joint
+    lh_hfe_joint
+    lh_kfe_joint

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<!-- trunk macro definition -->
+	<xacro:macro name="hyq_trunk" params="name">
+	
+		<!-- Floating-base Joint -->
+		<joint name="floating_base" type="fixed">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<parent link="${name}"/>
+			<child link="trunk"/>
+		</joint>
+
+		<!-- Footprint link -->
+		<link name="${name}">
+			<inertial>
+	      		<mass		value="1" />
+	    	</inertial>
+
+			<visual>
+				<geometry>
+					<cylinder length="0.01" radius="0.01"/>
+				</geometry>
+			</visual>
+		</link>
+		
+		<!-- Trunk link -->
+		<link name="trunk">
+			<inertial>
+	      		<mass		value="1" />
+	    	</inertial>
+	    	
+			<visual>				
+				<geometry>
+					<mesh filename="package://xpp_hyq/meshes/trunk/trunk.dae" scale="1 1 1"/>
+				</geometry>
+			</visual>
+			<collision>
+				<geometry>
+					<mesh filename="package://xpp_hyq/meshes/trunk/trunk.dae" scale="1 1 1"/>
+				</geometry>
+			</collision>
+		</link>
+
+	</xacro:macro>
+
+</robot>

@@ -1,0 +1,83 @@
+# popi_control Settings -----------------------
+# Settings for ros_control control loop
+generic_hw_control_loop:
+  loop_hz: 300
+  cycle_time_error_threshold: 0.01
+
+# Settings for ros_control hardware interface
+hardware_interface:
+   joints:
+      - aileAVD
+      - epauleAVD
+      - coudeAVD
+
+      - aileAVG
+      - epauleAVG
+      - coudeAVG
+
+      - aileARD
+      - epauleARD
+      - coudeARD
+
+      - aileARG
+      - epauleARG
+      - coudeARG
+   sim_control_mode: 0 # 0: position, 1: velocity
+
+# Publish all joint states ----------------------------------
+# Creates the /joint_states topic necessary in ROS
+joint_state_controller:
+   type: joint_state_controller/JointStateController
+   publish_rate: 50
+
+aileAVD_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: aileAVD
+   pid: {p: 1000.0, i: 0.0, d: 6.0}
+epauleAVD_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: epauleAVD
+   pid: {p: 1000.0, i: 0.0, d: 6.0}
+coudeAVD_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: coudeAVD
+   pid: {p: 1000.0, i: 0.0, d: 6.0}
+
+aileAVG_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: aileAVG
+   pid: {p: 1000.0, i: 0.0, d: 6.0}
+epauleAVG_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: epauleAVG
+   pid: {p: 1000.0, i: 0.0, d: 6.0}
+coudeAVG_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: coudeAVG
+   pid: {p: 1000.0, i: 0.0, d: 6.0}
+
+aileARD_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: aileARD
+   pid: {p: 1500.0, i: 0.0, d: 9.0}
+epauleARD_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: epauleARD
+   pid: {p: 1500.0, i: 0.0, d: 9.0}
+coudeARD_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: coudeARD
+   pid: {p: 1500.0, i: 0.0, d: 9.0}
+
+aileARG_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: aileARG
+   pid: {p: 1500.0, i: 0.0, d: 9.0}
+epauleARG_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: epauleARG
+   pid: {p: 1500.0, i: 0.0, d: 9.0}
+coudeARG_eff_position_controller:
+   type: effort_controllers/JointPositionController
+   joint: coudeARG
+   pid: {p: 1500.0, i: 0.0, d: 9.0}

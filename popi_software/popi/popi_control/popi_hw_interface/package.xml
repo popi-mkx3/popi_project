@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>popi_hw_interface</name>
+  <version>0.0.1</version>
+  <description>Simple simulation interface and template for setting up a hardware interface for popi</description>
+
+  <maintainer email="someone@someone.com">Someone</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/davetcoleman/popi_control</url>
+  <url type="butracker">https://github.com/davetcoleman/popi_control/issues</url>
+  <url type="repository">https://github.com/davetcoleman/popi_control/</url>
+
+  <author email="davetcoleman@gmail.com">Dave Coleman</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>popi_hw_interface</build_depend>
+  <run_depend>popi_hw_interface</run_depend>
+  <build_depend>popi_control</build_depend>
+  <run_depend>popi_control</run_depend>
+
+  <export>
+  </export>
+</package>
