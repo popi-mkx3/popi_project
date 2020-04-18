@@ -4,19 +4,22 @@
 <br>
 <br>
 
-POPI is an entirely open-source quadruped robot. You will find here all the source code used on POPI. To have a look on the relevant technical material, you can see our other repository [popi_docs]. These docs unfortunately are in French for now, but mechanical drawings should still speak to anyone. Let us know if you ever need a translation and we'll do our best !  
-The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation.
-<br>
-<br>
+## Overview of the project
+POPI is an entirely open-source quadruped robot. Though not yet extremely agile, <a href="#team">we</a> meant it to be accessible to anyone interested in robotics and we hope it becomes a friendly collaborative platform for educationnal or research purposes. You will hence find in this repository everything there is to know about POPI. If you want to know about every details, a good way would be to have a look at the user manual in the [popi_reports] folder.
 
-:heavy_check_mark: Trajectory generation and optimization based on [Towr].  
-:heavy_check_mark: Easy recording with [rqt_bag].  
-:heavy_check_mark: Actuators' control based on [ROS control boilerplate].  
-:heavy_check_mark: Available simulation on Gazebo.  
+#### What is available
+:heavy_check_mark: User manual  
+:heavy_check_mark: Bill of materials  
+:heavy_check_mark: Mechanical drawings and CAD  
+:heavy_check_mark: Electrical drawings  
+:heavy_check_mark: Source code (ROS and C++)  
+:heavy_check_mark: Cool 3D-renders  
 <br>
 <br>
 
 <p align="center">
+  <a href="#build">Build your own POPI</a> •
+  <a href="#soft">POPI software</a> •
   <a href="#contribute">Contribute</a> •
   <a href="#publications">Publications</a> •
   <a href="#team">Meet the team</a> •
@@ -24,8 +27,16 @@ The code is based on [ROS]. You can run it without the robot, develop your own c
 </p>
 
 <p align="center">
-	<img src="https://i.imgur.com/s29RHe6.gif" />
+  <img src="https://i.imgur.com/s29RHe6.gif" />
 </p>
+
+## <a name="build"></a> Build your own POPI
+
+## <a name="soft"></a> POPI software
+(the brain = 2BBB, 1 RPI + 1 user-PC)
+The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation.
+<br>
+<br>
 
 ## Contribute
 The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request !  
@@ -39,7 +50,8 @@ You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ro
 <br>
 
 ## <a name="team"></a> Meet the team !
-
+POPI was initially designed as part of our mechatronical engineering degree at IMT Mines d'Alès in France. Here is the team who started this project.
+<br>
 <p align="center"><b> Project Leader </b></p>
 <p align="center">
   <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/clément-thomaso-6b9ab910b/"><img src="https://i.imgur.com/3dUgaow.png" width="10%" alt="Clément Thomaso"/></a>
@@ -71,7 +83,10 @@ Finally we of course want to express our sincere gratitude to all our teachers f
 
 <img src="https://i.imgur.com/Qv3iWwq.jpg" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/5oggd8Z.png" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/TJwQi9n.jpg" height="151"/>
 
-[popi_docs]: https://github.com/popi-mkx3/popi_docs
+[popi_reports]: https://github.com/popi-mkx3/popi_project/tree/master/popi_reports
+[popi_mechanics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_mechanics
+[popi_electronics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_electronics
+[popi_software]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software
 [ROS]: https://www.ros.org/
 [Towr]: https://github.com/ethz-adrl/towr
 [rqt_bag]: http://wiki.ros.org/rqt_bag

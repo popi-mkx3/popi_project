@@ -56,11 +56,22 @@ The environment we used is Ubuntu 18.04 with [ROS Melodic].
    If you encounter any problem or would like any details about these dependencies, you will find [here](https://github.com/popi-mkx3/popi_ros/blob/master/CONFIGURATION.md) a list of the versions of the packages we had installed, aswell with links to their respective websites.
 <br>
 
-* Clone this repository:
+* Create the workspace:
    ```bash
    mkdir -p ~/catkin_ws/src
    cd ~/catkin_ws/src
-   git clone https://github.com/popi-mkx3/popi_ros.git
+   ```
+* Either download the whole repository:
+   ```bash
+   git clone https://github.com/popi-mkx3/popi_project.git
+   ```
+* Or only the popi_software folder:
+   ```bash
+   git init
+   git remode add -f origin https://github.com/popi-mkx3/popi_ros.git
+   git config core.sparseCheckout true
+   echo "popi_software" >> .git/info/sparse-checkout
+   git pull origin master
    ```
 <br>
 
