@@ -19,9 +19,8 @@ You will find here everything you need for the [machining] and the [assembly] as
   <a href="#general-description">General description</a> •
   <a href="#how-it-works">How it works</a> •
   <a href="#lets-look-further">Let's look further</a> •
-  <a href="#publications">Publications</a> •
-  <a href="#team">Meet the team</a> •
-  <a href="#acknowledgments">Acknowledgments</a>
+  <a href="#contribute">Contribute</a> •
+  <a href="#team">Meet the team</a>
 </p>
 
 <p align="center">
