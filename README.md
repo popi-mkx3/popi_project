@@ -27,7 +27,7 @@ POPI is an entirely open-source quadruped robot. Though not yet extremely agile,
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/s29RHe6.gif" />
+<a href="https://www.youtube.com/watch?v=yvZBiybOPDk" title="Link Title"><img src="https://img.youtube.com/vi/yvZBiybOPDk/0.jpg" alt="Watch the teaser on YouTube" /></a>
 </p>
 
 ## <a name="build"></a> Build your own POPI
@@ -70,7 +70,6 @@ POPI was initially designed as part of our mechatronical engineering degree at I
   <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/karla-brottet-69440/"><img src="https://i.imgur.com/4GvkygH.png" width="10%" alt="Karla Brottet"/></a>
   <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lucas-labarussiat/"><img src="https://i.imgur.com/eMQNCa7.png" width="10%" alt="Lucas Labarussiat"/></a>
 </p>
-
 <br>
 <br>
 

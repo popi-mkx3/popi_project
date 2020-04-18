@@ -4,8 +4,7 @@
 <br>
 <br>
 
-<em>POPI is an entirely open-source quadruped robot. You will find here everything you need for the [machining] and the [assembly] as well as the [mechanical drawings] of this 71kg and 1 meter long robot. These docs unfortunately are in French for now, but the drawings should still speak to anyone. Let us know if you ever need a translation and we'll do our best !
-<br> To get an overview of POPI's mechanical design, please read the following information. </em>
+You will find here everything you need for the [machining] and the [assembly] as well as the [mechanical drawings] of this 71kg and 1 meter long robot. These files unfortunately are in French for now, but the drawings should still speak to anyone. Let us know if you ever need a translation and we'll do our best ! To get an overview of POPI's mechanical design, please read the following information.
 <br>
 
 :heavy_check_mark: Design made with [CATIA].  
@@ -117,11 +116,8 @@ You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ro
   <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/karla-brottet-69440/"><img src="https://i.imgur.com/4GvkygH.png" width="10%" alt="Karla Brottet"/></a>
   <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lucas-labarussiat/"><img src="https://i.imgur.com/eMQNCa7.png" width="10%" alt="Lucas Labarussiat"/></a>
 </p>
-
 <br>
 <br>
-
-
 
 <img src="https://i.imgur.com/Qv3iWwq.jpg" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/5oggd8Z.png" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/TJwQi9n.jpg" height="151"/>
 
