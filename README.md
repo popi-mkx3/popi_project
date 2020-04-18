@@ -26,10 +26,13 @@ POPI is an entirely open-source quadruped robot. Though not yet extremely agile,
   <a href="#acknowledgments">Acknowledgments</a>
 </p>
 
-<iframe width="1216" height="684" src="https://www.youtube.com/embed/yvZBiybOPDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p align="center">
 <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yvZBiybOPDk" title="Link Title"><img src="https://img.youtube.com/vi/yvZBiybOPDk/0.jpg" alt="Watch the teaser on YouTube" /></a>
 </p>
+
+<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yvZBiybOPDk" title="Link Title"><img src="https://img.youtube.com/vi/yvZBiybOPDk/0.jpg" alt="Watch the teaser on YouTube" /></a>
+
+[![Watch the teaser on YouTube](https://img.youtube.com/vi/yvZBiybOPDk/0.jpg)](https://www.youtube.com/watch?v=yvZBiybOPDk "Watch the teaser on YouTube")
 
 ## <a name="build"></a> Build your own POPI
 
