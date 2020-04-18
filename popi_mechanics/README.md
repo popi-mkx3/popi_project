@@ -9,10 +9,10 @@
 <br>
 
 :heavy_check_mark: Design made with [CATIA].  
-:heavy_check_mark: First estimates of forces and torques on [SimDesigner]
-:heavy_check_mark: Mechanical simulation and actuator's choice on [SolidWorks] Motion and [SolidWorks] Simulation.
-:heavy_check_mark: Machining with CNC milling and turning machines, water jet cutting and 3D printing.
-:heavy_check_mark: Rendering with [SolidWorks] Motion and [SolidWorks] PhotoView 360
+:heavy_check_mark: First estimates of forces and torques on [SimDesigner].  
+:heavy_check_mark: Mechanical simulation and actuator's choice on [SolidWorks] Motion and [SolidWorks] Simulation.  
+:heavy_check_mark: Machining with CNC milling and turning machines, water jet cutting and 3D printing.  
+:heavy_check_mark: Rendering with [SolidWorks] Motion and [SolidWorks] PhotoView 360  
 <br>
 <br>
 
