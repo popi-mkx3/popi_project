@@ -53,7 +53,7 @@ The instructions to download the source code and use it are available in the [po
 <br>
 
 ## Contribute
-In times when [ICRA] organizes workshops called *["Towards real-world deployment of legged robots"]*(https://www.youtube.com/watch?v=nKZdYw9eXY0), where big shots like MIT and Boston Dynamics [loan](http://news.mit.edu/2019/mit-mini-cheetah-first-four-legged-robot-to-backflip-0304) or [sell](https://spectrum.ieee.org/automaton/robotics/industrial-robots/boston-dynamics-spot-robot-dog-goes-on-sale) their robots, we hope our modest open-source alternative can contribute to spread this technology.
+In times when [ICRA] organizes workshops called *["Towards real-world deployment of legged robots"](https://www.youtube.com/watch?v=nKZdYw9eXY0)*, where big shots like MIT and Boston Dynamics [loan](http://news.mit.edu/2019/mit-mini-cheetah-first-four-legged-robot-to-backflip-0304) or [sell](https://spectrum.ieee.org/automaton/robotics/industrial-robots/boston-dynamics-spot-robot-dog-goes-on-sale) their robots, we hope our modest open-source alternative can contribute to spread this technology.
 
 The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request.
 
