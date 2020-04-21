@@ -10,10 +10,10 @@ POPI is an entirely open-source quadruped robot. Though not yet extremely agile,
 #### What is available
 :heavy_check_mark: User manual  
 :heavy_check_mark: Bill of materials  
-:heavy_check_mark: Mechanical drawings and CAD  
+:heavy_check_mark: Mechanical drawings and CAD files  
 :heavy_check_mark: Electrical drawings  
 :heavy_check_mark: Source code (ROS and C++)  
-:heavy_check_mark: Cool 3D-renders  
+:heavy_check_mark: Cool 3D-renders and wallpapers  
 <br>
 <br>
 
@@ -21,6 +21,7 @@ POPI is an entirely open-source quadruped robot. Though not yet extremely agile,
   <a href="#build">Build your own POPI</a> •
   <a href="#soft">POPI software</a> •
   <a href="#contribute">Contribute</a> •
+  <a href="#alternative">Other open-source quadrupeds</a> •
   <a href="#publications">Publications</a> •
   <a href="#team">Meet the team</a> •
   <a href="#acknowledgments">Acknowledgments</a>
@@ -31,21 +32,46 @@ POPI is an entirely open-source quadruped robot. Though not yet extremely agile,
 </p>
 
 ## <a name="build"></a> Build your own POPI
+We really hope you build your own POPI, and if that's the case and you ever need our help, we'll be happy to answer all your questions. To get you going you will find all the CAD files and mechanical drawings in the [popi_mechanics] folder, along with information about POPI's dimensions, its actuators' specifications and the machines we used to make its parts.
+
+In [popi_electronics] you will learn more about POPI's electrical needs, its wiring maps and the electronic supplies. You can also check the whole bill of materials [here](https://github.com/popi-mkx3/popi_project/blob/master/popi_reports/POPI_bill_of_materials.xlsx).
+<br>
+<br>
 
 ## <a name="soft"></a> POPI software
-(the brain = 2BBB, 1 RPI + 1 user-PC)
-The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation.
+The brains of POPI are split between 3 single-board computers (one Raspberry Pi 3B+ and two BeagleBone Black) and one (offboard) user computer. It can seem daunting at first, but it allows for a more distributed work, and endows POPI with a computational power that is sufficient even for its future developments. Moreover the source code is entirely based on [ROS], which makes it really easy to run code across multiple machines.
+
+Each computer has a special use, as shown on the diagram below.
+<p align="center">
+  <img src="https://i.imgur.com/3t14bqz.png" /> 
+</p>
+
+If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. If not, you can still follow the instructions in the [popi_software] folder to download and install the part of the code running on the user computer.
+
+<b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI on a [Gazebo] simulation !</b>
 <br>
 <br>
 
 ## Contribute
-The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request !  
-We're fully aware we still have a long road to go before POPI becomes an impressive robot, and we'll be happy to take anyone with us onboard.  
+In times when [ICRA] organizes workshops called *["Towards real-world deployment of legged robots"]*(https://www.youtube.com/watch?v=nKZdYw9eXY0), where big shots like MIT and Boston Dynamics [loan](http://news.mit.edu/2019/mit-mini-cheetah-first-four-legged-robot-to-backflip-0304) or [sell](https://spectrum.ieee.org/automaton/robotics/industrial-robots/boston-dynamics-spot-robot-dog-goes-on-sale) their robots, we hope our modest open-source alternative can contribute to spread this technology.
+
+The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request.
+
+We're fully aware we still have a long road to go before POPI becomes an impressive robot, and we'll be happy to take anyone with us onboard.
+
 You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ros/graphs/contributors) who participated in this project.
 <br>
 <br>
 
+## <a name="alternative"></a> Other open-source quadrupeds
+Other open-source quadruped robots already exist ! If you are interested, you can check out the [Stanford Doggo Project] or the [Open Dynamic Robot Initiative] which are really cool and more functional at this point in time.
+
+If you know of other advanced open-source robots do not hesitate to contact us, we will be really happy to have a look at other projects.
+<br>
+<br>
+
 ## Publications
+We are working on some papers and will keep you updated when they're out there. In the meantime, you can have a look on our [YouTube channel]. Feel free to subscribe to see the video featuring the real POPI as soon as it gets out.
 <br>
 <br>
 
@@ -86,6 +112,8 @@ Finally we of course want to express our sincere gratitude to all our teachers f
 [popi_mechanics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_mechanics
 [popi_electronics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_electronics
 [popi_software]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software
+[flash images]: https://drive.google.com/drive/folders/1-L8BeBzDw7JF44kGpImWbDnX2oDaef4I?usp=sharing
+
 [ROS]: https://www.ros.org/
 [Towr]: https://github.com/ethz-adrl/towr
 [rqt_bag]: http://wiki.ros.org/rqt_bag
@@ -103,6 +131,10 @@ Finally we of course want to express our sincere gratitude to all our teachers f
 [Dave Coleman]: http://dav.ee/
 [TiMOTION]: https://www.timotion.com/fr
 [IMT Mines d'Alès]: https://www.mines-ales.fr/
+[ICRA]: https://www.icra2020.org/
+[Stanford Doggo Project]: https://github.com/Nate711/StanfordDoggoProject/blob/master/README.md
+[Open Dynamic Robot Initiative]: https://open-dynamic-robot-initiative.github.io/
+[YouTube channel]: https://www.youtube.com/channel/UCaCy-1MX6SoqdtjZH4uU_TA
 
 [Clément]: https://www.linkedin.com/in/clément-thomaso-6b9ab910b/
 [Rémi]: https://www.linkedin.com/in/rémi-combacal-16032214a/
