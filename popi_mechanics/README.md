@@ -1,6 +1,6 @@
 # popi_mechanics
 
-<img align="center" src="https://i.imgur.com/ONQVNOU.png" width="100%"/>
+<img align="center" src="https://i.imgur.com/REQ2u9T.png" width="100%"/>
 <br>
 <br>
 
@@ -24,7 +24,7 @@ You will find here everything you need for the [machining] and the [assembly] as
 </p>
 
 <p align="center">
-	<img src="https://i.imgur.com/boXW1fo.gif" />
+<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yvZBiybOPDk" title="Watch the teaser on YouTube"><img src="https://i.imgur.com/u5yCj2k.gif" alt="Watch the teaser on YouTube"/></a>
 </p>
 <br>
 <br>
@@ -34,13 +34,13 @@ You will find here everything you need for the [machining] and the [assembly] as
 
 When standing in its nominal position, POPI has the following general dimensions: 1017mm x 662mm x 620mm (DxLxH). The general assembly is available in the [CATIA folder]. You can download the whole folder and open the top assembly "ALL10-FinalVersion.CATProduct" with CATIA V5.
 <p align="center">
-	<img src="https://i.imgur.com/vjhk1Fi.png" />
+	<img src="https://i.imgur.com/x66c9iN.png" />
 </p>
 
 As shown below, some accessories are needed for the proper handling of the robot, such as a base and handles. Their CAD is available as well in the [CATIA folder] with the respective names ["Socle"] and ["Poignee"].
 
 <p align="center">
-	<img src="https://i.imgur.com/C2iJyDn.png" /> 
+	<img src="https://i.imgur.com/OhF8NML.png" /> 
 </p>
 <br>
 <br>
@@ -50,20 +50,20 @@ As shown below, some accessories are needed for the proper handling of the robot
 POPI has a longitudinal axis of symmetry.
 
 <p align="center">
-	<img src="https://i.imgur.com/YOD6UjQ.jpg" /> 
+	<img src="https://i.imgur.com/HiatkC7.jpg" /> 
 </p>
 <br>
 <br>
 POPI is composed of 12 actuators, 3 per leg. The combination of the "pitching hip joint" and "knee joint" actuators allows the robot to operate linearly. The action of the "rolling hip joint" allows the robot to turn and keep balance. You can find details about the actuators [here].
 
 <p align="center">
-	<img src="https://i.imgur.com/Mb8C8Sg.png" /> 
+	<img src="https://i.imgur.com/tiWUNIh.png" /> 
 </p>
 <br>
 <br>
 Zoom on a leg and its actuators without the body:
 <p align="center">
-	<img src="https://i.imgur.com/m2J5HHf.png" /> 
+	<img src="https://i.imgur.com/NHKHyeb.png" /> 
 </p>
 <br>
 <br>

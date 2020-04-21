@@ -1,6 +1,6 @@
 # POPI
 
-<img align="center" src="https://i.imgur.com/ONQVNOU.png" width="100%"/>
+<img align="center" src="https://i.imgur.com/ftqUFxM.png" width="100%"/>
 <br>
 <br>
 
