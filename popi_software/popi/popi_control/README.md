@@ -1,3 +1,16 @@
+## Credits
+<br>
+<b>
+Please check the original repository of this folder [here](https://github.com/PickNikRobotics/ros_control_boilerplate) ! 
+</b>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 # ROS Control Boilerplate
 
 Simple simulation interface and template for setting up a hardware interface for ros_control. The idea is you take this as a starting point for creating your hardware interfaces, and it is needed because [ros_control documentation](http://wiki.ros.org/ros_control) is sparse. This boilerplate demonstrates:

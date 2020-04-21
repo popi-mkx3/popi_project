@@ -1,3 +1,16 @@
+## Credits
+<br>
+<b>
+Please check the original repository of this folder [here](https://github.com/ethz-adrl/towr) ! 
+</b>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <img align="right" src="https://i.imgur.com/qI1Jfyl.gif" width="55%"/>
 
 [<img src="https://i.imgur.com/qliQVx1.png" />](https://ieeexplore.ieee.org/document/8283570 "Go to RA-L paper")

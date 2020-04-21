@@ -35,20 +35,8 @@ POPI is an entirely open-source quadruped robot. Though not yet extremely agile,
 We really hope you build your own POPI, and if that's the case and you ever need our help, we'll be happy to answer all your questions. To get you going you will find all the CAD files and mechanical drawings in the [popi_mechanics] folder, along with information about POPI's dimensions, its actuators' specifications and the machines we used to make its parts.
 
 In [popi_electronics] you will learn more about POPI's electrical needs, its wiring maps and the electronic supplies. You can also check the whole bill of materials [here](https://github.com/popi-mkx3/popi_project/blob/master/popi_reports/POPI_bill_of_materials.xlsx).
-<br>
-<br>
 
-## <a name="soft"></a> POPI software
-The brains of POPI are split between 3 single-board computers (one Raspberry Pi 3B+ and two BeagleBone Black) and one (offboard) user computer. It can seem daunting at first, but it allows for a more distributed work, and endows POPI with a computational power that is sufficient even for its future developments. Moreover the source code is entirely based on [ROS], which makes it really easy to run code across multiple machines.
-
-Each computer has a special use, as shown on the diagram below.
-<p align="center">
-  <img src="https://i.imgur.com/3t14bqz.png" /> 
-</p>
-
-If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI in a [Gazebo] simulation !</b>
-
-The instructions to download the source code and use it are available in the [popi_software] folder. Of course you will also find there more explanations about how it works to help you getting started.
+The source code is entirely based on [ROS]. If you build your own POPI, you will need to download the [flash images] for the SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI !</b> The instructions to download the source code and use it are available in the [popi_software] folder. Of course you will also find there more explanations about how it works to help you getting started.
 <br>
 <br>
 
