@@ -46,9 +46,9 @@ Each computer has a special use, as shown on the diagram below.
   <img src="https://i.imgur.com/3t14bqz.png" /> 
 </p>
 
-If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. If not, you can still follow the instructions in the [popi_software] folder to download and install the part of the code running on the user computer.
+If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI in a [Gazebo] simulation !</b>
 
-<b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI on a [Gazebo] simulation !</b>
+The instructions to download the source code and use it are available in the [popi_software] folder. Of course you will also find there more explanations about how it works to help you getting started.
 <br>
 <br>
 
