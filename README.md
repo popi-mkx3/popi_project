@@ -36,7 +36,7 @@ We really hope you build your own POPI, and if that's the case and you ever need
 
 In [popi_electronics] you will learn more about POPI's electrical needs, its wiring maps and the electronic supplies. You can also check the whole bill of materials [here](https://github.com/popi-mkx3/popi_project/blob/master/popi_reports/POPI_bill_of_materials.xlsx).
 
-The source code is entirely based on [ROS]. If you build your own POPI, you will need to download the [flash images] for the SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI !</b> The instructions to download the source code and use it are available in the [popi_software] folder. Of course you will also find there more explanations about how it works to help you getting started.
+The source code is entirely based on [ROS]. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI !</b> The instructions to download the source code and use it are available in the [popi_software] folder. Of course you will also find there more explanations about how it works to help you getting started.
 <br>
 <br>
 

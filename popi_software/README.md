@@ -4,8 +4,7 @@
 <br>
 <br>
 
-POPI is an entirely open-source quadruped robot. You will find here all the source code used on POPI. To have a look on the relevant technical material, you can see our other repository [popi_docs]. These docs unfortunately are in French for now, but mechanical drawings should still speak to anyone. Let us know if you ever need a translation and we'll do our best !  
-The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation.
+You will find here all the source code used on POPI. The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation.
 <br>
 <br>
 
@@ -36,8 +35,6 @@ Each computer has a special use, as shown on the diagram below.
 </p>
 
 If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI in a [Gazebo] simulation !</b>
-
-The instructions to download the source code and use it are available in the [popi_software] folder. Of course you will also find there more explanations about how it works to help you getting started.
 <br>
 <br> 
 

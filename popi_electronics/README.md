@@ -1,6 +1,97 @@
 # popi_electronics
 
+<img align="center" src="https://i.imgur.com/HhxkuNx.jpg" width="100%"/>
+<br>
+<br>
 
+You will find here everything you need for understanding all the electronics necessary to make popi walk. Hence, all the [wiring diagrams] and the [pin planning] of our onboard-computers are available in this repository. These files unfortunately are in French for now, but the diagrams should still speak to anyone. Let us know if you ever need a translation and we'll do our best ! To get an overview of POPI's electronic design, please read the following information.
+<br>
+
+:heavy_check_mark: Design made with [easyEDA].
+:heavy_check_mark: Creation of a custom [encoder]. 
+:heavy_check_mark: Creation of a custom [current sensor PCB]. 
+:heavy_check_mark: Mapping of all the card to respect the symmetry.
+:heavy_check_mark: PCB manufacturing on a PCB milling machine.
+<br>
+
+
+<p align="center">
+  <a href="#general-description">General description</a> •
+  <a href="#onboard-computers">Onboard computers</a> •
+  <a href="#sensors">Sensors</a> •
+  <a href="#power-supply">Power supply</a> •
+  <a href="#contribute">Contribute</a> •
+  <a href="#team">Meet the team</a>
+</p>
+
+<p align="center">
+	<img src="https://i.imgur.com/1yiO1dD.gif" width="70%" />
+</p>
+
+
+
+## <a name="general-description"></a> General description
+  
+
+Most of the electronics of the robot is located on the main electronic board underneath the plexiglass carter. All the parts are spread and layered evenly to ease the accessibility and the maintenance. As you can see below, the main electronic board is divided in 3 areas : computing, commanding and supplying.  
+<p align="center">
+	<img src="https://i.imgur.com/N276beb.png" width="80%" />
+</p>
+
+All the detail of the parts is given in the [electronic nomenclature] and a link to a retailer can be found in the [bills of material] in the [popi_report] repository. 
+
+
+
+## <a name="onboard-computers"></a> Onboard computers
+
+POPI is composed by 3 onboard computers. The main one is a [Raspberry Pi 3B+] and is used to host the controllers and compute the set point of each joint. It communicates with two [BeagleBone Black] (BBB) computers that both host the hardware interface of two legs (right legs for one BBB and left legs for the other). 
+
+<p align="center">
+	<img src="https://i.imgur.com/J5PzmXd.png" width="100%" /> 
+</p>
+
+
+## <a name="sensors"></a> Sensors
+
+In order to know the position of each joints, POPI is equiped with two kind of sensors. All the knee and hip rolling joints positions are measured by potentiometers. For the hip pitching joints, we designed a custom [encoder] and its control PCB which plan is available in this repository. 
+<p align="center">
+	<img src="https://i.imgur.com/G7UEYgz.png" width="60%"/> 
+</p>
+
+We also designed a [current sensor PCB] to be able to know the consumption of all the motors. All the details of this part are given in here.  
+
+
+ 
+## <a name="power-supply"></a> Power supply
+
+POPI is actually powered by two 24V power supplies that are located outside the robot on a [power supply board] that we designed. Thus, POPI must be hooked up with an umbilicus cable that will provide all the power needed. All the details on the power supply board of POPI are given in the [user_manual]. 
+  <p align="center">
+	<img src="https://i.imgur.com/L8llYIF.png" width="70%"/> 
+</p>
+<h4>Thoughts for a future version:  </h4>
+
+<ul>
+<li>
+Try looking for more power efficient motors to reduce the size of the ombilicus cable and even maybe to design an onboard battery. 
+</li><li>
+Be more careful of ECM influence on the quality of the sensor signals. Try having all the high power beneath the main electronic board and isolate better the two zones. Think about shielding the important data cables. 
+</li><li>
+Try having always absolute sensors or at least add limit switches to the system. 
+</li><li>
+Unfortunately we had not enough analog input to receive all the current sensor data in the same time. Try adding a multiplexer or an ADC on the current sensor PCB. 
+</li><li>
+We had to add 100nF capacitors just before the BeagleBone to filter the analog signal of our potentiometers. Try designing a proper integration board for those capacitors.
+</li>
+</ul>
+
+
+
+## Contribute
+The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request !  
+We're fully aware we still have a long road to go before POPI becomes an impressive robot, and we'll be happy to take anyone with us onboard.  
+You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ros/graphs/contributors) who participated in this project.
+<br>
+<br>
 
 ## <a name="team"></a> Meet the team !
 
@@ -27,24 +118,20 @@
 
 <img src="https://i.imgur.com/h6RkNK1.jpg" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/MZJbr31.png" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/P2nOGKx.jpg" height="151"/>
 
-[popi_docs]: https://github.com/popi-mkx3/popi_docs
-[ROS]: https://www.ros.org/
-[Towr]: https://github.com/ethz-adrl/towr
-[rqt_bag]: http://wiki.ros.org/rqt_bag
-[xpp]: http://wiki.ros.org/xpp
-[RViz]: http://wiki.ros.org/rviz
-[URDF]: http://wiki.ros.org/urdf
-[Gazebo]: http://gazebosim.org/
-[rqt_gui]: http://wiki.ros.org/rqt_gui
-[ROS Melodic]: http://wiki.ros.org/melodic/Installation/Ubuntu
 
-[BalenaEtcher]: https://www.minimachines.net/tutos/etcher-flasher-image-usb-50144
-[ROS control boilerplate]: https://github.com/PickNikRobotics/ros_control_boilerplate
+[wiring diagrams]: https://github.com/popi-mkx3/popi_project/blob/master/popi_electronics/POPI_PlanElec_General.pdf
+[pin planning]: https://github.com/popi-mkx3/popi_project/blob/master/popi_electronics/POPI_PinPlanning.xlsx
+[easyEDA]: https://easyeda.com/fr
+[encoder]:https://github.com/popi-mkx3/popi_project/blob/master/popi_electronics/POPI_PlanElec_Carte_roue_codeuse.pdf
+[current sensor PCB]: https://github.com/popi-mkx3/popi_project/blob/master/popi_electronics/POPI_PlanElec_Capteur_courant.pdf
+[electronic nomenclature]: https://github.com/popi-mkx3/popi_project/blob/master/popi_electronics/Nomenclature.xlsx
+[bills of material]: https://github.com/popi-mkx3/popi_project/blob/master/popi_reports/POPI_bill_of_materials.xlsx
+[Raspberry Pi 3B+]: https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/
+[BeagleBone Black]: https://beagleboard.org/black
+[power supply board]: https://github.com/popi-mkx3/popi_project/blob/master/popi_electronics/Schematic_POPI-Platine-dalimentation_Sheet_1.pdf
+[user_manual]: https://github.com/popi-mkx3/popi_project/blob/master/popi_reports/POPI_user_manual.pdf
 
-[Alexander W. Winkler]: https://www.alex-winkler.com
-[Dave Coleman]: http://dav.ee/
-[TiMOTION]: https://www.timotion.com/fr
-[IMT Mines d'Alès]: https://www.mines-ales.fr/
+
 
 [Clément]: https://www.linkedin.com/in/clément-thomaso-6b9ab910b/
 [Rémi]: https://www.linkedin.com/in/rémi-combacal-16032214a/
