@@ -198,8 +198,8 @@ You can then save your file, for example as *modified_test.csv*. Make sure the C
 <p align="center">
    <img src="https://i.imgur.com/jfdKSFc.png" /> 
 </p>
-To build your own controls, you can have a look at *popi_software/popi/popi_robot/src/manette.cpp*.
 
+To build your own controls, you can have a look at *popi_software/popi/popi_robot/src/manette.cpp* .
 <br>
 
 * Finally, to use the trajectory you just created:
