@@ -86,7 +86,6 @@ Our robot is built in a simple way, that's the goal, but a slightly more complex
 </li>
 </ul>
 <br>
-<br>
 
 ## Contribute
 The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request.

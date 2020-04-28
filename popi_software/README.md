@@ -19,9 +19,8 @@ You will find here all the source code used on POPI. The code is based on [ROS].
 
 <p align="center">
   <a href="#soft">POPI software</a> •
-  <a href="#howitworks">How it works</a> •
-  <a href="#structure">Folder structure</a> •
   <a href="#install-dependecies">Install dependencies</a> •
+  <a href="#structure">Folder structure</a> •
   <a href="#run">Run</a> •
   <a href="#contribute">Contribute</a>
 </p>
@@ -31,6 +30,16 @@ You will find here all the source code used on POPI. The code is based on [ROS].
 </p>
 
 ## <a name="soft"></a> POPI software
+As of now, POPI doesn't have any on-the-fly trajectory computation. Hence it is important to understand there is a two-step operating principle:
+<ul>
+<li>
+   Generating a new trajectory and making sure it works fine on the virtual model, and that the mechanical stress induced is OK
+</li>
+<li>
+   Sending the trajectory on POPI
+</li>
+</ul>
+
 The brains of POPI are split between 3 single-board computers (one Raspberry Pi 3B+ and two BeagleBone Black) and one (offboard) user computer. It can seem daunting at first, but it allows for a more distributed work, and endows POPI with a computational power that is sufficient even for its future developments. Moreover the source code is entirely based on [ROS], which makes it really easy to run code across multiple machines.
 
 Each computer has a special use, as shown on the diagram below.
@@ -38,17 +47,9 @@ Each computer has a special use, as shown on the diagram below.
   <img src="https://i.imgur.com/3t14bqz.png" /> 
 </p>
 
-If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI in a [Gazebo] simulation !</b> The source code available here is actually the one running on the user computer when making POPI walk.
+If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. The source code available here is actually the one running on the user computer when making POPI walk, and it is also the one needed to create and test new trajectories.
 <br>
 <br> 
-
-## <a name="howitworks"></a> How it works
-<br>
-<br>
-
-## <a name="structure"></a> Folder structure
-<br>
-<br>
 
 ## <a name="install-dependecies"></a> Install dependencies
   
@@ -77,7 +78,7 @@ The environment we used is Ubuntu 18.04 with [ROS Melodic].
    ```bash
    sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers ros-melodic-robot-controllers ros-melodic-robot-state-publisher ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control ros-melodic-rosparam-shortcuts ros-melodic-joy git cmake libeigen3-dev coinor-libipopt-dev libncurses5-dev libgflags-dev libboost-all-dev xterm
    ```
-   If you encounter any problem or would like any details about these dependencies, you will find [here](https://github.com/popi-mkx3/popi_ros/blob/master/CONFIGURATION.md) a list of the versions of the packages we had installed, aswell with links to their respective websites.
+   If you encounter any problem or would like any details about these dependencies, you will find [here](https://github.com/popi-mkx3/popi_ros/blob/master/CONFIGURATION.md) a list of the versions of the packages we had installed, as well as links to their respective websites.
 <br>
 
 * Create the workspace:
@@ -116,10 +117,30 @@ The environment we used is Ubuntu 18.04 with [ROS Melodic].
    #export ROS_MASTER_URI=http://192.168.7.1:11311" >> ~/.bashrc
 
    ```
-	Leave the two last lines commented if you're just using the simulation.
+	Leave the two last lines commented if you're not building your own robot.
 <br>
 <br>
- 
+
+## <a name="structure"></a> Folder structure
+Let's break the folder structure down so that you better understand how it works.
+<p align="center">
+  <img src="https://i.imgur.com/Zt2IFjE.png" /> 
+</p>
+<ul>
+<li> [popi_code] includes source code automatically generated from our URDF model with [RobCoGen], using first the [urdf2robcogen] tool to get a .kindsl format. We actually don't use this generated code for now but thought this might be of use at some point.</li>
+<li> [popi_control] is based on [ROS control boilerplate] and includes ROS-type controllers. This is what allows us to control our twelve actuators, in the simulation as well as with the real robot. In the latter case, a hardware interface is needed. It is also included in this package, but the node actually runs on the Raspberry Pi when making POPI walk. </li>
+<li> [popi_description] includes the [URDF] model of POPI and the STL meshes. In fact we first generated the URDF from our mechanical design thanks to the [SolidWorks to URDF exporter], and then made modifications, additions and simplifications to get the current [xacro] model. </li>
+<li> [popi_gazebo] includes the files needed to define the physics of the world where we spawn our virtual POPI. It also includes a [SDF] model of POPI. Although, please note that we created this SDF model early in the project before switching to URDF, which is needed to work with ROS. </li>
+<li> [popi_robot] includes the definition of messages used and the main launch files. </li>
+<li> [ifotp] is a C++ Interface to Nonlinear Programming Solvers used by Towr. </li>
+<li> [towr] is the package used to generate trajectories. It was developed by [Alexander W. Winkler], we only added there our robot model. </li>
+<li> [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematics model of our robot to compute the required joints' angles to get the foot in the desired position. </li>
+<li> actionneurs includes ROS nodes sending commands to the actuators. </li>
+<li> capteurs includes ROS nodes reading the sensors' values. </li>
+</ul>
+<br>
+<br>
+
 ## Run
 <br>
 <br>
@@ -160,12 +181,25 @@ We're fully aware we still have a long road to go before POPI becomes a more aut
 [popi_mechanics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_mechanics
 [popi_electronics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_electronics
 [popi_software]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software
+[popi_code]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/popi/popi_code
+[popi_control]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/popi/popi_control
+[popi_description]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/popi/popi_description
+[popi_gazebo]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/popi/popi_gazebo
+[popi_robot]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/popi/popi_robot
+[towr]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/towr/towr
+[ifopt]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/towr/ifopt
+[xpp]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/towr/xpp
+
+[SolidWorks to URDF exporter]: https://wiki.ros.org/sw_urdf_exporter
+[urdf2robcogen]: https://github.com/leggedrobotics/urdf2robcogen
+[RobCoGen]: https://robcogenteam.bitbucket.io/whatisit.html
+[SDF]: http://sdformat.org/spec
 [ROS]: https://www.ros.org/
 [Towr]: https://github.com/ethz-adrl/towr
 [rqt_bag]: http://wiki.ros.org/rqt_bag
-[xpp]: http://wiki.ros.org/xpp
 [RViz]: http://wiki.ros.org/rviz
 [URDF]: http://wiki.ros.org/urdf
+[xacro]: http://wiki.ros.org/xacro
 [Gazebo]: http://gazebosim.org/
 [rqt_gui]: http://wiki.ros.org/rqt_gui
 [ROS Melodic]: http://wiki.ros.org/melodic/Installation/Ubuntu
