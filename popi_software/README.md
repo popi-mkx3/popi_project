@@ -1,7 +1,8 @@
 # popi_software
 
 <img align="center" src="https://i.imgur.com/ua4r1Gw.png" width="100%"/>
-<i>The Gazebo world used here isn't available yet in the repository, as we encountered some problems with it. It comes from this GitHub [project](https://github.com/yukkysaito/vehicle_sim) if you want to check it out.</i>
+
+*The Gazebo world used here isn't available yet in the repository, as we encountered some problems with it. It comes from this [GitHub project](https://github.com/yukkysaito/vehicle_sim) if you want to check it out.*
 <br>
 <br>
 
