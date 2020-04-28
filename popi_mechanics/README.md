@@ -7,10 +7,10 @@
 You will find here everything you need for the [machining] and the [assembly] as well as the [mechanical drawings] of this 71kg and 1 meter long robot. These files unfortunately are in French for now, but the drawings should still speak to anyone. Let us know if you ever need a translation and we'll do our best ! To get an overview of POPI's mechanical design, please read the following information.
 <br>
 
-:heavy_check_mark: Design made with [CATIA].  
-:heavy_check_mark: First estimates of forces and torques on [SimDesigner].  
-:heavy_check_mark: Mechanical simulation and actuator's choice on [SolidWorks] Motion and [SolidWorks] Simulation.  
-:heavy_check_mark: Machining with CNC milling and turning machines, water jet cutting and 3D printing.  
+:heavy_check_mark: Design made with [CATIA]  
+:heavy_check_mark: First estimates of forces and torques on [SimDesigner]  
+:heavy_check_mark: Mechanical simulation and actuator's choice on [SolidWorks] Motion and [SolidWorks] Simulation  
+:heavy_check_mark: Machining with CNC milling and turning machines, water jet cutting and 3D printing  
 :heavy_check_mark: Rendering with [SolidWorks] Motion and [SolidWorks] PhotoView 360  
 <br>
 <br>

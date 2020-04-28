@@ -7,6 +7,12 @@
 ## Overview of the project
 POPI is an entirely open-source quadruped robot. Though not yet extremely agile, <a href="#team">we</a> meant it to be accessible to anyone interested in robotics and we hope it becomes a friendly collaborative platform for educationnal or research purposes. You will hence find in this repository everything there is to know about POPI. If you want to know about every details, a good way would be to have a look at the user manual in the [popi_reports] folder.
 
+This project initially started as a student work. As a team of 10 not-yet engineers, we designed and built it from scratch with a 4k€ budget over a six-month-long period during which we still had to take other classes and exams. As such, we are proud of what we achieved but we do know POPI couldn't compete with other quadrupeds as-is. Some of us are still working on this prototype on our free time to improve it, and we will share here everything. In the same time we are also rethinking the whole design to create a new, lighter and mostly 3D-printed POPI.
+
+We are actually looking for some fundings to get this new version up and running and are interested in any opportunity we could have to continue our work. If you have any idea about this or would like to discuss some kind of partnership, please let us know by sending us an <a href = "mailto: popi.mkx3@gmail.com">email</a>.
+
+Otherwise, you can still have a look at what we've done so far on this first prototype. Please keep in mind we inevitably made some mistakes considering it is our first robot and we had limited time and budget. We'll be more than happy to get some advice and discuss any part of our work with you.
+
 #### What is available
 :heavy_check_mark: User manual  
 :heavy_check_mark: Bill of materials  
@@ -45,7 +51,7 @@ In times when [ICRA] organizes workshops called *["Towards real-world deployment
 
 The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request.
 
-We're fully aware we still have a long road to go before POPI becomes an impressive robot, and we'll be happy to take anyone with us onboard. You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ros/graphs/contributors) who participated in this project.
+We're fully aware we still have a long road to go before POPI becomes a more autonomous robot, and we'll be happy to take anyone with us onboard. You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ros/graphs/contributors) who participated in this project.
 <br>
 <br>
 

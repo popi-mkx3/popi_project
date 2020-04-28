@@ -7,11 +7,11 @@
 You will find here everything you need for understanding all the electronics necessary to make popi walk. Hence, all the [wiring diagrams] and the [pin planning] of our onboard-computers are available in this repository. These files unfortunately are in French for now, but the diagrams should still speak to anyone. Let us know if you ever need a translation and we'll do our best ! To get an overview of POPI's electronic design, please read the following information.
 <br>
 
-:heavy_check_mark: Design made with [easyEDA].
-:heavy_check_mark: Creation of a custom [encoder]. 
-:heavy_check_mark: Creation of a custom [current sensor PCB]. 
-:heavy_check_mark: Mapping of all the card to respect the symmetry.
-:heavy_check_mark: PCB manufacturing on a PCB milling machine.
+:heavy_check_mark: Design made with [easyEDA]  
+:heavy_check_mark: Creation of a custom [encoder]  
+:heavy_check_mark: Creation of a custom [current sensor PCB]  
+:heavy_check_mark: Mapping of all the card to respect the symmetry  
+:heavy_check_mark: PCB manufacturing on a PCB milling machine
 <br>
 
 
