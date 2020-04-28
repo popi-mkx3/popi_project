@@ -1,22 +1,25 @@
 # popi_software
 
-<img align="center" src="https://i.imgur.com/ONQVNOU.png" width="100%"/>
+<img align="center" src="https://i.imgur.com/ua4r1Gw.png" width="100%"/>
+<i>The Gazebo world used here isn't available yet in the repository, as we encountered some problems with it. It comes from this GitHub [project](https://github.com/yukkysaito/vehicle_sim) if you want to check it out.</i>
 <br>
 <br>
 
-You will find here all the source code used on POPI. The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation.
+You will find here all the source code used on POPI. The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation. Please read below to get all the information needed to install and run our code on a virtual POPI. If you build your own robot and need the instructions to configure the network and make it work, please refer to the user manual in the [popi_reports] folder.
 <br>
 <br>
 
-:heavy_check_mark: Trajectory generation and optimization based on [Towr].  
-:heavy_check_mark: Easy recording with [rqt_bag].  
-:heavy_check_mark: Actuators' control based on [ROS control boilerplate].  
-:heavy_check_mark: Available simulation on Gazebo.  
+:heavy_check_mark: Trajectory generation and optimization based on [Towr]  
+:heavy_check_mark: Easy recording with [rqt_bag]  
+:heavy_check_mark: Actuators' control based on [ROS control boilerplate]  
+:heavy_check_mark: Available simulation on Gazebo  
 <br>
 <br>
 
 <p align="center">
   <a href="#soft">POPI software</a> •
+  <a href="#howitworks">How it works</a> •
+  <a href="#structure">Folder structure</a> •
   <a href="#install-dependecies">Install dependencies</a> •
   <a href="#run">Run</a> •
   <a href="#contribute">Contribute</a>
@@ -34,9 +37,17 @@ Each computer has a special use, as shown on the diagram below.
   <img src="https://i.imgur.com/3t14bqz.png" /> 
 </p>
 
-If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI in a [Gazebo] simulation !</b>
+If you build your own POPI, you will need to download the [flash images] for the 3 SD cards. <b>Even if you don't plan on building POPI, you can still develop your own code or your own walking trajectories and try it on a virtual POPI in a [Gazebo] simulation !</b> The source code available here is actually the one running on the user computer when making POPI walk.
 <br>
 <br> 
+
+## <a name="howitworks"></a> How it works
+<br>
+<br>
+
+## <a name="structure"></a> Folder structure
+<br>
+<br>
 
 ## <a name="install-dependecies"></a> Install dependencies
   
@@ -113,9 +124,9 @@ The environment we used is Ubuntu 18.04 with [ROS Melodic].
 <br>
 
 ## Contribute
-The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request !  
-We're fully aware we still have a long road to go before POPI becomes an impressive robot, and we'll be happy to take anyone with us onboard.  
-You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ros/graphs/contributors) who participated in this project.
+The whole point of making this project fully open-source is to have anyone who is interested contribute to POPI ! Whether it includes documentation translations, new functionalities, bug fixes or code improvements, we'll be glad to receive your pull request.
+
+We're fully aware we still have a long road to go before POPI becomes a more autonomous robot, and we'll be happy to take anyone with us onboard. You can see here the list of [contributors](https://github.com/popi-mkx3/popi_project/graphs/contributors) who participated in this project.
 <br>
 <br>
 
@@ -144,7 +155,10 @@ You can see here the list of [contributors](https://github.com/popi-mkx3/popi_ro
 
 <img src="https://i.imgur.com/h6RkNK1.jpg" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/MZJbr31.png" height="151"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/P2nOGKx.jpg" height="151"/>
 
-[popi_docs]: https://github.com/popi-mkx3/popi_docs
+[popi_reports]: https://github.com/popi-mkx3/popi_project/tree/master/popi_reports
+[popi_mechanics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_mechanics
+[popi_electronics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_electronics
+[popi_software]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software
 [ROS]: https://www.ros.org/
 [Towr]: https://github.com/ethz-adrl/towr
 [rqt_bag]: http://wiki.ros.org/rqt_bag
