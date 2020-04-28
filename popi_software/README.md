@@ -121,6 +121,8 @@ Let's break the folder structure down so that you better understand how it works
 <p align="center">
   <img src="https://i.imgur.com/Zt2IFjE.png" /> 
 </p>
+
+Here is a short explanation of what lies in each folder:
 * [popi_code] includes source code automatically generated from our URDF model with [RobCoGen], using first the [urdf2robcogen] tool to get a .kindsl format. We actually don't use this generated code for now but thought this might be of use at some point.
 * [popi_control] is based on [ROS control boilerplate] and includes ROS-type controllers. This is what allows us to control our twelve actuators, in the simulation as well as with the real robot. In the latter case, a hardware interface is needed. It is also included in this package, but the node actually runs on the Raspberry Pi when making POPI walk.
 * [popi_description] includes the [URDF] model of POPI and the STL meshes. In fact we first generated the URDF from our mechanical design thanks to the [SolidWorks to URDF exporter], and then made modifications, additions and simplifications to get the current [xacro] model.
@@ -131,6 +133,7 @@ Let's break the folder structure down so that you better understand how it works
 * [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematics model of our robot to compute the required joints' angles to get the foot in the desired position.
 * actionneurs includes ROS nodes sending commands to the actuators.
 * capteurs includes ROS nodes reading the sensors' values.
+
 <br>
 <br>
 
