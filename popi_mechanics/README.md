@@ -66,7 +66,7 @@ Zoom on a leg and its actuators without the body:
 ## <a name="lets-look-further"></a> Let's look further
 This design remains a proof of concept, designed and built in a few months by students relatively new to this field. We now have to improve what we've done and take into account the problems we encountered to achieve a truly functional V2.
   
-####Thoughts for a future version:
+#### Thoughts for a future version:
 * Do not make legs too heavy compared to the body and think ahead about the robot's balance. We currently have too much weight on the back compared to the front, so the rear feet are struggling to get off the ground.
 * Think about the programming in parallel of mechanics, try out all possible approaches in a physical simulation of walking before machining the robot. SolidWorks Motion does this perfectly. 
 * Our robot can move all of its joints independently, it's cool, but think about whether this is really useful. Moving the robot's pitch hip proportionally to the knee might be enough.

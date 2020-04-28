@@ -67,7 +67,7 @@ POPI is actually powered by two 24V power supplies that are located outside the 
 ## <a name="lets-look-further"></a> Let's look further
 This design remains a proof of concept, designed and built in a few months by students relatively new to this field. We now have to improve what we've done and take into account the problems we encountered to achieve a truly functional V2.
   
-####Thoughts for a future version:
+#### Thoughts for a future version:
 * Try looking for more power efficient motors to reduce the size of the ombilicus cable and even maybe to design an onboard battery. 
 * Be more careful of ECM influence on the quality of the sensor signals. Try having all the high power beneath the main electronic board and isolate better the two zones. Think about shielding the important data cables. 
 * Try having always absolute sensors or at least add limit switches to the system. 
