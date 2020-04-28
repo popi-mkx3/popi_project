@@ -207,7 +207,7 @@ To build your own controls, you can have a look at *popi_software/popi/popi_robo
    cd ~/catkin_ws/src/popi_project/popi_software/popi/popi_robot/trajectories/bags
    rosbag play modified_test.bag
    ```
-You can also try out the ones we saved:
+   You can also try out the ones we saved:
    ```bash
    rosbag play short_static_walking.bag
    rosbag play short_dynamic_walking.bag
