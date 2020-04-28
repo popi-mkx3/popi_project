@@ -22,7 +22,8 @@ You will find here all the source code used on POPI. The code is based on [ROS].
   <a href="#install-dependecies">Install dependencies</a> •
   <a href="#structure">Folder structure</a> •
   <a href="#run">Run</a> •
-  <a href="#contribute">Contribute</a>
+  <a href="#contribute">Contribute</a> •
+  <a href="#team">Meet the team</a>
 </p>
 
 <p align="center">
@@ -142,7 +143,7 @@ Here is a short explanation of what lies in each folder:
    ```bash
    roslaunch towr_ros towr_ros_popi.launch
    ```
-   The user interface is pretty easy to understand. The constraints used by Towr can make a big difference in the generated trajectories as well, and to change them you will need to get your hands in the code. The maximum deviation of the feet from the nominal position, represented by the blue boxes, can be changed in *popi_software/towr/towr/towr/include/towr/models/examples/popi_model.h*. We would still have to work with Towr to use the constraints efficiently. Moreover our inverse kinematics model is unfortunately restricted with quite a lot of singularities. To get rid of them, we lowered the maximum deviation parameters, but this probably isn't the best way around.
+   The user interface is pretty easy to understand. The constraints used by Towr can make a big difference in the generated trajectories, and to change them you will need to get your hands in the code. The maximum deviation of the feet from the nominal position, represented by the blue boxes, can be changed in *popi_software/towr/towr/towr/include/towr/models/examples/popi_model.h*. We would still have to work with Towr to use the constraints efficiently. Moreover our inverse kinematics model is unfortunately restricted with quite a lot of singularities. To get rid of them, we lowered the maximum deviation parameters, but this probably isn't the best way around.
    We still generated some good trajectories we were able to try out on our real robot and which worked fine !
 <br>
 
