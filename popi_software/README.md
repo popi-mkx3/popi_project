@@ -7,9 +7,8 @@
 <br>
 
 You will find here all the source code used on POPI. The code is based on [ROS]. You can run it without the robot, develop your own code and try it in a [Gazebo] simulation. Please read below to get all the information needed to install and run our code on a virtual POPI. If you build your own robot and need the instructions to configure the network and make it work, please refer to the user manual in the [popi_reports] folder.
-<br>
-<br>
 
+#### What is available
 :heavy_check_mark: Trajectory generation and optimization based on [Towr]  
 :heavy_check_mark: Easy recording with [rqt_bag]  
 :heavy_check_mark: Actuators' control based on [ROS control boilerplate]  
@@ -134,7 +133,6 @@ Here is a short explanation of what lies in each folder:
 * [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematics model of our robot to compute the required joints' angles to get the foot in the desired position.
 * actionneurs includes ROS nodes sending commands to the actuators.
 * capteurs includes ROS nodes reading the sensors' values.
-
 <br>
 <br>
 

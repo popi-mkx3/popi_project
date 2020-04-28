@@ -5,8 +5,8 @@
 <br>
 
 You will find here everything you need for the [machining] and the [assembly] as well as the [mechanical drawings] of this 71kg and 1 meter long robot. These files unfortunately are in French for now, but the drawings should still speak to anyone. Let us know if you ever need a translation and we'll do our best ! To get an overview of POPI's mechanical design, please read the following information.
-<br>
 
+#### What is available
 :heavy_check_mark: Design made with [CATIA]  
 :heavy_check_mark: First estimates of forces and torques on [SimDesigner]  
 :heavy_check_mark: Mechanical simulation and actuator's choice on [SolidWorks] Motion and [SolidWorks] Simulation  
@@ -26,12 +26,8 @@ You will find here everything you need for the [machining] and the [assembly] as
 <p align="center">
 <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yvZBiybOPDk" title="Watch the teaser on YouTube"><img src="https://i.imgur.com/u5yCj2k.gif" alt="Watch the teaser on YouTube"/></a>
 </p>
-<br>
-<br>
 
 ## <a name="general-description"></a> General description
-  
-
 When standing in its nominal position, POPI has the following general dimensions: 1017mm x 662mm x 620mm (DxLxH). The general assembly is available in the [CATIA folder]. You can download the whole folder and open the top assembly "ALL10-FinalVersion.CATProduct" with CATIA V5.
 <p align="center">
 	<img src="https://i.imgur.com/x66c9iN.png" />
@@ -46,7 +42,6 @@ As shown below, some accessories are needed for the proper handling of the robot
 <br>
 
 ## <a name="how-it-works"></a> How it works
-
 POPI has a longitudinal axis of symmetry.
 
 <p align="center">
@@ -69,22 +64,14 @@ Zoom on a leg and its actuators without the body:
 <br>
 
 ## <a name="lets-look-further"></a> Let's look further
-
-This design remains a proof of concept, designed and built in a few months by novice students in this field. Optimizing the existing and taking into account the problems encountered will allow us to achieve a truly functional V2.  
+This design remains a proof of concept, designed and built in a few months by students relatively new to this field. We now have to improve what we've done and take into account the problems we encountered to achieve a truly functional V2.
   
-<h4>Thoughts for a future version:  </h4>
-
-<ul>
-<li>
-Do not make legs too heavy compared to the body and think ahead about the robot's balance. We currently have too much weight on the back compared to the front, so the rear feet are struggling to get off the ground.
-</li><li>
-Think about the programming in parallel of mechanics, try out all possible approaches in a physical simulation of walking before machining the robot. SolidWorks Motion does this perfectly. 
-</li><li>
-Our robot can move all of its joints independently, it's cool, but think about whether this is really useful. Moving the robot's pitch hip proportionally to the knee might be enough.
-</li><li>
-Our robot is built in a simple way, that's the goal, but a slightly more complex arrangement that would allow the knee to move without a cylinder could be more efficient. A motor, which could be integrated into the body and act on the knee through a chain/pulley system might be a better solution.
-</li>
-</ul>
+####Thoughts for a future version:
+* Do not make legs too heavy compared to the body and think ahead about the robot's balance. We currently have too much weight on the back compared to the front, so the rear feet are struggling to get off the ground.
+* Think about the programming in parallel of mechanics, try out all possible approaches in a physical simulation of walking before machining the robot. SolidWorks Motion does this perfectly. 
+* Our robot can move all of its joints independently, it's cool, but think about whether this is really useful. Moving the robot's pitch hip proportionally to the knee might be enough.
+* Our robot is built in a simple way, that's the goal, but a slightly more complex arrangement that would allow the knee to move without a cylinder could be more efficient. A motor, which could be integrated into the body and act on the knee through a chain/pulley system might be a better solution.
+<br>
 <br>
 
 ## Contribute
@@ -132,7 +119,7 @@ We're fully aware we still have a long road to go before POPI becomes a more aut
 
 [here]: https://github.com/popi-mkx3/popi_project/blob/master/popi_mechanics/POPI_actuators_data.xlsx
 
-[popi_docs]: https://github.com/popi-mkx3/popi_docs
+[popi_reports]: https://github.com/popi-mkx3/popi_reports
 [ROS]: https://www.ros.org/
 [Towr]: https://github.com/ethz-adrl/towr
 [rqt_bag]: http://wiki.ros.org/rqt_bag
