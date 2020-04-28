@@ -31,14 +31,9 @@ You will find here all the source code used on POPI. The code is based on [ROS].
 
 ## <a name="soft"></a> POPI software
 As of now, POPI doesn't have any on-the-fly trajectory computation. Hence it is important to understand there is a two-step operating principle:
-<ul>
-<li>
-   Generating a new trajectory and making sure it works fine on the virtual model, and that the mechanical stress induced is OK
-</li>
-<li>
-   Sending the trajectory on POPI
-</li>
-</ul>
+   * Generating a new trajectory and making sure it works fine on the virtual model, and that the mechanical stress induced is OK
+   * Sending the trajectory on POPI
+
 
 The brains of POPI are split between 3 single-board computers (one Raspberry Pi 3B+ and two BeagleBone Black) and one (offboard) user computer. It can seem daunting at first, but it allows for a more distributed work, and endows POPI with a computational power that is sufficient even for its future developments. Moreover the source code is entirely based on [ROS], which makes it really easy to run code across multiple machines.
 
@@ -126,18 +121,16 @@ Let's break the folder structure down so that you better understand how it works
 <p align="center">
   <img src="https://i.imgur.com/Zt2IFjE.png" /> 
 </p>
-<ul>
-<li> [popi_code] includes source code automatically generated from our URDF model with [RobCoGen], using first the [urdf2robcogen] tool to get a .kindsl format. We actually don't use this generated code for now but thought this might be of use at some point.</li>
-<li> [popi_control] is based on [ROS control boilerplate] and includes ROS-type controllers. This is what allows us to control our twelve actuators, in the simulation as well as with the real robot. In the latter case, a hardware interface is needed. It is also included in this package, but the node actually runs on the Raspberry Pi when making POPI walk. </li>
-<li> [popi_description] includes the [URDF] model of POPI and the STL meshes. In fact we first generated the URDF from our mechanical design thanks to the [SolidWorks to URDF exporter], and then made modifications, additions and simplifications to get the current [xacro] model. </li>
-<li> [popi_gazebo] includes the files needed to define the physics of the world where we spawn our virtual POPI. It also includes a [SDF] model of POPI. Although, please note that we created this SDF model early in the project before switching to URDF, which is needed to work with ROS. </li>
-<li> [popi_robot] includes the definition of messages used and the main launch files. </li>
-<li> [ifotp] is a C++ Interface to Nonlinear Programming Solvers used by Towr. </li>
-<li> [towr] is the package used to generate trajectories. It was developed by [Alexander W. Winkler], we only added there our robot model. </li>
-<li> [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematics model of our robot to compute the required joints' angles to get the foot in the desired position. </li>
-<li> actionneurs includes ROS nodes sending commands to the actuators. </li>
-<li> capteurs includes ROS nodes reading the sensors' values. </li>
-</ul>
+* [popi_code] includes source code automatically generated from our URDF model with [RobCoGen], using first the [urdf2robcogen] tool to get a .kindsl format. We actually don't use this generated code for now but thought this might be of use at some point.
+* [popi_control] is based on [ROS control boilerplate] and includes ROS-type controllers. This is what allows us to control our twelve actuators, in the simulation as well as with the real robot. In the latter case, a hardware interface is needed. It is also included in this package, but the node actually runs on the Raspberry Pi when making POPI walk.
+* [popi_description] includes the [URDF] model of POPI and the STL meshes. In fact we first generated the URDF from our mechanical design thanks to the [SolidWorks to URDF exporter], and then made modifications, additions and simplifications to get the current [xacro] model.
+* [popi_gazebo] includes the files needed to define the physics of the world where we spawn our virtual POPI. It also includes a [SDF] model of POPI. Although, please note that we created this SDF model early in the project before switching to URDF, which is needed to work with ROS.
+* [popi_robot] includes the definition of messages used and the main launch files.
+* [ifotp] is a C++ Interface to Nonlinear Programming Solvers used by Towr.
+* [towr] is the package used to generate trajectories. It was developed by [Alexander W. Winkler], we only added there our robot model.
+* [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematics model of our robot to compute the required joints' angles to get the foot in the desired position.
+* actionneurs includes ROS nodes sending commands to the actuators.
+* capteurs includes ROS nodes reading the sensors' values.
 <br>
 <br>
 
