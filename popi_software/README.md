@@ -142,6 +142,83 @@ Let's break the folder structure down so that you better understand how it works
 <br>
 
 ## Run
+* Run Towr to generate a new trajectory:
+   ```bash
+   roslaunch towr_ros towr_ros_popi.launch
+   ```
+   The user interface is pretty easy to understand. The constraints used by Towr can make a big difference in the generated trajectories as well, and to change them you will need to get your hands in the code. The maximum deviation of the feet from the nominal position, represented by the blue boxes, can be changed in *popi_software/towr/towr/towr/include/towr/models/examples/popi_model.h*. We would still have to work with Towr to use the constraints efficiently. Moreover our inverse kinematics model is unfortunately restricted with quite a lot of singularities. To get rid of them, we lowered the maximum deviation parameters, but this probably isn't the best way around.
+   We still generated some good trajectories we were able to try out on our real robot and which worked fine !
+<br>
+
+* Save the trajectory as a rosbag file:
+   ```bash
+   cd ~/catkin_ws/src/popi_project/popi_software/popi/popi_robot/trajectories/bags
+   rosrun rqt_bag rqt_bag
+   ```
+   Click the red recording button, select the 12 topics called */popi/.../command*, then click *Record*, give a name to your bag file (like *test.bag*), then go to the towr user interface and click *v* to replay the last calculated trajectory.
+   The rqt_bag window should look like this:
+   <p align="center">
+      <img src="https://i.imgur.com/ny4yXxI.png" /> 
+   </p>
+   Note the X number, as it may be useful to understand the timestamps of your bag file if you want to work on your commands as a CSV file. When this is done, close the rqt_bag window.
+<br>
+
+* To convert your data fril rosbag to CSV, you can do the following:   
+   ```bash
+   cd ~/catkin_ws/src/popi_project/popi_software/popi/popi_robot/trajectories/bags
+   rostopic echo -b test.bag -p /popi/aileAVD_eff_position_controller/command > ../csv/aileAVD.csv
+   rostopic echo -b test.bag -p /popi/aileAVG_eff_position_controller/command > ../csv/aileAVG.csv
+   rostopic echo -b test.bag -p /popi/aileARD_eff_position_controller/command > ../csv/aileARD.csv
+   rostopic echo -b test.bag -p /popi/aileARG_eff_position_controller/command > ../csv/aileARG.csv
+   rostopic echo -b test.bag -p /popi/epauleAVD_eff_position_controller/command > ../csv/epauleAVD.csv
+   rostopic echo -b test.bag -p /popi/epauleAVG_eff_position_controller/command > ../csv/epauleAVG.csv
+   rostopic echo -b test.bag -p /popi/epauleARD_eff_position_controller/command > ../csv/epauleARD.csv
+   rostopic echo -b test.bag -p /popi/epauleARG_eff_position_controller/command > ../csv/epauleARG.csv
+   rostopic echo -b test.bag -p /popi/coudeAVD_eff_position_controller/command > ../csv/coudeAVD.csv
+   rostopic echo -b test.bag -p /popi/coudeAVG_eff_position_controller/command > ../csv/coudeAVG.csv
+   rostopic echo -b test.bag -p /popi/coudeARD_eff_position_controller/command > ../csv/coudeARD.csv
+   rostopic echo -b test.bag -p /popi/coudeARG_eff_position_controller/command > ../csv/coudeARG.csv
+   ```
+   This isn't optimal as it creates 12 differents CSV files you then have to concatenate to work on the whole data in one file. We will release a short script to make it easier. To get your timestamps into actual seconds past after your hit the *Record* button, use the following formula : t = (%time / 10^9) − X.
+<br>
+
+* If you changed your data on Excel and want to get the modified .csv back into rosbag, make sure first the columns headings are the following : %time, aileAVD, aileAVG, aileARD, aileARG, epauleAVD,
+epauleAVG, epauleARD, epauleARG, coudeAVD, coudeAVG, coudeARD, coudeARG. This means the columns need to be in that order, so be careful when you concatenate your 12 CSV files.
+You can then save your file, for example as *modified_test.csv*. Make sure the CSV format is the same as the one it was in the previous files. Finally, you can run the following commands:
+   ```bash
+   cd ~/catkin_ws/src/popi_project/popi_software/popi/popi_robot/trajectories/csv
+   ./csv_to_rosbag.py modified_test
+   mv modified_test.bag ../bags/
+   ```
+<br>
+
+* To open the Gazebo environment, you just have to run:
+   ```bash
+   roslaunch popi_robot popi_simu.launch
+   ```
+<br>
+
+* If you have a Xbox controller, this launch file allows you to use it to run some simple functions:
+<p align="center">
+   <img src="https://i.imgur.com/jfdKSFc.png" /> 
+</p>
+To build your own controls, you can have a look at *popi_software/popi/popi_robot/src/manette.cpp*.
+
+<br>
+
+* Finally, to use the trajectory you just created:
+   ```bash
+   cd ~/catkin_ws/src/popi_project/popi_software/popi/popi_robot/trajectories/bags
+   rosbag play modified_test.bag
+   ```
+You can also try out the ones we saved:
+   ```bash
+   rosbag play short_static_walking.bag
+   rosbag play short_dynamic_walking.bag
+   rosbag play long_dynamic_walking.bag
+   rosbag play pit_30cm.bag
+   rosbag play step_20cm.bag
+   ```
 <br>
 <br>
 
