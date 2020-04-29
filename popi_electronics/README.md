@@ -26,7 +26,7 @@ You will find here everything you need to understand all the electronics necessa
 </p>
 
 <p align="center">
-	<img src="https://i.imgur.com/1yiO1dD.gif" width="70%" />
+	<img src="https://i.imgur.com/C25Hcgm.gif" width="70%" />
 </p>
 
 ## <a name="general-description"></a> General description

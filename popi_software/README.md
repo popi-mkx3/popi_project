@@ -31,7 +31,7 @@ You will find here all the source code used on POPI. The code is based on [ROS].
 
 ## <a name="soft"></a> POPI software
 As of now, POPI doesn't have any on-the-fly trajectory computation. Hence it is important to understand there is a two-step operating principle:
-   * Generating a new trajectory and making sure it works fine on the virtual model, and that the mechanical stress induced is OK
+   * Generating a new trajectory and making sure it works fine on the virtual model
    * Sending the trajectory on POPI
 
 
@@ -73,7 +73,7 @@ The environment we used is Ubuntu 18.04 with [ROS Melodic].
    ```bash
    sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers ros-melodic-robot-controllers ros-melodic-robot-state-publisher ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control ros-melodic-rosparam-shortcuts ros-melodic-joy git cmake libeigen3-dev coinor-libipopt-dev libncurses5-dev libgflags-dev libboost-all-dev xterm
    ```
-   If you encounter any problem or would like any details about these dependencies, you will find [here](https://github.com/popi-mkx3/popi_ros/blob/master/CONFIGURATION.md) a list of the versions of the packages we had installed, as well as links to their respective websites.
+   If you encounter any problem or would like any details about these dependencies, you will find [here](https://github.com/popi-mkx3/popi_project/blob/master/popi_software/CONFIGURATION.md) a list of the versions of the packages we had installed, as well as links to their respective websites.
 <br>
 
 * Create the workspace:
@@ -88,7 +88,7 @@ The environment we used is Ubuntu 18.04 with [ROS Melodic].
 * Or only the popi_software folder:
    ```bash
    git init
-   git remode add -f origin https://github.com/popi-mkx3/popi_ros.git
+   git remode add -f origin https://github.com/popi-mkx3/popi_project.git
    git config core.sparseCheckout true
    echo "popi_software" >> .git/info/sparse-checkout
    git pull origin master
@@ -128,9 +128,9 @@ Here is a short explanation of what lies in each folder:
 * [popi_description] includes the [URDF] model of POPI and the STL meshes. In fact we first generated the URDF from our mechanical design thanks to the [SolidWorks to URDF exporter], and then made modifications, additions and simplifications to get the current [xacro] model.
 * [popi_gazebo] includes the files needed to define the physics of the world where we spawn our virtual POPI. It also includes a [SDF] model of POPI. Although, please note that we created this SDF model early in the project before switching to URDF, which is needed to work with ROS.
 * [popi_robot] includes the definition of messages used and the main launch files.
-* [ifotp] is a C++ Interface to Nonlinear Programming Solvers used by Towr.
+* [ifopt] is a C++ Interface to Nonlinear Programming Solvers used by Towr.
 * [towr] is the package used to generate trajectories. It was developed by [Alexander W. Winkler], we only added there our robot model.
-* [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematics model of our robot to compute the required joints' angles to get the foot in the desired position.
+* [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematic model of our robot to compute the required joint angles to get the foot in the desired position.
 * actionneurs includes ROS nodes sending commands to the actuators.
 * capteurs includes ROS nodes reading the sensors' values.
 <br>
@@ -141,7 +141,7 @@ Here is a short explanation of what lies in each folder:
    ```bash
    roslaunch towr_ros towr_ros_popi.launch
    ```
-   The user interface is pretty easy to understand. The constraints used by Towr can make a big difference in the generated trajectories, and to change them you will need to get your hands in the code. The maximum deviation of the feet from the nominal position, represented by the blue boxes, can be changed in *popi_software/towr/towr/towr/include/towr/models/examples/popi_model.h*. We would still have to work with Towr to use the constraints efficiently. Moreover our inverse kinematics model is unfortunately restricted with quite a lot of singularities. To get rid of them, we lowered the maximum deviation parameters, but this probably isn't the best way around.
+   The user interface is pretty easy to understand. The constraints used by Towr can make a big difference in the generated trajectories, and to change them you will need to get your hands in the code. The maximum deviation of the feet from the nominal position, represented by the blue boxes, can be changed in *popi_software/towr/towr/towr/include/towr/models/examples/popi_model.h*. We would still have to work with Towr to use the constraints efficiently. Moreover our inverse kinematic model is unfortunately restricted with quite a lot of singularities. To get rid of them, we lowered the maximum deviation parameters, but this probably isn't the best way around.
    We still generated some good trajectories we were able to try out on our real robot and which worked fine !
 <br>
 
@@ -261,6 +261,7 @@ We're fully aware we still have a long road to go before POPI becomes a more aut
 [towr]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/towr/towr
 [ifopt]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/towr/ifopt
 [xpp]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software/towr/xpp
+[flash images]: https://drive.google.com/drive/folders/1-L8BeBzDw7JF44kGpImWbDnX2oDaef4I?usp=sharing
 
 [SolidWorks to URDF exporter]: https://wiki.ros.org/sw_urdf_exporter
 [urdf2robcogen]: https://github.com/leggedrobotics/urdf2robcogen
