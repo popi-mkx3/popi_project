@@ -16,6 +16,7 @@ We're fully aware we still have a long road to go before POPI becomes a more aut
 <br>
 
 ## Meet the team !
+If you want to contact us you can send us an email at popi.mkx3@gmail.com.
 
 <p align="center"><b> Project Leader </b></p>
 <p align="center">

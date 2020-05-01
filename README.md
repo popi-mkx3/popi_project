@@ -68,6 +68,8 @@ We are working on some papers and will keep you updated when they're out there. 
 
 ## <a name="team"></a> Meet the team !
 POPI was initially designed as part of our mechatronical engineering degree at IMT Mines d'Alès in France. Here is the team who started this project.
+If you want to contact us you can send us an email at popi.mkx3@gmail.com.
+
 <br>
 <p align="center"><b> Project Leader </b></p>
 <p align="center">
@@ -103,7 +105,6 @@ Finally we of course want to express our sincere gratitude to all our teachers f
 [popi_mechanics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_mechanics
 [popi_electronics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_electronics
 [popi_software]: https://github.com/popi-mkx3/popi_project/tree/master/popi_software
-[flash images]: https://drive.google.com/drive/folders/1-L8BeBzDw7JF44kGpImWbDnX2oDaef4I?usp=sharing
 
 [ROS]: https://www.ros.org/
 [Towr]: https://github.com/ethz-adrl/towr
