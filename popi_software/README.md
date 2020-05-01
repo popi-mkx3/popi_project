@@ -131,8 +131,8 @@ Here is a short explanation of what lies in each folder:
 * [ifopt] is a C++ Interface to Nonlinear Programming Solvers used by Towr.
 * [towr] is the package used to generate trajectories. It was developed by [Alexander W. Winkler], we only added there our robot model.
 * [xpp] is a package used by Towr to allow the visualization of trajectories on RViz. This is where is included the inverse kinematic model of our robot to compute the required joint angles to get the foot in the desired position.
-* actionneurs includes ROS nodes sending commands to the actuators.
-* capteurs includes ROS nodes reading the sensors' values.
+* actionneurs includes ROS nodes sending commands to the actuators (only in the flash images).
+* capteurs includes ROS nodes reading the sensors' values (only in the flash images).
 <br>
 <br>
 

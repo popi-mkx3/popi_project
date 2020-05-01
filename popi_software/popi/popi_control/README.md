@@ -1,8 +1,8 @@
 ## Credits
 <br>
 <b>
-    
-Please check the original repository of this folder [here](https://github.com/PickNikRobotics/ros_control_boilerplate) ! 
+
+This is a modified version of the [original repository](https://github.com/PickNikRobotics/ros_control_boilerplate). Please refer to it for an up-to-date version, ROS install commands and pull-requests.
 </b>
 <br>
 <br>

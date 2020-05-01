@@ -1,3 +1,16 @@
+## Credits
+<br>
+<b>
+
+This is a modified version of the [original repository](https://github.com/ethz-adrl/ifopt). Please refer to it for an up-to-date version, ROS install commands and pull-requests.
+</b>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ### <img src="https://i.imgur.com/ZOfGZwB.png" height="60" />
 
 [![Build Status](http://build.ros.org/buildStatus/icon?job=Kdev__ifopt__ubuntu_xenial_amd64)](http://build.ros.org/view/Kdev/job/Kdev__ifopt__ubuntu_xenial_amd64/)

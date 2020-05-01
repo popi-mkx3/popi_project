@@ -1,3 +1,16 @@
+## Credits
+<br>
+<b>
+
+This is a modified version of the [original repository](https://github.com/leggedrobotics/xpp). Please refer to it for an up-to-date version, ROS install commands and pull-requests.
+</b>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ### <img src="https://i.imgur.com/ct8e7T4.png" width="20%" /> 
 
 [![Build Status](http://build.ros.org/buildStatus/icon?job=Kdev__xpp__ubuntu_xenial_amd64)](http://build.ros.org/view/Kdev/job/Kdev__xpp__ubuntu_xenial_amd64/)
