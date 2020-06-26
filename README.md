@@ -99,7 +99,7 @@ Finally we of course want to express our sincere gratitude to all our teachers f
 <br>
 <br>
 
-<img src="https://i.imgur.com/h6RkNK1.jpg" height="100"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/MZJbr31.png" height="100"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/P2nOGKx.jpg" height="100"/>
+<img src="https://i.imgur.com/h6RkNK1.jpg" height="130"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/MZJbr31.png" height="130"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://i.imgur.com/P2nOGKx.jpg" height="130"/>
 
 [popi_reports]: https://github.com/popi-mkx3/popi_project/tree/master/popi_reports
 [popi_mechanics]: https://github.com/popi-mkx3/popi_project/tree/master/popi_mechanics
