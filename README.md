@@ -4,6 +4,18 @@
 <br>
 <br>
 
+## News : Walko
+Below are the links to the follow up of the POPI project, on a new quadruped. Our whole work will be once again open source and we should start releasing it in September 2021.
+The goal is still the same : allowing everybody to build their own quad. Unlike POPI, our new quad will be 100% 3d-printed to make this goal closer, with components available to purchase online. We will provide as soon as possible a BOM and links to the manufacturers' websites (we are not resellers). According to our current estimations, building your own quad will cost around 2,7k€ altogether (without the camera module though), which is still expensive but rather cheap when considering the size of the robot and the price of similar-sized robots.
+We aim to provide beginner-friendly step-by-step instructions along the road, and to keep improving the tech as well.
+
+If you want to stay tuned about this :
+[Website](https://walko-robotics.com)
+[GitLab](https://gitlab.com/walko-robotics/doge/software) and [GitHub](https://github.com/Walko-Robotics) - Please keep in mind that the GitHub will be a mirror of the GitLab from now on.
+[Instagram](https://www.instagram.com/walko_adventures/)
+[Discord](dsc.gg/walko)
+[YouTube](https://www.youtube.com/c/WalkoRobotics)
+
 ## Overview of the project
 POPI is an entirely open-source quadruped robot. Though not yet extremely agile, <a href="#team">we</a> meant it to be accessible to anyone interested in robotics and we hope it becomes a friendly collaborative platform for educational or research purposes. You will hence find in this repository everything there is to know about POPI. If you want to know about every details, a good way would be to have a look at the user manual in the [popi_reports] folder.
 
@@ -27,7 +39,6 @@ Otherwise, you can still have a look at what we've done so far on this first pro
   <a href="#build">Build your own POPI</a> •
   <a href="#contribute">Contribute</a> •
   <a href="#alternative">Other open-source quadrupeds</a> •
-  <a href="#publications">Publications</a> •
   <a href="#team">Meet the team</a> •
   <a href="#acknowledgments">Acknowledgments</a>
 </p>
@@ -58,11 +69,6 @@ We're fully aware we still have a long road to go before POPI becomes a more aut
 Other open-source quadruped robots already exist ! If you are interested, you can check out the [Stanford Doggo Project] or the [Open Dynamic Robot Initiative] which are really cool and more functional at this point in time.
 
 If you know of other advanced open-source robots do not hesitate to contact us, we will be really happy to have a look at other projects.
-<br>
-<br>
-
-## Publications
-We are working on some papers and will keep you updated when they're out there. In the meantime, you can have a look on our [YouTube channel]. Feel free to subscribe to see the video featuring the real POPI as soon as it gets out.
 <br>
 <br>
 
