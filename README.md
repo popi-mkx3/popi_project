@@ -18,6 +18,8 @@ If you want to stay tuned about this : <br>
 [Instagram](https://www.instagram.com/walko_adventures/) <br>
 [Discord](dsc.gg/walko) <br>
 [YouTube](https://www.youtube.com/c/WalkoRobotics) <br> <br>
+Fair warning : we mainly use French on our social media for now, but you can still DM us or send us an email at contact.walko@gmail.com if you want.
+<br> <br>
 
 ## Overview of the project
 POPI is an entirely open-source quadruped robot. Though not yet extremely agile, <a href="#team">we</a> meant it to be accessible to anyone interested in robotics and we hope it becomes a friendly collaborative platform for educational or research purposes. You will hence find in this repository everything there is to know about POPI. If you want to know about every details, a good way would be to have a look at the user manual in the [popi_reports] folder.
