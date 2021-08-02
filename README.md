@@ -5,16 +5,19 @@
 <br>
 
 ## News : Walko
-Below are the links to the follow up of the POPI project, on a new quadruped. Our whole work will be once again open source and we should start releasing it in September 2021.
-The goal is still the same : allowing everybody to build their own quad. Unlike POPI, our new quad will be 100% 3d-printed to make this goal closer, with components available to purchase online. We will provide as soon as possible a BOM and links to the manufacturers' websites (we are not resellers). According to our current estimations, building your own quad will cost around 2,7k€ altogether (without the camera module though), which is still expensive but rather cheap when considering the size of the robot and the price of similar-sized robots.
+Below are the links to the follow up of the POPI project, on a new quadruped. Our whole work will be once again open source and we should start releasing it in September 2021. <br>
+The goal is still the same : allowing everybody to build their own quad. Unlike POPI, our new quad will be 100% 3d-printed to make this goal closer, with components available to purchase online. We will provide as soon as possible a BOM and links to the manufacturers' websites (we are not resellers). <br>
+According to our current estimations, building your own quad will cost around 2,7k€ altogether (without the camera module though), which is still expensive but rather cheap when considering the size of the robot and the price of similar-sized robots.
+<br>
 We aim to provide beginner-friendly step-by-step instructions along the road, and to keep improving the tech as well.
-
-If you want to stay tuned about this :
-[Website](https://walko-robotics.com)
-[GitLab](https://gitlab.com/walko-robotics/doge/software) and [GitHub](https://github.com/Walko-Robotics) - Please keep in mind that the GitHub will be a mirror of the GitLab from now on.
-[Instagram](https://www.instagram.com/walko_adventures/)
-[Discord](dsc.gg/walko)
-[YouTube](https://www.youtube.com/c/WalkoRobotics)
+<br>
+<br>
+If you want to stay tuned about this : <br>
+[Website](https://walko-robotics.com) <br>
+[GitLab](https://gitlab.com/walko-robotics/doge/software) and [GitHub](https://github.com/Walko-Robotics) - Please keep in mind that the GitHub repo will be a mirror of the GitLab one from now on. <br>
+[Instagram](https://www.instagram.com/walko_adventures/) <br>
+[Discord](dsc.gg/walko) <br>
+[YouTube](https://www.youtube.com/c/WalkoRobotics) <br> <br>
 
 ## Overview of the project
 POPI is an entirely open-source quadruped robot. Though not yet extremely agile, <a href="#team">we</a> meant it to be accessible to anyone interested in robotics and we hope it becomes a friendly collaborative platform for educational or research purposes. You will hence find in this repository everything there is to know about POPI. If you want to know about every details, a good way would be to have a look at the user manual in the [popi_reports] folder.
